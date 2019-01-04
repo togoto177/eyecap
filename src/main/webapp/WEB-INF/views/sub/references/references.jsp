@@ -18,8 +18,22 @@
 				<a>Myongji University, Korea</a>
 			</div>
 		</div>
-		
-		
+		<div class="refImgBox">
+			<div class="refImg">
+				<img alt="Myongji University Letter of recommendation" src="resources/sub/references/ref_02.jpg">
+			</div>
+			<div class="refLetterText">
+				<a>Korea Electric Power Corporation</a>
+			</div>
+		</div>
+		<div class="refImgBox">
+			<div class="refImg">
+				<img alt="Myongji University Letter of recommendation" src="resources/sub/references/ref_03.jpg">
+			</div>
+			<div class="refLetterText">
+				<a>Kwangwoon University, Korea</a>
+			</div>
+		</div>
 	</div>
 </div>
 </body>
