@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*SUB PAGE_HEADER*/
+header.header { position:relative;}
+div.sub-main-content { padding-top:0;}
+ul.sub_hover { position:absolute; top:75px; left:0; width:330px; background:#e60012; display:none;}
+ul.sub_hover li { text-align: center; width:100%; height: auto; overflow:hidden}
+.header .header-inner .gnb ul.sub_hover li a { color:#fff; display: block; width:100%; height:100%; font-size:16px;}
+nav.gnb a.hover:hover ~ ul.sub_hover, ul.sub_hover:hover { display:block;}
+ol.product_des_tab.fixed { position:fixed; top:0; z-index:100; min-width:1200px; max-width:1200px;}

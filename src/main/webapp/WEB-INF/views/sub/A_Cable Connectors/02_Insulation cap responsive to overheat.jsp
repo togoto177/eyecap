@@ -278,22 +278,22 @@
                             		<table class="table03">
                                       <tr class="back_gray"><td rowspan="2">SIZE(SQ)</td><td rowspan="2">AWG</td><td rowspan="2">B</td><td rowspan="2">b</td><td rowspan="2">D</td><td rowspan="2">A</td><td rowspan="2">L</td><td rowspan="2">T</td><td rowspan="2">E</td><td colspan="7">PART NO.</td></tr>
                                       <tr class="back_gray"><td>BLACK</td><td>RED</td><td>BLUE</td><td>YELLOW</td><td>GREEN</td><td>P7</td><td>etc</td></tr>
-                                      <tr><td>25</td>  <td>4</td>    <td>2.8</td> <td>5.9</td> <td>2.8</td> <td>13.1</td><td>7.6</td><td>0.8</td> <td>5.3</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td><td rowspan="11">Gwangyang(POSCO)</td></tr>
-                                      <tr><td>35</td>  <td>2,3</td>       <td>3.4</td> <td>6.9</td> <td>3.5</td> <td>13.8</td><td>8.1</td><td>0.8</td> <td>5.4</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>50</td>  <td>1</td>       <td>3.8</td> <td>7.5</td> <td>4.3</td> <td>16.2</td><td>9.6</td><td>0.8</td> <td>7.0</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>70</td>  <td>1/0</td>       <td>4.8</td> <td>8.7</td> <td>5.0</td> <td>17.4</td><td>9.7</td><td>0.8</td> <td>7.7</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>95</td>  <td>2/0</td>           <td>6.2</td> <td>10.1</td><td>6.7</td> <td>20.4</td><td>10.9</td><td>0.8</td><td>8.3</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>120</td> <td>3/0</td>           <td>7.0</td> <td>12.5</td><td>8.3</td> <td>23.5</td><td>13.0</td><td>0.8</td><td>10.0</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>150</td> <td>4/0, 250Kcmil</td>           <td>10.1</td><td>15.5</td><td>10.2</td><td>31.5</td><td>17.1</td><td>0.8</td><td>14.6</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>185</td> <td>2,3</td>         <td>10.6</td><td>16.5</td><td>10.8</td><td>35.1</td><td>19.0</td><td>0.8</td><td>16.8</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>240</td> <td>1</td>           <td>12.4</td><td>18.2</td><td>12.1</td><td>37.7</td><td>19.1</td><td>0.8</td><td>19.1</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>300</td> <td>1/0</td>         <td>14.2</td><td>21.8</td><td>15.2</td><td>38.3</td><td>19.5</td><td>0.8</td><td>20.5</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>400</td> <td>2/0</td>         <td>15.9</td><td>23.5</td><td>16.2</td><td>42.6</td><td>21.6</td><td>0.8</td><td>21.9</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>                                      
+                                      <tr><td>25</td>  <td>4</td>             <td>8.6</td>  <td>13.9</td> <td>9.0</td>  <td>10.3</td><td>25.3</td><td>1.2</td><td>14.0</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td><td rowspan="11">Gwangyang(POSCO)</td></tr>
+                                      <tr><td>35</td>  <td>2,3</td>           <td>10.2</td> <td>15.5</td> <td>10.5</td> <td>10.1</td><td>27.5</td><td>1.3</td><td>17.3</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
+                                      <tr><td>50</td>  <td>1</td>             <td>11.6</td> <td>17.2</td> <td>11.5</td> <td>12.2</td><td>43.2</td><td>1.5</td><td>34.3</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
+                                      <tr><td>70</td>  <td>1/0</td>           <td>13.8</td> <td>20.3</td> <td>13.9</td> <td>12.2</td><td>48.2</td><td>1.8</td><td>36.7</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
+                                      <tr><td>95</td>  <td>2/0</td>           <td>16.5</td> <td>22.8</td> <td>16.0</td> <td>12.3</td><td>56.2</td><td>1.9</td><td>36.4</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
+                                      <tr><td>120</td> <td>3/0</td>           <td>18.3</td> <td>24.6</td> <td>18.0</td> <td>18.8</td><td>61.6</td><td>1.9</td><td>40.1</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
+                                      <tr><td>150</td> <td>4/0, 250Kcmil</td> <td>20.8</td> <td>27.2</td> <td>21.4</td> <td>18.8</td><td>66.7</td><td>2.0</td><td>40.1</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
+                                      <tr><td>185</td> <td>300Kcmil</td>      <td>22.1</td> <td>31.0</td> <td>22.7</td> <td>24.0</td><td>74.0</td><td>2.1</td><td>48.6</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
+                                      <tr><td>240</td> <td>350~400Kcmil</td>  <td>28.1</td> <td>35.1</td> <td>26.8</td> <td>23.2</td><td>83.0</td><td>2.1</td><td>54.5</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
+                                      <tr><td>300</td> <td>450~500Kcmil</td>  <td>29.0</td> <td>37.0</td> <td>28.2</td> <td>25.5</td><td>95.1</td><td>2.3</td><td>66.5</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
+                                      <tr><td>400</td> <td>550~700Kcmil</td>  <td>32.5</td> <td>40.9</td> <td>32.8</td> <td>25.7</td><td>98.9</td><td>2.5</td><td>72.7</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>                                      
                                       <tr><td colspan="16">
                                       	<div class="left">
                                       		<a><strong>Example for Part Number</strong></a>
                                       		<div class="left_01">
-                                      			<a>EYECAP-SIT (A) 1.5 BK</a><br />
+                                      			<a>EYECAP-SIT (B) 1.5 BK</a><br />
                                       			<a class="right">③</a><a class="right">②</a><a class="right">①</a>
                                       		</div>
                                       	</div>
@@ -304,7 +304,7 @@
                         	                &nbsp;&nbsp;&nbsp;(B)(Tubular terminal lugs type)</a><br />
                                       		<a class="red">②</a><a class="size">&nbsp;SIZE</a><br />
                                       		<a class="size1">
-                                      		&nbsp;&nbsp;&nbsp;1.5SQ ~ 300SQ</a><br />
+                                      		&nbsp;&nbsp;&nbsp;25SQ ~ 400SQ</a><br />
                                       		<a class="red">③</a><a class="size">&nbsp;COLOR</a><br />
                                       		<a class="size1">
                                       		&nbsp;&nbsp;&nbsp;BK(Black), R(RED), B(BLUE), Y(YELLOW), G(GREEN)<br />

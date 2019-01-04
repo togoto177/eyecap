@@ -17,8 +17,12 @@
 <meta http-equiv="imagetoolbar" content="no">
 <script src="js/jquery/jquery.js"></script>
 
+<link rel="stylesheet" href="css/sub/sub.css">
+<!-- <link rel="stylesheet" href="css/sub/header.css"> -->
+<link rel="stylesheet" href="css/sub/sub2.css">
 <link rel="stylesheet" href="css/main/style.css">
 <link rel="stylesheet" href="css/main/swiper.min.css">
+
 
 <script src="js/jquery/jquery-1.8.3.min.js"></script>
 <!-- <script src="./js/jquery.menu.js?ver=171222"></script> -->
@@ -28,7 +32,5 @@
 <script src="js/main/swiper.min.js"></script>
 <script src="js/main/main.js"></script>
 
-<link href="css/sub/sub.css" rel="stylesheet">
-<link href="css/sub/header.css" rel="stylesheet">
 <script src="js/jquery/jquery.js"></script>
 <script src="js/sub/sub.js"></script>
