@@ -158,5 +158,24 @@ jQuery(document).ready(function($){
                 //$(this).find('.ico_ar:eq(0)').css('transform','rotate(180deg)');
             }
         })
-    })
+    });
 });
+
+/*관리자 팝업창*/
+
+function Close02 () {
+	document.getElementById("pop_master02").classList.remove('show');
+};
+
+function popWrite() {
+	var popup2 = document.getElementById("pop_master02");
+	popup2.classList.add("show");
+};
+
+function Close () {
+	document.getElementById("pop_master").classList.remove('show');
+};
+function popModify() {
+	var popup = document.getElementById("pop_master");
+	popup.classList.add("show");
+};

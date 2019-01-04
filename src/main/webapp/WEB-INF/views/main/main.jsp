@@ -245,6 +245,15 @@
                                         <p>As soon as they come up. <br />
                                             It's worth visiting the site regularly to make sure you don't miss out on any new opportunities.</p>
                                     </li>
+                                <!-- add -->
+                                    <li class="btn_master">
+                                        <a onClick="popModify();" class="btn_master_modify">
+                                            Modify
+                                        </a>
+                                        <a href="" class="btn_master_delete">
+                                            Delete
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="accordian_dotted reveal reveal-top">
@@ -266,6 +275,25 @@
                                 </ul>
                             </li>
                         </ul>
+                        <!-- add -->
+                        <div id="pop_master">
+                            <h4 class="pop_master_tit">
+                                Support-FAQ<br>Write new post
+                            </h4>
+                            <input id="pop_master_faq_tit" name="faq_tit" type="text">
+                            <textarea id="content" name="content"></textarea>
+                            <ol class="pop_master_btn">
+                                <li>
+                                    <a href="" class="pop_master_btn_modify">Modify</a>
+                                </li>
+                                 <li>
+                                    <a href="" class="pop_master_btn_delete">Delete</a>
+                                </li>
+                                 <li class="margin_none">
+                                    <a onclick="Close();" class="pop_master_btn_cancle">Cancle</a>
+                                </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -283,68 +311,131 @@
                             <th scope="col" class="th_line">Title</th>
                             <th scope="col" class="th_line">Date</th>
                             <th scope="col">File Download</th>
+                            <th scope="col">&nbsp;</th>
                         </tr>
                         <tr>
                             <td class="notice text_center">NOTICE</td>
                             <td class="notice_title">전기 자재 카달로그</td>
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
+                            <td class="td_master">
+                                <a href="" onclick="" class="td_modify">Modify</a>
+                                <a href="" onclick="" class="td_delete">Delete</a>
+                            </td>
                         </tr>
                         <tr>
                             <td class="notice text_center">NOTICE</td>
                             <td class="notice_title">전기 자재 카달로그</td>
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
+                            <td class="td_master">
+                                <a href="" onclick="" class="td_modify">Modify</a>
+                                <a href="" onclick="" class="td_delete">Delete</a>
+                            </td>
                         </tr>
                         <tr>
                             <td class="text_center">10</td>
                             <td class="notice_title">전기 자재 카달로그</td>
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
+                            <td class="td_master">
+                                <a href="" onclick="" class="td_modify">Modify</a>
+                                <a href="" onclick="" class="td_delete">Delete</a>
+                            </td>
                         </tr>
                         <tr>
                             <td class="text_center">9</td>
                             <td class="notice_title">전기 자재 카달로그</td>
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
+                            <td class="td_master">
+                                <a href="" onclick="" class="td_modify">Modify</a>
+                                <a href="" onclick="" class="td_delete">Delete</a>
+                            </td>
                         </tr>
                         <tr>
                             <td class="text_center">8</td>
                             <td class="notice_title">전기 자재 카달로그</td>
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
+                            <td class="td_master">
+                                <a href="" onclick="" class="td_modify">Modify</a>
+                                <a href="" onclick="" class="td_delete">Delete</a>
+                            </td>
                         </tr>
                         <tr>
                             <td class="text_center">7</td>
                             <td class="notice_title">전기 자재 카달로그</td>
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
+                            <td class="td_master">
+                                <a href="" onclick="" class="td_modify">Modify</a>
+                                <a href="" onclick="" class="td_delete">Delete</a>
+                            </td>
                         </tr>
                         <tr>
                             <td class="text_center">6</td>
                             <td class="notice_title">전기 자재 카달로그</td>
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
+                            <td class="td_master">
+                                <a href="" onclick="" class="td_modify">Modify</a>
+                                <a href="" onclick="" class="td_delete">Delete</a>
+                            </td>
                         </tr>
                         <tr>
                             <td class="text_center">5</td>
                             <td class="notice_title">전기 자재 카달로그</td>
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
+                            <td class="td_master">
+                                <a href="" onclick="" class="td_modify">Modify</a>
+                                <a href="" onclick="" class="td_delete">Delete</a>
+                            </td>
                         </tr>
                         <tr>
                             <td class="text_center">4</td>
                             <td class="notice_title">전기 자재 카달로그</td>
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
+                            <td class="td_master">
+                                <a href="" onclick="" class="td_modify">Modify</a>
+                                <a href="" onclick="" class="td_delete">Delete</a>
+                            </td>
                         </tr>
                         <tr>
                             <td class="text_center">3</td>
                             <td class="notice_title">전기 자재 카달로그</td>
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
+                            <td class="td_master">
+                                <a href="" onclick="" class="td_modify">Modify</a>
+                                <a href="" onclick="" class="td_delete">Delete</a>
+                            </td>
                         </tr>
-                    </table>                
+                    </table>   
+                   <!-- add -->
+                    <div id="btn_master_write" class="reveal action">
+                        <a onClick="popWrite();">Write</a>
+                    </div>
+                    <div id="pop_master02">
+                        <h4 class="pop_master_tit">
+                            ARCHAVE - Write new post
+                        </h4>
+                        <input type="checkbox" name="write_notice" value="Notice"> Notice
+                        <input id="pop_master_write_tit" name="write_tit" type="text" placeholder="Title">
+                        <input id="pop_master_write_serch" name="serch_tit" type="text">
+                        <ol class="pop_master_btn02">
+                            <li>
+                                <a href="" class="pop_master_btn_submit">SUBMIT</a>
+                            </li>
+                             <li class="margin_none">
+                                <a onclick="Close02();" class="pop_master_btn_cancle">CANCLE</a>
+                            </li>
+                        </ol>
+                    </div>
+                    
+                    
                     <div class="reveal reveal-top board_pg">
                         <ul>
                             <li class="prev_btn" title="prev"></li>
