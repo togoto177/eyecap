@@ -18,4 +18,9 @@ public class EyecapSubController {
 		return "sub/A_Cable Connectors/01_Insulation cap responsive to overheat";
 	}
 	
+	@RequestMapping(value = "/references.do")
+	public String references() {
+		
+		return "sub/references/references";
+	}
 }

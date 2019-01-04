@@ -1012,13 +1012,13 @@ ol.pop_master_btn li.margin_none { margin-right:0;}
 ol.pop_master_btn li a { display:block; text-align:center;color:#fff; padding:0.5em 1em;}
 ol.pop_master_btn li a.pop_master_btn_modify { background:#00335b;}
 ol.pop_master_btn li a.pop_master_btn_delete { background:#e60012;}
-ol.pop_master_btn li a.pop_master_btn_cancle { background:#222222;}
+ol.pop_master_btn li a.pop_master_btn_cancle { background:#222222; cursor: pointer;}
 #section-5 td { height: 60px; line-height:60px; padding:0; vertical-align: middle;}
 #section-5 td.td_master { line-height:0;}
-#section-5 td.td_master a.td_modify { background:#00335b; color:#fff; padding:5px; text-align: center; display:inline-block; height:30px; width:65px;line-height:20px;}
-#section-5 td.td_master a.td_delete { background:#e60012; color:#fff; padding:5px; text-align: center; display: inline-block; height:30px; width:65px; line-height:20px;}
+#section-5 td.td_master a.td_modify { background:#00335b; color:#fff; padding:5px; text-align: center; display:inline-block; height:30px; width:65px;line-height:20px; cursor: pointer;}
+#section-5 td.td_master a.td_delete { background:#e60012; color:#fff; padding:5px; text-align: center; display: inline-block; height:30px; width:65px; line-height:20px; cursor: pointer;}
 div#btn_master_write { width:100%; margin-top:10px; height:40px;}
-div#btn_master_write a { display:inline-block; float:right; background:#e60012; color:#fff; width:65px; height:30px; line-height:20px; padding:5px; text-align: center;}
+div#btn_master_write a { display:inline-block; float:right; background:#e60012; color:#fff; width:65px; height:30px; line-height:20px; padding:5px; text-align: center; cursor: pointer;}
 
 /*MASTER-WRIGHT*/
 div#pop_master02 { display:none;}
@@ -1030,6 +1030,56 @@ ol.pop_master_btn02 li { float:left; margin-right:5px; width:150px;}
 ol.pop_master_btn02 li.margin_none { margin-right:0;}
 ol.pop_master_btn02 li a { display:block; text-align:center;color:#fff; padding:0.5em 1em;}
 ol.pop_master_btn02 li a.pop_master_btn_submit { background:#e60012; color:#fff;}
-ol.pop_master_btn02 li a.pop_master_btn_cancle { background:#222222; color:#fff;}
+ol.pop_master_btn02 li a.pop_master_btn_cancle { background:#222222; color:#fff; cursor: pointer;}
 
+/* 파일 인풋 디자인 */
 
+.filebox input[type="file"] {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip:rect(0,0,0,0);
+	border: 0;
+}
+.filebox label {
+	display: inline-block;
+	padding: .6em .75em;
+	color: #ffffff;
+	font-size: inherit;
+	line-height: normal;
+	vertical-align: middle;
+	background-color: #737373;
+	cursor: pointer;
+	border: 1px solid #ebebeb;
+	border-bottom-color: #e2e2e2;
+	width: 21%;
+	margin-left: -11px;
+	text-align: center;
+}
+.filebox .upload-name {
+	display: inline-block;
+	padding: 1em;
+	width:80%;
+	font: 400 13.3333px Arial;
+	line-height: normal;
+	vertical-align: middle;
+	background-color: #f7f7f7;
+	border: 1px solid #ccc;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.fileAdd{
+	text-align: right;
+	margin-top: 10px;
+	width: 100%;
+}
+.fileAdd a{
+	background: #00335b;
+	color: white;
+	padding: 1px 15px;
+	cursor: pointer;
+}

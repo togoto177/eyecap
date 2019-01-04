@@ -5,6 +5,19 @@
 <html lang="ko">
 <head>
 	<title>EyeCapInternational</title>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var fileTarget = $('.filebox .upload-hidden');
+		fileTarget.on('change', function(){ // 값이 변경되면
+			if(window.FileReader){ // modern browser
+				var filename = $(this)[0].files[0].name;
+			} else { // old IE
+				var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
+			} // 추출한 파일명 삽입
+			$(this).siblings('.upload-name').val(filename);
+		});
+	}); 
+	</script>
 </head>
 <body>
     <!-- TODO : Wrapper -->
@@ -235,6 +248,9 @@
                     <h2 class="text_center">SUPPORT</h2>
                     <div class="title_red_line"></div>
                     <h4 class="sec_sub_title">FAQ</h4>
+	                    <div id="btn_master_write" class="reveal action">
+	                        <a onClick="popModify();">Write</a>
+	                    </div>
                     <div id="accordian">
                         <ul>
                             <li class="accordian_dotted active reveal reveal-top">
@@ -319,8 +335,8 @@
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
                             <td class="td_master">
-                                <a href="" onclick="" class="td_modify">Modify</a>
-                                <a href="" onclick="" class="td_delete">Delete</a>
+                                <a onclick="popWrite();" class="td_modify">Modify</a>
+                                <a onclick="" class="td_delete">Delete</a>
                             </td>
                         </tr>
                         <tr>
@@ -329,8 +345,8 @@
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
                             <td class="td_master">
-                                <a href="" onclick="" class="td_modify">Modify</a>
-                                <a href="" onclick="" class="td_delete">Delete</a>
+                                <a onclick="popWrite();" class="td_modify">Modify</a>
+                                <a onclick="" class="td_delete">Delete</a>
                             </td>
                         </tr>
                         <tr>
@@ -339,8 +355,8 @@
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
                             <td class="td_master">
-                                <a href="" onclick="" class="td_modify">Modify</a>
-                                <a href="" onclick="" class="td_delete">Delete</a>
+                                <a onclick="popWrite();" class="td_modify">Modify</a>
+                                <a onclick="" class="td_delete">Delete</a>
                             </td>
                         </tr>
                         <tr>
@@ -349,8 +365,8 @@
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
                             <td class="td_master">
-                                <a href="" onclick="" class="td_modify">Modify</a>
-                                <a href="" onclick="" class="td_delete">Delete</a>
+                                <a onclick="popWrite();" class="td_modify">Modify</a>
+                                <a onclick="" class="td_delete">Delete</a>
                             </td>
                         </tr>
                         <tr>
@@ -359,8 +375,8 @@
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
                             <td class="td_master">
-                                <a href="" onclick="" class="td_modify">Modify</a>
-                                <a href="" onclick="" class="td_delete">Delete</a>
+                                <a onclick="popWrite();" class="td_modify">Modify</a>
+                                <a onclick="" class="td_delete">Delete</a>
                             </td>
                         </tr>
                         <tr>
@@ -369,8 +385,8 @@
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
                             <td class="td_master">
-                                <a href="" onclick="" class="td_modify">Modify</a>
-                                <a href="" onclick="" class="td_delete">Delete</a>
+                                <a onclick="popWrite();" class="td_modify">Modify</a>
+                                <a onclick="" class="td_delete">Delete</a>
                             </td>
                         </tr>
                         <tr>
@@ -379,8 +395,8 @@
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
                             <td class="td_master">
-                                <a href="" onclick="" class="td_modify">Modify</a>
-                                <a href="" onclick="" class="td_delete">Delete</a>
+                                <a onclick="popWrite();" class="td_modify">Modify</a>
+                                <a onclick="" class="td_delete">Delete</a>
                             </td>
                         </tr>
                         <tr>
@@ -389,8 +405,8 @@
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
                             <td class="td_master">
-                                <a href="" onclick="" class="td_modify">Modify</a>
-                                <a href="" onclick="" class="td_delete">Delete</a>
+                                <a onclick="popWrite();" class="td_modify">Modify</a>
+                                <a onclick="" class="td_delete">Delete</a>
                             </td>
                         </tr>
                         <tr>
@@ -399,8 +415,8 @@
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
                             <td class="td_master">
-                                <a href="" onclick="" class="td_modify">Modify</a>
-                                <a href="" onclick="" class="td_delete">Delete</a>
+                                <a onclick="popWrite();" class="td_modify">Modify</a>
+                                <a onclick="" class="td_delete">Delete</a>
                             </td>
                         </tr>
                         <tr>
@@ -409,8 +425,8 @@
                             <td>2018-12-28</td>
                             <td class="td_file"><span class="file_down"></span> EYECAP_CATALOG_pdf (9.2M)</td>
                             <td class="td_master">
-                                <a href="" onclick="" class="td_modify">Modify</a>
-                                <a href="" onclick="" class="td_delete">Delete</a>
+                                <a onclick="popWrite();" class="td_modify">Modify</a>
+                                <a onclick="" class="td_delete">Delete</a>
                             </td>
                         </tr>
                     </table>   
@@ -424,7 +440,17 @@
                         </h4>
                         <input type="checkbox" name="write_notice" value="Notice"> Notice
                         <input id="pop_master_write_tit" name="write_tit" type="text" placeholder="Title">
-                        <input id="pop_master_write_serch" name="serch_tit" type="text">
+                        <!-- <input id="pop_master_write_serch" name="serch_tit" type="text"> -->
+                        
+                        <div class="filebox preview-image">
+                        <input class="upload-name" value="Filename" disabled="disabled" >
+                        <label for="input-file">SEARCH</label>
+                        <input type="file" id="input-file" class="upload-hidden">
+                        </div>
+                        
+						<div class="fileAdd">
+							<a>Add</a>
+						</div>
                         <ol class="pop_master_btn02">
                             <li>
                                 <a href="" class="pop_master_btn_submit">SUBMIT</a>
