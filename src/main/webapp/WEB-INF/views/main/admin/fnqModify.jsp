@@ -5,7 +5,8 @@
                             <textarea id="content" name="board_content"></textarea>
                             <ol class="pop_master_btn">
                                 <li>
-                                    <a href="" class="pop_master_btn_modify" onclick="modifyFnQSubmit();">Submit</a>
+                                    <!-- <a href="" class="pop_master_btn_modify" onclick="modifyFnQSubmit();">Submit</a> -->
+                                    <a id="modifyFnQSubmit" class="pop_master_btn_modify" >Submit</a>
                                 </li>
                                  <li>
                                     <a href="" class="pop_master_btn_delete">Delete</a>

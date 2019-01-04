@@ -13,11 +13,7 @@
                         <label for="input-file" class="fileSearch" id="fileSearch0" idx="0" >SEARCH</label>
                         <input type="file" id="input-file0" name="uploadfile" class="upload-hidden">
                         </div>
-<!--                         <div class="filebox preview-image" id="fileIndex">
-                        <input class="upload-name" id="upload-name1" value="Filename">
-                        <label for="input-file" class="fileSearch" id="fileSearch1" >SEARCH</label>
-                        <input type="file" id="input-file1" name="input-file[1]" class="upload-hidden">
-                        </div> -->
+
                         
                         </div>
                         
@@ -26,7 +22,8 @@
 						</div>
                         <ol class="pop_master_btn02">
                             <li>
-                                <a href="" class="pop_master_btn_submit" onclick="writeAcSubmit();">SUBMIT</a>
+<!--                                 <a href="" class="pop_master_btn_submit" onclick="writeAcSubmit();">SUBMIT</a> -->
+                                <a id="writeAcSubmit" class="pop_master_btn_submit" >SUBMIT</a>
                             </li>
                              <li class="margin_none">
                                 <a onclick="Close02();" class="pop_master_btn_cancle">CANCLE</a>

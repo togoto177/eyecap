@@ -30,8 +30,8 @@ $(document).ready(function(){
 		var i = "";
         i =$(this).attr('idx');
         alert(i);
-	$('#uploadfile').click();
-	var fileTarget = $('#uploadfile'); 
+	$('#input-file'+i).click();
+	var fileTarget = $('#input-file'+i); 
 	fileTarget.on('change', function(){ // 값이 변경되면 
 		if(window.FileReader){ // modern browser 
 			var filename = $(this)[0].files[0].name; 
@@ -42,14 +42,14 @@ $(document).ready(function(){
 		}); 
 	});    
 	
-	$('#addbt').click(function(e){
+	$(document).on("click", "#addbt", function(e) {
+		e.preventDefault();
 	var fileIndex = $("#fileDiv").children().length+1-1;
-	alert(fileIndex);
 	$("#fileDiv").append(
 			'<div class="filebox preview-image" id="fileIndex">' +
 			'<input class="upload-name" id="upload-name'+fileIndex+'" value="Filename">' + 
 			'<label for="input-file" class="fileSearch" id="fileSearch'+fileIndex+'" idx="'+fileIndex+'">SEARCH</label>' +
-			'<input type="file" id="input-file'+fileIndex+'" name="uploadfile'+fileIndex+'" class="upload-hidden">' +
+			'<input type="file" id="input-file'+fileIndex+'" name="uploadfile" class="upload-hidden">' +
 			'</div>');
 	});
 	
@@ -79,109 +79,116 @@ $(document).ready(function(){
 		}
 		
 	});
+	$(document).on("click", "#writeFnQSubmit", function(e) {
+		e.preventDefault();
+		var params = $("#FnQ_form").serialize();
+//	var params = new FormData($('#archave_form')[0]);
+//	var form = $('#archave_form')[0];
+//    var params = new FormData(form);
+		
+		$.ajax({
+			type : "POST",
+			url : "/mainBoardAction.do",
+			data : params,
+			dataType : "json",
+			success : function(data) {
+				if(data.code == '1') {
+					alert("게시글이 등록되었습니다.");
+					location.reload();
+				} else {
+					alert("code:" + data.code + "\n" + "msg:" + data.msg);
+				}    
+			},
+			error : function(request, status, error) {
+				alert("code:" + request.status + "\n" + "error:" + error);
+			}
+		})
+	});
+	
+		$(document).on("click", "#writeAcSubmit", function(e) {
+		/*var params = $("#archave_form").serialize();*/
+		var form = $('#archave_form')[0];
+	    var params = new FormData(form);
+		
+		$.ajax({
+			type : "POST",
+			url : "/mainBoardAction.do",
+			enctype: "multipart/form-data",
+			processData: false,
+            contentType: false,
+			data : params,
+			dataType : "json",
+			success : function(data) {
+				if(data.code == '1') {
+		            alert("게시글이 등록되었습니다.");
+		            location.reload();
+		        } else {
+		            alert("code:" + data.code + "\n" + "msg:" + data.msg);
+		        }    
+			},
+			error : function(request, status, error) {
+				alert("code:" + request.status + "\n" + "error:" + error);
+			}
+		})
+	});
+	
+		$(document).on("click", "#modifyFnQSubmit", function(e) {
+			var params = $("#FnQ_form").serialize();
+//	var params = new FormData($('#archave_form')[0]);
+//	var form = $('#archave_form')[0];
+//    var params = new FormData(form);
+			$.ajax({
+				type : "POST",
+				url : "/ModifyAction.do",
+				data : params,
+				dataType : "json",
+				success : function(data) {
+					if(data.code == '1') {
+						alert("게시글이 수정되었습니다.");
+						location.reload();
+					} else {
+						alert("code:" + data.code + "\n" + "msg:" + data.msg);
+					} 
+				},
+				error : function(request, status, error) {
+					alert("code:" + request.status + "\n" + "error:" + error);
+				}
+			})
+		});
+		
+		$(document).on("click", "#modifyAcSubmit", function(e) {
+			var params = $("#archave_form").serialize();
+//			var params = new FormData($('#archave_form')[0]);
+//			var form = $('#archave_form')[0];
+//		    var params = new FormData(form);
+			$.ajax({
+				type : "POST",
+				url : "/ModifyAction.do",
+				data : params,
+				dataType : "json",
+				success : function(data) {
+					if(data.code == '1') {
+						alert("게시글이 수정되었습니다.");
+			            location.reload();
+			        } else {
+			            alert("code:" + data.code + "\n" + "msg:" + data.msg);
+			        } 
+				},
+				error : function(request, status, error) {
+					alert("code:" + request.status + "\n" + "error:" + error);
+				}
+			})
+			});
+		
 	});
 
-function writeFnQSubmit() {
-	var params = $("#FnQ_form").serialize();
-//	var params = new FormData($('#archave_form')[0]);
-//	var form = $('#archave_form')[0];
-//    var params = new FormData(form);
-	
-	$.ajax({
-		type : "POST",
-		url : "/mainBoardAction.do",
-		data : params,
-		dataType : "json",
-		success : function(data) {
-			if(data.code == '1') {
-	            alert("게시글이 등록되었습니다.");
-	            location.reload();
-	        } else {
-	            alert("code:" + data.code + "\n" + "msg:" + data.msg);
-	        }    
-		},
-		error : function(request, status, error) {
-			alert("code:" + request.status + "\n" + "error:" + error);
-		}
-	})
-}
 
-function modifyFnQSubmit() {
-	var params = $("#FnQ_form").serialize();
-//	var params = new FormData($('#archave_form')[0]);
-//	var form = $('#archave_form')[0];
-//    var params = new FormData(form);
-	$.ajax({
-		type : "POST",
-		url : "/ModifyAction.do",
-		data : params,
-		dataType : "json",
-		success : function(data) {
-			if(data.code == '1') {
-				alert("게시글이 수정되었습니다.");
-	            location.reload();
-	        } else {
-	            alert("code:" + data.code + "\n" + "msg:" + data.msg);
-	        } 
-		},
-		error : function(request, status, error) {
-			alert("code:" + request.status + "\n" + "error:" + error);
-		}
-	})
-	}
 
-function writeAcSubmit() {
-	var params = $("#archave_form").serialize();
-//	var params = new FormData($('#archave_form')[0]);
-//	var form = $('#archave_form')[0];
-//    var params = new FormData(form);
-	
-	$.ajax({
-		type : "POST",
-		url : "/mainBoardAction.do",
-		data : params,
-		dataType : "json",
-		success : function(data) {
-			if(data.code == '1') {
-	            alert("게시글이 등록되었습니다.");
-	            location.reload();
-	        } else {
-	            alert("code:" + data.code + "\n" + "msg:" + data.msg);
-	        }    
-		},
-		error : function(request, status, error) {
-			alert("code:" + request.status + "\n" + "error:" + error);
-		}
-	})
-}
 
-function modifyAcSubmit() {
-	var params = $("#archave_form").serialize();
-//	var params = new FormData($('#archave_form')[0]);
-//	var form = $('#archave_form')[0];
-//    var params = new FormData(form);
-	$.ajax({
-		type : "POST",
-		url : "/ModifyAction.do",
-		data : params,
-		dataType : "json",
-		success : function(data) {
-			if(data.code == '1') {
-				alert("게시글이 수정되었습니다.");
-	            location.reload();
-	        } else {
-	            alert("code:" + data.code + "\n" + "msg:" + data.msg);
-	        } 
-		},
-		error : function(request, status, error) {
-			alert("code:" + request.status + "\n" + "error:" + error);
-		}
-	})
-	}
+
+
 
 $(document).ready(function() {
-	
-
 	
 	var startPage = $('#startPageList').val(); //현재 페이지
 	var totalPage = $('#totalPage').val(); //전체 페이지

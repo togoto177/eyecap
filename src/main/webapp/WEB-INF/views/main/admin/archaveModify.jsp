@@ -37,7 +37,8 @@
 						</div>
                         <ol class="pop_master_btn02">
                             <li>
-                                <a href="" class="pop_master_btn_submit" onclick="modifyAcSubmit();">SUBMIT</a>
+                                <!-- <a href="" class="pop_master_btn_submit" onclick="modifyAcSubmit();">SUBMIT</a> -->
+                                <a id="modifyAcSubmit" class="pop_master_btn_submit" >SUBMIT</a>
                             </li>
                              <li class="margin_none">
                                 <a onclick="Close02();" class="pop_master_btn_cancle">CANCLE</a>

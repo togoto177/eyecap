@@ -26,12 +26,14 @@
 			#{board_seq},
 			#{file_ori_name},
 			#{file_sub_name},
-			#{extention_name},
+			#{file_ext_name},
 			#{file_size},
 			'0',
 			#{file_path},
 			#{file_use_yn},
-			#{file_updateid},
+			#{file_register_id},
+			now(),
+			#{file_update_id},
 			now(),
 			#{file_etc}
 		

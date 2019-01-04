@@ -97,7 +97,7 @@ public class PKS {
 	//메인 글쓰기 작성 액션
 	@RequestMapping(value="/mainBoardAction.do", method=RequestMethod.POST)
 	@ResponseBody
-	public Map<String, Object> mainBoardAction(@ModelAttribute Board board, Fileup fileup, HttpServletRequest request, Model model, HttpSession session, @RequestParam Map<String, Object> map)throws Exception{
+	public Map<String, Object> mainBoardAction(@ModelAttribute Board board, Fileup fileup, HttpServletRequest request, Model model, HttpSession session, @RequestParam Map<String, Object> map, MultipartHttpServletRequest multi)throws Exception{
 				
 				Object ss_id = session.getAttribute("ad_id");
 	    		String session_id = ss_id.toString();
@@ -115,79 +115,79 @@ public class PKS {
 		   
 				bs.board_insert(board);
 				
-//				board = bs.board_read(board);
-//				
-//				String board_division = board.getBoard_division();
-//				
-//		        BoardFile boardFile = new BoardFile();
-//		        boardFile.setBoard_seq(board.getBoard_seq());
-//		        boardFile.setFile_register_id(board.getBoard_register_id());
-//		        boardFile.setFile_update_id(board.getBoard_register_id());
-//		        boardFile.setFile_use_yn("Y");
+				board = bs.board_read(board);
+				
+				String board_division = board.getBoard_division();
+				
+		        BoardFile boardFile = new BoardFile();
+		        boardFile.setBoard_seq(board.getBoard_seq());
+		        boardFile.setFile_register_id(board.getBoard_register_id());
+		        boardFile.setFile_update_id(board.getBoard_register_id());
+		        boardFile.setFile_use_yn("Y");
 				
 				//파일
-//		        Calendar cal = Calendar.getInstance()  ;
-//		        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd-HHmmSS");
-//		        String time = dateFormat.format(cal.getTime());
-//		        List<MultipartFile> files = fileup.getUploadfile();
-//		        System.out.println("File ----->" + files);
-//				if (null != files && files.size() > 0) {
-//					
-//					
-//					for (MultipartFile multipartFile : files) {
-//						if (!"".equals(multipartFile.getOriginalFilename()) && multipartFile.getSize() > 0) {
-//						
-//							System.out.println("file = " + multipartFile.getOriginalFilename() + "/" + multipartFile.getSize());
-//							// 상대경로 
-//							String file_path = request.getSession().getServletContext().getRealPath("/");
-//							
-//							String file_ori_name = multipartFile.getOriginalFilename();
-//							String file_sub_name = time + "-" + UUID.randomUUID().toString() +"_" +file_ori_name;
-//							String attach_path = "";
-//							
-//							if(board_division.equals("archave")) {
-//								attach_path = "resources/uploadFile/archave/";
-//							}else if (board_division.equals("oooo")) {
-//								attach_path = "resources/portfolio/portfolio_uploadfile/";
-//							}
-//							
-//							File f = new File(file_path + attach_path + file_sub_name);
-//							
-//							System.out.println("===========자료실 파일업로드 실제 Path=========" + f);
-//							
-//							if(!f.exists())
-//								f.mkdirs();
-//							//	이력서 model에 파일명,주소 저장
-//							//         파일명에서 확장자 추출 
-//							String filename = file_ori_name;
-//							int fileLen = filename.length();
-//							int lastDot = filename.lastIndexOf('.');
-//							String fileExt = filename.substring(lastDot, fileLen).toLowerCase();
-//							boardFile.setFile_ext_name(fileExt);
-//							boardFile.setFile_ori_name(file_ori_name);
-//							boardFile.setFile_sub_name(file_sub_name);
-//							boardFile.setFile_path("/" + attach_path);
-//
-//							long fsize = multipartFile.getSize();
-//							String Fsize = String.valueOf(fsize);
-//					        System.out.println(" size = " + Fsize + " bytes");
-//							boardFile.setFile_size(Fsize);
-//							System.out.println("확장명 : " + fileExt);
-//							bfs.file_insert(boardFile);
-//							try {
-//								multipartFile.transferTo(f);
-//							} catch (IllegalStateException e) {
-//								e.printStackTrace();
-//							} catch (IOException e) {
-//								e.printStackTrace();
-//							}
-//							try { 						
-//							} catch (Exception e) {
-//								model.addAttribute("msg", "다시 입력하세요.");
-//							}
-//						}
-//					}
-//				}
+		        Calendar cal = Calendar.getInstance()  ;
+		        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd-HHmmSS");
+		        String time = dateFormat.format(cal.getTime());
+		        List<MultipartFile> files = multi.getFiles("uploadfile");
+		        System.out.println("File ----->" + files);
+				if (null != files && files.size() > 0) {
+					
+					
+					for (MultipartFile multipartFile : files) {
+						if (!"".equals(multipartFile.getOriginalFilename()) && multipartFile.getSize() > 0) {
+						
+							System.out.println("file = " + multipartFile.getOriginalFilename() + "/" + multipartFile.getSize());
+							// 상대경로 
+							String file_path = request.getSession().getServletContext().getRealPath("/");
+							
+							String file_ori_name = multipartFile.getOriginalFilename();
+							String file_sub_name = time + "-" + UUID.randomUUID().toString() +"_" +file_ori_name;
+							String attach_path = "";
+							
+							if(board_division.equals("archave")) {
+								attach_path = "resources/uploadFile/archave/";
+							}else if (board_division.equals("oooo")) {
+								attach_path = "resources/portfolio/portfolio_uploadfile/";
+							}
+							
+							File f = new File(file_path + attach_path + file_sub_name);
+							
+							System.out.println("===========자료실 파일업로드 실제 Path=========" + f);
+							
+							if(!f.exists())
+								f.mkdirs();
+							//	이력서 model에 파일명,주소 저장
+							//         파일명에서 확장자 추출 
+							String filename = file_ori_name;
+							int fileLen = filename.length();
+							int lastDot = filename.lastIndexOf('.');
+							String fileExt = filename.substring(lastDot, fileLen).toLowerCase();
+							boardFile.setFile_ext_name(fileExt);
+							boardFile.setFile_ori_name(file_ori_name);
+							boardFile.setFile_sub_name(file_sub_name);
+							boardFile.setFile_path("/" + attach_path);
+
+							long fsize = multipartFile.getSize();
+							String Fsize = String.valueOf(fsize);
+					        System.out.println(" size = " + Fsize + " bytes");
+							boardFile.setFile_size(Fsize);
+							System.out.println("확장명 : " + fileExt);
+							bfs.file_insert(boardFile);
+							try {
+								multipartFile.transferTo(f);
+							} catch (IllegalStateException e) {
+								e.printStackTrace();
+							} catch (IOException e) {
+								e.printStackTrace();
+							}
+							try { 						
+							} catch (Exception e) {
+								model.addAttribute("msg", "다시 입력하세요.");
+							}
+						}
+					}
+				}
 				
 			    map.put("code","1");
 				
