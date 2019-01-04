@@ -6,9 +6,16 @@
 	<!-- <properties resource="db.properties" /> -->
 	<typeAliases>
 		<typeAlias  type="com.homepage.eyecap.model.User" alias="user"/>
+		<typeAlias  type="com.homepage.eyecap.model.Admin" alias="admin"/>
+		<typeAlias  type="com.homepage.eyecap.model.Board" alias="board"/>
+		<typeAlias  type="com.homepage.eyecap.model.BoardFile" alias="boardFile"/>
+		<typeAlias  type="com.homepage.eyecap.model.Fileup" alias="fileup"/>
 	</typeAliases>
 
 	<mappers>
 		<mapper resource="User.xml" />
+		<mapper resource="Admin.xml" />
+		<mapper resource="Board.xml" />
+		<mapper resource="BoardFile.xml" />
 	</mappers>
 </configuration>

@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="css/main/style.css">
 <link rel="stylesheet" href="css/main/swiper.min.css">
 
-<script src="js/jquery/jquery-1.8.3.min.js"></script>
+<!-- <script src="js/jquery/jquery-1.8.3.min.js"></script> -->
 <!-- <script src="./js/jquery.menu.js?ver=171222"></script> -->
 <script src="js/main/common.js?ver=171222"></script>
 <script src="js/main/wrest.js?ver=171222"></script>
@@ -29,3 +29,6 @@
 <script src="js/main/swiper.min.js"></script>
 <script src="js/main/main.js"></script>
 <!--<link rel="stylesheet" href="./js/font-awesome/css/font-awesome.min.css"> -->
+<script src="js/main/admin.js"></script>
+<script src="js/main/jquery.js"></script>
+<script src="js/main/jquery-3.3.1.min.js"></script>

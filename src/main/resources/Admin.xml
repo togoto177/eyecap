@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="admins">
+	<resultMap type="admin" id="adminResult">
+		<result property="ad_seq" column="ad_seq" />
+		<result property="ad_id" column="ad_id" />
+		<result property="ad_pw" column="ad_pw" />
+		<result property="ad_name" column="ad_name" />
+		<result property="ad_contact" column="ad_contact" />
+		<result property="ad_email" column="ad_email" />
+		<result property="ad_register_date" column="ad_register_date" />
+		<result property="ad_update_id" column="ad_update_id" />
+		<result property="ad_update_date" column="ad_update_date" />
+		<result property="ad_division" column="ad_division" />
+		<result property="ad_etc" column="ad_etc" />
+	</resultMap>
+
+	<select id="selectUserInfo" parameterType="HashMap" resultType="admin">
+		select * from admin_tb where ad_id = #{ad_id} 
+		and ad_pw = password(#{ad_pw})
+	</select>
+	
+</mapper>

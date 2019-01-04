@@ -12,6 +12,7 @@ jQuery(document).ready(function($){
           },
         });
         
+        /* 권수 체크 */    
          var swiper02 = new Swiper('.instance-1', {
           slidesPerView: 9,
           spaceBetween: 30,
@@ -167,15 +168,74 @@ function Close02 () {
 	document.getElementById("pop_master02").classList.remove('show');
 };
 
-function popWrite() {
-	var popup2 = document.getElementById("pop_master02");
-	popup2.classList.add("show");
+function popAcWrite(seq) {
+	$.ajax({ 
+		type: 'get' , 
+		url: '/archaveWriteForm.do',
+		dataType : 'html' ,
+		success: function(data) {
+			$('#pop_master02').empty();
+//			$('#pagination').empty();
+			$('#pop_master02').html(data);
+//			history.go(-1);
+//			$("#pagination").append(pagination);
+			var popup2 = document.getElementById("pop_master02");
+			popup2.classList.add("show");
+		} 
+	});	
+};
+
+function popAcModify(seq) {
+	$.ajax({ 
+		type: 'get' , 
+		url: '/archaveModifyForm.do?board_seq='+seq ,
+		dataType : 'html' ,
+		success: function(data) {
+			$('#pop_master02').empty();
+//			$('#pagination').empty();
+			$('#pop_master02').html(data);
+//			history.go(-1);
+//			$("#pagination").append(pagination);
+			var popup2 = document.getElementById("pop_master02");
+			popup2.classList.add("show");
+		} 
+	});	
 };
 
 function Close () {
 	document.getElementById("pop_master").classList.remove('show');
 };
-function popModify() {
-	var popup = document.getElementById("pop_master");
-	popup.classList.add("show");
+
+function popFnQWrite() {
+	$.ajax({ 
+		type: 'get' , 
+		url: '/fnqWriteForm.do',
+		dataType : 'html' ,
+		success: function(data) {
+			alert();
+//			$('#pagination').empty();
+			$('#pop_master').html(data);
+//			history.go(-1);
+//			$("#pagination").append(pagination);
+			var popup = document.getElementById("pop_master");
+			popup.classList.add("show");
+		} 
+	});	
+};
+
+function popFnQModify() {
+	$.ajax({ 
+		type: 'get' , 
+		url: '/fnqModifyForm.do',
+		dataType : 'html' ,
+		success: function(data) {
+			alert();
+//			$('#pagination').empty();
+			$('#pop_master').html(data);
+//			history.go(-1);
+//			$("#pagination").append(pagination);
+			var popup = document.getElementById("pop_master");
+			popup.classList.add("show");
+		} 
+	});	
 };
