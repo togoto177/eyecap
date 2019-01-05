@@ -45,4 +45,14 @@ public class BoardServiceImpl implements BoardService {
 		bd.board_delete(board);
 	}
 
+	@Override
+	public List<Board> fnq_list(Map<String, Object> paramMap) {
+		return bd.fnq_list(paramMap);
+	}
+
+	@Override
+	public int fnq_cnt(Map<String, Object> paramMap) {
+		return bd.fnq_cnt(paramMap);
+	}
+
 }

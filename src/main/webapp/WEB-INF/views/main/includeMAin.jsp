@@ -32,3 +32,4 @@
 <script src="js/main/admin.js"></script>
 <script src="js/main/jquery.js"></script>
 <script src="js/main/jquery-3.3.1.min.js"></script>
+<script src="util/naver_edit/js/HuskyEZCreator.js"></script>

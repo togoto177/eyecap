@@ -23,6 +23,27 @@ public class BoardFileServiceImpl implements BoardFileService{
 		bfd.file_insert(boardFile);
 		
 	}
+	
+	@Override
+	public List<BoardFile> file_list(Map<String, Object> paramMap) {
+		return bfd.file_list(paramMap);
+	}
+	
+	@Override
+	public void file_delete(BoardFile boardFile) {
+		bfd.file_delete(boardFile);
+		}
+
+	@Override
+	public void file_updateform_delete(BoardFile boardFile) {
+		bfd.file_updateform_delete(boardFile);
+		
+	}
+
+	@Override
+	public void file_hit(String file_seq) {
+		bfd.file_hit(file_seq);
+	}
 
 
 	

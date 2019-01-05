@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -14,11 +16,24 @@
                         <c:if test="${board_read.board_notice == 0}">
                         <input type="checkbox" id="board_notice" name="board_notice" value="1"> Notice
                         </c:if>
+                        
                         <input id="pop_master_write_tit" name="board_title" type="text" placeholder="Title" value="${board_read.board_title}" >
                         <!-- <input id="pop_master_write_serch" name="serch_tit" type="text"> -->
                         
                         <div id="fileDiv">
-                        
+                        <c:forEach var="file_list" items="${file_list}"  varStatus="status">
+						<c:if test="${file_list.file_use_yn eq 'Y'}">
+						<div id="flist_${status.count}">
+						 	<c:set var="TextValue" value="${file_list.file_sub_name}"/>
+							<input type="hidden" name="file_key" id="file_key" value="${file_list.file_seq}" />
+							<input type="hidden" id="update_id" name="update_id" value="${sessionScope.admin_id}" />
+							<input type="hidden"  name="flag" id="flag" value="C" />
+							<button type="button" id="delFile" idx="${status.count}">삭제</button>
+							 파일 이름 : ${file_list.file_ori_name} | 파일 크기 : ${file_list.file_size} KB
+							<br/>
+						</div>		
+						</c:if>
+						</c:forEach>
                         <div class="filebox preview-image" id="fileIndex">
                         <input class="upload-name" id="upload-name0" value="Filename">
                         <label for="input-file" class="fileSearch" id="fileSearch0" idx="0" >SEARCH</label>

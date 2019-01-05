@@ -20,4 +20,8 @@ public interface BoardDao {
 	public void board_update(Board board);
 	
 	public void board_delete(Board board);
+
+	public List<Board> fnq_list(Map<String, Object> paramMap);
+
+	public int fnq_cnt(Map<String, Object> paramMap);
 }

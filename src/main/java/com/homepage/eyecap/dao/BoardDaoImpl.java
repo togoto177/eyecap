@@ -44,4 +44,14 @@ public class BoardDaoImpl implements BoardDao{
 	public void board_delete(Board board) {
 		sst.update("boards.board_delete", board);
 	}
+
+	@Override
+	public List<Board> fnq_list(Map<String, Object> paramMap) {
+		return sst.selectList("boards.fnq_list", paramMap);
+	}
+
+	@Override
+	public int fnq_cnt(Map<String, Object> paramMap) {
+		return sst.selectOne("boards.fnq_cnt", paramMap);
+	}
 }

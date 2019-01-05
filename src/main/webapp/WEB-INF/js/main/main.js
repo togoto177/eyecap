@@ -148,7 +148,8 @@ jQuery(document).ready(function($){
     
     // Accordian
     $(function(){
-        $("#accordian h4").click(function(){
+    	$(document).on("click", "#accordian h4", function(e) {
+        /*$("#accordian h4").click(function(){*/
             $("#accordian ul ul").slideUp();
             $('.ico_ar').text('+');
             //$('.ico_ar').css('transform','none');
@@ -219,14 +220,15 @@ function popFnQWrite() {
 //			$("#pagination").append(pagination);
 			var popup = document.getElementById("pop_master");
 			popup.classList.add("show");
+			
 		} 
 	});	
 };
 
-function popFnQModify() {
+function popFnQModify(seq) {
 	$.ajax({ 
 		type: 'get' , 
-		url: '/fnqModifyForm.do',
+		url: '/fnqModifyForm.do?board_seq='+seq,
 		dataType : 'html' ,
 		success: function(data) {
 			alert();
@@ -239,3 +241,4 @@ function popFnQModify() {
 		} 
 	});	
 };
+

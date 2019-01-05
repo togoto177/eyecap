@@ -50,24 +50,60 @@
         	select * 
 				from board_tb 
 			where board_seq = #{board_seq}; 
-	</select>
+	</select>	
 	
+    <update id="board_update" parameterType="java.util.HashMap">
+    	update 
+    	board_tb
+    	    	
+    	set
+    	<if test="board_division.equals('archave')">
+    	board_notice = #{board_notice},
+		</if>
+    	board_title = #{board_title},
+    	board_content = #{board_content},
+    	board_update_id = #{board_update_id},
+    	board_update_date = now()
+
+		where board_seq = #{board_seq};
+    </update>
+    
+    <update id="board_delete" parameterType="java.util.HashMap">
+    	
+        update
+            board_tb
+		set
+        board_use_yn = 'N',
+        board_update_id = #{board_update_id},
+        board_update_date = now()    
+        where
+        board_seq = #{board_seq};
+            
+    </update>
+    
+    
+    <!-- 서브 리스트 쿼리  -->
+    
 	<select id="archave_list" resultType="Board" parameterType="java.util.HashMap">
 	
-	    select 
-        *
-        from board_tb
-        
-         where board_division = 'archave' and board_use_yn = 'Y'
+         
+         SELECT a.*, 
+         (SELECT COUNT(b.file_seq)FROM file_tb b WHERE b.file_use_yn = 'y' AND b.board_seq = a.board_seq) AS file_cnt, 
+         (SELECT SUM( b.file_hit )FROM file_tb b WHERE b.board_seq = a.board_seq AND b.file_use_yn =  'Y' ) AS file_hit, 
+         (SELECT GROUP_CONCAT( b.file_sub_name,  '*', a.board_division,  '*', b.file_seq SEPARATOR  '|' ) FROM file_tb b WHERE a.board_seq = b.board_seq
+         AND b.file_use_yn =  'Y') AS file_sub_name, 
+         (SELECT GROUP_CONCAT( b.file_ori_name SEPARATOR  '|' ) FROM file_tb b WHERE a.board_seq = b.board_seq AND b.file_use_yn =  'Y') AS file_ori_name
+         FROM board_tb a LEFT JOIN board_tb b ON a.board_seq = b.board_seq
+         WHERE a.board_division = 'archave' and a.board_use_yn = 'Y'
 		 <choose>
      	<when test="sch_type == 'board_title'">
-		  AND board_title like CONCAT('%', #{sch_value}, '%')
+		  AND a.board_title like CONCAT('%', #{sch_value}, '%')
 		  </when>
 		  <when test="sch_type == 'board_content'">
-		  AND board_content like CONCAT('%', #{sch_value}, '%')
+		  AND a.board_content like CONCAT('%', #{sch_value}, '%')
 		  </when>
 		  </choose>
-        order by board_notice = 1 desc ,board_seq desc
+        order by a.board_notice = 1 desc , a.board_seq desc
         
         limit #{start}, #{end};
 	
@@ -88,101 +124,17 @@
 	
 	</select>
 	
-    <update id="board_update" parameterType="java.util.HashMap">
-    	 <if test="board_division.equals('archave')">
-    	update 
-    	board_tb
-    	    	
-    	set
-    	board_notice = #{board_notice},
-    	board_title = #{board_title},
-    	board_content = #{board_content},
-    	board_update_id = #{board_update_id},
-    	board_update_date = now()
-
-		where board_seq = #{board_seq};
-		</if>
-    </update>
-    
-    <update id="board_delete" parameterType="java.util.HashMap">
-    	
-        update
-            board_tb
-		set
-        board_use_yn = 'N',
-        board_update_id = #{board_update_id},
-        board_update_date = now()    
-        where
-        board_seq = #{board_seq};
-            
-    </update>
-    
-    
-    <!-- 서브 쿼리  -->
-    
-    <!-- 포트폴리오 추가 쿼리 -->
-    <insert id="portfolio_insert" parameterType="java.util.HashMap">
-		insert into portfolio_tb
-			
-			(
-			board_seq,
-			business_period,
-			buyer,
-			link,
-			portfolio_etc,
-			pf_division
-			)
-			
-			values(
-
-			#{board_seq},
-			#{business_period},
-			#{buyer},
-			#{link},
-			#{portfolio_etc},
-			#{pf_division}
-
-        )      
-	</insert>
+	<select id="fnq_list" resultType="Board" parameterType="java.util.HashMap">
 	
-	<!-- 고객센터 추가 쿼리 -->
-	<insert id="customer_insert" parameterType="java.util.HashMap">
-		insert into customer_tb
-			
-			(
-			board_seq,
-			user_id,
-			user_email,
-			user_contact,
-			status
-			)
-			
-			values(
-
-			#{board_seq},
-			#{user_id},
-			#{user_email},
-			#{user_contact},
-			#{status}
-
-        )      
-	</insert>
-	
-	<select id="download_list" resultType="Board" parameterType="java.util.HashMap">
-	
-	    select 
-        a.*,
-        (select count(b.file_seq) from file_tb b where b.file_use_yn = 'y' and b.board_seq = a.board_seq) as file_cnt,
-        (select sum(b.file_hit) from file_tb b where b.board_seq = a.board_seq and b.file_use_yn = 'Y'  ) as file_hit,
-        (select group_concat(b.file_sub_name,'*',a.board_division,'*',b.file_seq separator '|') 
-        from file_tb b 
-        where a.board_seq = b.board_seq and b.file_use_yn='Y') as file_sub_name,  
-        (select group_concat(b.file_ori_name separator '|') 
-        from file_tb b 
-        where a.board_seq = b.board_seq and b.file_use_yn='Y') as file_ori_name
-        from board_tb a 
-        
-         where a.board_division = 'download' and a.board_use_yn = 'Y'
+         
+         SELECT a.*, 
+         (SELECT COUNT(b.file_seq)FROM file_tb b WHERE b.file_use_yn = 'y' AND b.board_seq = a.board_seq) AS file_cnt, 
+         (SELECT SUM( b.file_hit )FROM file_tb b WHERE b.board_seq = a.board_seq AND b.file_use_yn =  'Y' ) AS file_hit, 
+         (SELECT GROUP_CONCAT( b.file_sub_name,  '*', a.board_division,  '*', b.file_seq SEPARATOR  '|' ) FROM file_tb b WHERE a.board_seq = b.board_seq
+         AND b.file_use_yn =  'Y') AS file_sub_name, 
+         (SELECT GROUP_CONCAT( b.file_ori_name SEPARATOR  '|' ) FROM file_tb b WHERE a.board_seq = b.board_seq AND b.file_use_yn =  'Y') AS file_ori_name
+         FROM board_tb a LEFT JOIN board_tb b ON a.board_seq = b.board_seq
+         WHERE a.board_division = 'fnq' and a.board_use_yn = 'Y'
 		 <choose>
      	<when test="sch_type == 'board_title'">
 		  AND a.board_title like CONCAT('%', #{sch_value}, '%')
@@ -191,16 +143,16 @@
 		  AND a.board_content like CONCAT('%', #{sch_value}, '%')
 		  </when>
 		  </choose>
-        order by board_seq desc
+        order by a.board_notice = 1 desc , a.board_seq desc
         
         limit #{start}, #{end};
 	
 	</select>
 	
-	<select id="download_cnt" resultType="int" parameterType="Board">
+	<select id="fnq_cnt" resultType="int" parameterType="Board">
 	
 	    select count(board_seq) from board_tb 
-	    where board_division = 'download' and board_use_yn = 'y'
+	    where board_division = 'fnq' and board_use_yn = 'Y'
      	<choose>
 	     	  <when test="sch_type == 'board_title'">
 			  AND board_title like CONCAT('%', #{sch_value}, '%')
@@ -209,55 +161,6 @@
 			  AND board_content like CONCAT('%', #{sch_value}, '%')
 			  </when>
 	    </choose>
-	
-	</select>
-	
-	 <update id="download_hit" parameterType="int">
-        update board_tb set board_hit = board_hit + 1 where board_seq = #{board_seq}
-    </update>
-    
-    <select id="portfolio_list" resultType="Board" parameterType="java.util.HashMap">
-
-	      select 
-        a.*,
-        (select count(b.file_seq) from file_tb b where b.file_use_yn = 'y' and b.board_seq = a.board_seq) as file_cnt,
-        (select sum(b.file_hit) from file_tb b where b.board_seq = a.board_seq and b.file_use_yn = 'Y'  ) as file_hit,
-        (select group_concat(b.file_sub_name,'*',a.board_division,'*',b.file_seq separator '|') 
-        from file_tb b 
-        where a.board_seq = b.board_seq and b.file_use_yn='Y') as file_sub_name,  
-        (select group_concat(b.file_ori_name separator '|') 
-        from file_tb b 
-        where a.board_seq = b.board_seq and b.file_use_yn='Y') as file_ori_name,
-        c.business_period, c.buyer, c.link, c.pf_division, (select left(c.business_period ,4)) as pf_year,
-        (MOD(a.board_seq, 2) = 1) as seq_division,
-        d.file_path, d.file_sub_name
-        
-        from board_tb a left join portfolio_tb c on a.board_seq = c.board_seq left join file_tb d on a.board_seq = d.board_seq
-        
-         where a.board_division = 'portfolio' and a.board_use_yn = 'Y' and d.file_use_yn = 'Y' and (select left(c.business_period ,4)) = 
-        <if test="pf_year.equals('2018')">
-         2018
-    	</if>
-    	<if test="pf_year.equals('2009')">
-         2009
-    	</if>
-    	<if test="pf_year.equals('2008')">
-         2008
-    	</if>
-    	<if test="pf_year.equals('2007')">
-         2007
-    	</if>
-		
-		 <choose>
-     	<when test="sch_type == 'board_title'">
-		  AND a.board_title like CONCAT('%', #{sch_value}, '%')
-		  </when>
-		  <when test="sch_type == 'board_content'">
-		  AND a.board_content like CONCAT('%', #{sch_value}, '%')
-		  </when>
-		  </choose>
-        order by board_seq desc;
-        
 	
 	</select>
 	

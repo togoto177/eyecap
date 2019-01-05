@@ -1,3 +1,64 @@
+			<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+			<script type="text/javascript">
+			$(document).ready(function() {
+				
+				// 네이버 에디터  
+				var oEditors = [];
+				
+				nhn.husky.EZCreator.createInIFrame({
+					oAppRef: oEditors,
+					elPlaceHolder: "content",
+					sSkinURI: "util/naver_edit/SmartEditor2Skin.html",
+					fCreator: "createSEditor2",
+					htParams : { // 툴바 사용 여부 (true:사용/ false:사용하지 않음) 
+						bUseToolbar : true, // 입력창 크기 조절바 사용 여부 (true:사용/ false:사용하지 않음) 
+						bUseVerticalResizer : true, // 모드 탭(Editor | HTML | TEXT) 사용 여부 (true:사용/ false:사용하지 않음) 
+						bUseModeChanger : true, 
+					}
+				});	
+				
+				$(document).on("click", "#writeFnQSubmit", function(e) {
+					e.preventDefault();
+					oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []); 
+//					var params = $("#FnQ_form").serialize();
+//				var params = new FormData($('#archave_form')[0]);
+				var form = $('#FnQ_form')[0];
+			    var params = new FormData(form);
+					$.ajax({
+						type : "POST",
+						url : "/mainBoardAction.do",
+						enctype: "multipart/form-data",
+						processData: false,
+			            contentType: false,
+						data : params,
+						dataType : "json",
+						success : function(data) {
+							if(data.code == '1') {
+								alert("게시글이 등록되었습니다.");
+								$.ajax({ 
+		    						type: 'get' , 
+		    						url: '/fnqList.do',
+		    						dataType : 'text' ,
+		    						success: function(data) { 
+		    							/* $('#pagination').empty(); */
+		    							$('#fnqList').empty();
+		    							$('#fnqList').html(data);
+		    							/* $("#pagination").append(pagination); */
+		    						} 
+		    					});	
+							} else {
+								alert("code:" + data.code + "\n" + "msg:" + data.msg);
+							}    
+						},
+						error : function(request, status, error) {
+							alert("code:" + request.status + "\n" + "error:" + error);
+						}
+					})
+				});
+			
+				});	
+				</script>
 						<h4 class="pop_master_tit">
                                 Support-FAQ<br>Write new post
                             </h4>

@@ -102,7 +102,6 @@ public class BoardFile {
 	public void setFile_etc(String file_etc) {
 		this.file_etc = file_etc;
 	}
-	
 	@Override
 	public String toString() {
 		return "BoardFile [file_seq=" + file_seq + ", board_seq=" + board_seq + ", file_ori_name=" + file_ori_name

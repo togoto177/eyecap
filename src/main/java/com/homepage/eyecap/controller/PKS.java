@@ -1,7 +1,11 @@
 package com.homepage.eyecap.controller;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -212,10 +216,10 @@ public class PKS {
 			
 			bs.board_delete(board);
 
-			/*boardFile.setFile_update_id("delete success");
+			boardFile.setFile_update_id(session_id);
 			boardFile.setBoard_seq(board_seq[i]);
 			
-			bs.file_delete(boardFile);*/
+			bfs.file_delete(boardFile);
 			}
 			HashMap<String, Object> map = new HashMap<String, Object>();
 		    map.put("code","1");
@@ -240,6 +244,7 @@ public class PKS {
 	public String archaveModifyForm(@RequestParam Map<String, Object> paramMap, Model model, Board board, HttpServletRequest request) {
 		String path =  request.getServletPath();
 		model.addAttribute("servletPath", path);
+		model.addAttribute("file_list",bfs.file_list(paramMap));
 		model.addAttribute("board_read",bs.board_read(board));
 		
 		return "main/admin/archaveModify";
@@ -255,7 +260,7 @@ public class PKS {
 		return "main/admin/fnqWrite";
 	}
 	
-	//Fnq 작성창
+	//Fnq 수정창
 	@RequestMapping(value = "/fnqModifyForm.do")
 	public String fnqModifyForm(@RequestParam Map<String, Object> paramMap, Model model, Board board, HttpServletRequest request) {
 		String path =  request.getServletPath();
@@ -268,7 +273,7 @@ public class PKS {
 	//메인 글쓰기 수정 액션
 		@RequestMapping(value="/ModifyAction.do", method=RequestMethod.POST)
 		@ResponseBody
-		public Map<String, Object> ModifyAction(@ModelAttribute Board board, Fileup fileup, HttpServletRequest request, Model model, HttpSession session, @RequestParam Map<String, Object> map)throws Exception{
+		public Map<String, Object> ModifyAction(@ModelAttribute Board board, Fileup fileup, HttpServletRequest request, Model model, HttpSession session, @RequestParam Map<String, Object> map,String[] file_key, String[] flag, MultipartHttpServletRequest multi)throws Exception{
 					
 					Object ss_id = session.getAttribute("ad_id");
 		    		String session_id = ss_id.toString();
@@ -282,12 +287,123 @@ public class PKS {
 					System.out.println("====================>" + board);
 					bs.board_update(board);
 					
+			        BoardFile boardFile = new BoardFile();
+			        boardFile.setBoard_seq(board.getBoard_seq());
+			        boardFile.setFile_register_id(session_id);
+			        boardFile.setFile_update_id(session_id);
+			        boardFile.setFile_use_yn("Y");
+			        
+			        String board_division = board.getBoard_division();
+			        
+			        //파일
+			        Calendar cal = Calendar.getInstance()  ;
+			        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd-HHmmSS");
+			        String time = dateFormat.format(cal.getTime());
+			        
+			        List<MultipartFile> files = multi.getFiles("uploadfile");
+					
+					//List<String> fileNames = new ArrayList<String>();
+					if (null != files && files.size() > 0) {
+						
+						
+						for (MultipartFile multipartFile : files) {
+							if (!"".equals(multipartFile.getOriginalFilename()) && multipartFile.getSize() > 0) {
+							
+								System.out.println("file = " + multipartFile.getOriginalFilename() + "/" + multipartFile.getSize());
+								// 상대경로 
+								String file_path = request.getSession().getServletContext().getRealPath("/");
+								String file_ori_name = multipartFile.getOriginalFilename();
+								String file_sub_name = time + "-" + UUID.randomUUID().toString() +"_" +file_ori_name;
+								
+								System.out.println("file_ori_name ----->" + file_ori_name);
+								
+								String attach_path = "";
+								if(board_division.equals("archave")) {
+									attach_path = "resources/uploadFile/archave/";
+								}else if (board_division.equals("oooo")) {
+									attach_path = "resources/portfolio/portfolio_uploadfile/";
+								}
+								
+								File f = new File(file_path + attach_path + file_sub_name);
+								
+								System.out.println("===========자료실 파일업로드 실제 Path=========" + f);
+								
+								if(!f.exists())
+									f.mkdirs();
+								
+								//	이력서 model에 파일명,주소 저장
+								//         파일명에서 확장자 추출 
+								String filename = file_ori_name;
+								int fileLen = filename.length();
+								int lastDot = filename.lastIndexOf('.');
+								String fileExt = filename.substring(lastDot, fileLen).toLowerCase();
+								boardFile.setFile_ext_name(fileExt);
+								boardFile.setFile_ori_name(file_ori_name);
+								boardFile.setFile_sub_name(file_sub_name);
+								boardFile.setFile_path("/" + attach_path);
+								
+								long test = multipartFile.getSize();
+								String test2 = String.valueOf(test);
+
+						        System.out.println(" size = " + test2 + " bytes");
+						 
+								
+								boardFile.setFile_size(test2);
+
+								System.out.println("확장명 : " + fileExt);
+								
+								bfs.file_insert(boardFile);
+								
+								try {
+									multipartFile.transferTo(f);
+								} catch (IllegalStateException e) {
+									e.printStackTrace();
+								} catch (IOException e) {
+									e.printStackTrace();
+								}
+								
+								
+								
+								
+								try { 						
+									
+								} catch (Exception e) {
+									model.addAttribute("msg", "다시 입력하세요.");
+								}
+								
+							}
+						}
+						
+						
+					}
+					if(file_key != null) {
+			    		
+			    		for(int i=0; i<file_key.length ; i++) {
+			    			
+			    			System.out.println("===========fileKey==============>" + file_key[i]);
+			    			System.out.println("===========flag==============>" + flag[i]);
+			        		/*System.out.println("===========fName==============>" + fName[i]);*/
+
+			        		//flag가 D인건 삭제. 데이터도 삭제, 파일도 삭제.
+			    			if("D".equals(flag[i])) {
+			    				boardFile.setFile_seq(Integer.parseInt(file_key[i]));
+			    				boardFile.setFile_update_id(session_id);
+			    				
+			    				bfs.file_updateform_delete(boardFile);
+									
+			    			}
+			    		}
+			    		}else{
+					bs.board_update(board);
+					}
+					
 				    map.put("code","1");
 					
 					return map;
 			      
 			    }
-		
+
+		//아카이브 리스트
 		@RequestMapping(value = "/archaveList.do")
 		public String archaveList(@RequestParam Map<String, Object> paramMap, Model model, Board board, HttpServletRequest request) {
 			
@@ -331,5 +447,140 @@ public class PKS {
 			
 			
 			return "main/admin/archaveList";
+		}
+		
+		//공통 다운로드 액션
+		@RequestMapping("/boardFileDown")
+	    private void boardFileDown(String file_name, String file_seq, String board_division, HttpServletRequest request, HttpServletResponse response) throws Exception{
+	   	request.setCharacterEncoding("UTF-8");
+	   		
+	   		//자료실 다운 액션
+	   		try {
+				 /*상대경로 */
+	   		String file_path = request.getSession().getServletContext().getRealPath("/");
+	   		String attach_path = "";
+	   		
+	   		if(board_division.equals("archave")) {
+	   			attach_path = "resources/uploadFile/archave/";
+	   		}else if (board_division.equals("000")) {
+	   			attach_path = "resources/portfolio/portfolio_uploadfile/";
+			}
+
+	   		String savePath = file_path+attach_path;
+	   		String fileName = file_name;
+	   		//실제 내보낼 파일명
+	   		String oriFileName = file_name;
+	   		
+	   		String oriFileNames = oriFileName.substring(oriFileName.indexOf("_")+1);
+
+	   		
+	   		System.out.println(oriFileNames); 
+	   		
+	   		InputStream in = null;
+	   		OutputStream os = null;
+	   		File file = null;
+	   		boolean skip = false;
+	   		String client = "";
+	   		
+	   		
+	   		//파일을 읽어 스트림에 담기
+	   		try {
+					file = new File(savePath, fileName);
+					in = new FileInputStream(file);
+				} catch (FileNotFoundException fe) {
+					skip = true;
+				}
+	   		
+	   		client = request.getHeader("User-Agent");
+	   		
+	   		
+	   		//파일 다운로드 헤더 지정 
+	           response.reset();
+	           response.setContentType("application/octet-stream");
+	           response.setHeader("Content-Description", "JSP Generated Data");
+	           
+	           
+	           
+	           if (!skip) {
+	               // IE
+	               if (client.indexOf("MSIE") != -1) {
+	                   response.setHeader("Content-Disposition", "attachment; filename=\""
+	                           + java.net.URLEncoder.encode(oriFileNames, "UTF-8").replaceAll("\\+", "\\ ") + "\"");
+	                   
+	                   // IE 11 이상.
+	               } else if (client.indexOf("Trident") != -1) {
+	                   response.setHeader("Content-Disposition", "attachment; filename=\""
+	                           + java.net.URLEncoder.encode(oriFileNames, "UTF-8").replaceAll("\\+", "\\ ") + "\"");
+	               } else {
+	                   // 한글 파일명 처리
+	                   response.setHeader("Content-Disposition",
+	                           "attachment; filename=\"" + new String(oriFileNames.getBytes("UTF-8"), "ISO8859_1") + "\"");
+	                   response.setHeader("Content-Type", "application/octet-stream; charset=utf-8");
+	               }
+	               response.setHeader("Content-Length", "" + file.length());
+	               os = response.getOutputStream();
+	               byte b[] = new byte[(int) file.length()];
+	               int leng = 0;
+	               while ((leng = in.read(b)) > 0) {
+	                   os.write(b, 0, leng);
+	               
+	                   bfs.file_hit(file_seq);
+	               
+	               }
+	           } else {
+	               response.setContentType("text/html;charset=UTF-8");
+	               System.out.println("파일을 찾을 수 없습니다.");
+	           }
+	           in.close();
+	           os.close();
+	       } catch (Exception e) {
+	           System.out.println("ERROR : " + e.getMessage());
+	       }
+	   		
+	   	}
+		
+		@RequestMapping(value = "/fnqList.do")
+		public String fnqList(@RequestParam Map<String, Object> paramMap, Model model, Board board, HttpServletRequest request) {
+			
+			//조회 하려는 페이지
+	        int startPage = (!"".equals(paramMap.get("startPage")) && paramMap.get("startPage")!=null?Integer.parseInt(paramMap.get("startPage").toString()):1);
+
+	        //한페이지에 보여줄 리스트 수
+	        int visiblePages = (!"".equals(paramMap.get("visiblePages")) && paramMap.get("visiblePages")!=null?Integer.parseInt(paramMap.get("visiblePages").toString()):5);
+	        //일단 전체 건수를 가져온다.
+	        int totalCnt = bs.fnq_cnt(paramMap);
+	        
+	        //아래 1,2는 실제 개발에서는 class로 빼준다. (여기서는 이해를 위해 직접 적음)
+	        //1.하단 페이지 네비게이션에서 보여줄 리스트 수를 구한다.
+	        BigDecimal decimal1 = new BigDecimal(totalCnt);
+	        BigDecimal decimal2 = new BigDecimal(visiblePages);
+	        BigDecimal totalPage = decimal1.divide(decimal2, 0, BigDecimal.ROUND_UP);
+	        
+	        //int allCount = boardService.getallCount(paramMap);
+	 
+	        int startLimitPage = 0;
+	        //2.mysql limit 범위를 구하기 위해 계산
+	        if(startPage==1){
+	            startLimitPage = 0;
+	        }else{
+	            startLimitPage = (startPage-1)*visiblePages;
+	        }
+	        
+	        paramMap.put("start", startLimitPage);
+	        paramMap.put("end", visiblePages);
+	        
+	        model.addAttribute("startPage", startPage+"");//현재 페이지      
+	        model.addAttribute("totalCnt", totalCnt);//전체 게시물수
+	        model.addAttribute("totalPage", totalPage);//페이지 네비게이션에 보여줄 리스트 수
+	        model.addAttribute("sch_value", paramMap.get("sch_value"));
+	        model.addAttribute("sch_type", paramMap.get("sch_type"));
+	        
+			model.addAttribute("fnq_List", bs.fnq_list(paramMap));
+			
+			String path =  request.getServletPath();
+			model.addAttribute("servletPath", path);
+			
+			
+			return "main/admin/fnqList";
 		}
 }

@@ -25,6 +25,8 @@ jQuery(document).ready(function($){
 */
 
 $(document).ready(function(){ 
+	
+	
 	$(document).on("click", ".fileSearch", function(e) {
 		e.preventDefault();
 		var i = "";
@@ -55,18 +57,54 @@ $(document).ready(function(){
 	
 	$(document).on("click", "#aDelete", function(e) {
 		e.preventDefault();
+		
 		var i = "";
         i =$(this).attr('idx');
+     
+        var key = i.split('*');
+
+        
+        var id = key[0];
+        var division = key[1];
+        
+		var acStartPage = $('#archaveStartPageList').val();
+		var fnqStartPage = $('#fnqStartPageList').val(); 
 		if (confirm("정말 삭제하시겠습니까??") == true){    //확인
 			$.ajax({
 				type : "GET",
-				url : "/board_delete.do?board_seq="+i,
-				data : i,
+				url : "/board_delete.do?board_seq="+id,
+				data : id,
 				dataType : "json",
 				success : function(data) {
 					if(data.code == '1') {
 			            alert("게시글이 삭제되었습니다.");
-			            location.reload();
+/*			            location.reload();*/
+			            if (division == 'archave') {
+			            	$.ajax({ 
+	    						type: 'get' , 
+	    						url: '/archaveList.do?startPage='+ acStartPage +'&visiblePages=10',
+	    						dataType : 'text' ,
+	    						success: function(data) { 
+	    							/* $('#pagination').empty(); */
+	    							$('#archaveList').empty();
+	    							$('#archaveList').html(data);
+	    							/* $("#pagination").append(pagination); */
+	    						} 
+	    					});	
+						}else if (division == 'fnq') {
+			            	$.ajax({ 
+	    						type: 'get' , 
+	    						url: '/fnqList.do?startPage='+ fnqStartPage +'&visiblePages=5',
+	    						dataType : 'text' ,
+	    						success: function(data) { 
+	    							/* $('#pagination').empty(); */
+	    							$('#fnqList').empty();
+	    							$('#fnqList').html(data);
+	    							/* $("#pagination").append(pagination); */
+	    						} 
+	    					});	
+						}
+			            
 			        } else {
 			            alert("code:" + data.code + "\n" + "msg:" + data.msg);
 			        }    
@@ -79,31 +117,7 @@ $(document).ready(function(){
 		}
 		
 	});
-	$(document).on("click", "#writeFnQSubmit", function(e) {
-		e.preventDefault();
-		var params = $("#FnQ_form").serialize();
-//	var params = new FormData($('#archave_form')[0]);
-//	var form = $('#archave_form')[0];
-//    var params = new FormData(form);
-		
-		$.ajax({
-			type : "POST",
-			url : "/mainBoardAction.do",
-			data : params,
-			dataType : "json",
-			success : function(data) {
-				if(data.code == '1') {
-					alert("게시글이 등록되었습니다.");
-					location.reload();
-				} else {
-					alert("code:" + data.code + "\n" + "msg:" + data.msg);
-				}    
-			},
-			error : function(request, status, error) {
-				alert("code:" + request.status + "\n" + "error:" + error);
-			}
-		})
-	});
+
 	
 		$(document).on("click", "#writeAcSubmit", function(e) {
 		/*var params = $("#archave_form").serialize();*/
@@ -121,7 +135,17 @@ $(document).ready(function(){
 			success : function(data) {
 				if(data.code == '1') {
 		            alert("게시글이 등록되었습니다.");
-		            location.reload();
+/*		            location.reload();*/
+		        	$.ajax({ 
+		    			type: 'get' , 
+		    			url: '/archaveList.do',
+		    			dataType : 'html' ,
+		    			success: function(data) {
+		    				$('#archaveList').empty();
+		    				$('#archaveList').html(data);
+
+		    			} 
+		    		});
 		        } else {
 		            alert("code:" + data.code + "\n" + "msg:" + data.msg);
 		        }    
@@ -129,47 +153,42 @@ $(document).ready(function(){
 			error : function(request, status, error) {
 				alert("code:" + request.status + "\n" + "error:" + error);
 			}
-		})
+		});
+	
 	});
 	
-		$(document).on("click", "#modifyFnQSubmit", function(e) {
-			var params = $("#FnQ_form").serialize();
-//	var params = new FormData($('#archave_form')[0]);
-//	var form = $('#archave_form')[0];
-//    var params = new FormData(form);
-			$.ajax({
-				type : "POST",
-				url : "/ModifyAction.do",
-				data : params,
-				dataType : "json",
-				success : function(data) {
-					if(data.code == '1') {
-						alert("게시글이 수정되었습니다.");
-						location.reload();
-					} else {
-						alert("code:" + data.code + "\n" + "msg:" + data.msg);
-					} 
-				},
-				error : function(request, status, error) {
-					alert("code:" + request.status + "\n" + "error:" + error);
-				}
-			})
-		});
+		
 		
 		$(document).on("click", "#modifyAcSubmit", function(e) {
-			var params = $("#archave_form").serialize();
+//			var params = $("#archave_form").serialize();
 //			var params = new FormData($('#archave_form')[0]);
-//			var form = $('#archave_form')[0];
-//		    var params = new FormData(form);
+			var form = $('#archave_form')[0];
+		    var params = new FormData(form);
+		    var startPage = $('#archaveStartPageList').val(); 
+		    var visiblePages = 10;//리스트 보여줄 페이지
 			$.ajax({
 				type : "POST",
 				url : "/ModifyAction.do",
+				enctype: "multipart/form-data",
+				processData: false,
+	            contentType: false,
 				data : params,
 				dataType : "json",
 				success : function(data) {
 					if(data.code == '1') {
 						alert("게시글이 수정되었습니다.");
-			            location.reload();
+						$.ajax({ 
+    						type: 'get' , 
+    						url: '/archaveList.do?startPage='+ startPage +'&visiblePages='+visiblePages ,
+    						dataType : 'text' ,
+    						success: function(data) { 
+    							/* $('#pagination').empty(); */
+    							$('#archaveList').empty();
+    							$('#archaveList').html(data);
+    							/* $("#pagination").append(pagination); */
+    						} 
+    					});
+/*			            location.reload();*/
 			        } else {
 			            alert("code:" + data.code + "\n" + "msg:" + data.msg);
 			        } 
@@ -180,140 +199,33 @@ $(document).ready(function(){
 			})
 			});
 		
-	});
-
-
-
-
-
-
-
-$(document).ready(function() {
-	
-	var startPage = $('#startPageList').val(); //현재 페이지
-	var totalPage = $('#totalPage').val(); //전체 페이지
-	//--페이지 셋팅
-	var pagination = "";
-	//--페이지네이션에 항상 10개가 보이도록 조절
-	var forStart = 0;
-	var forEnd = 0;
-	if ((startPage - 5) < 1) {
-		forStart = 1;
-	} else {
-		forStart = startPage - 5;
-	}
-	if (forStart == 1) {
-		if (totalPage > 9) {
-			forEnd = 10;
-		} else {
-			forEnd = totalPage;
-		}
-	} else {
-		if ((startPage + 4) > totalPage) {
-			forEnd = totalPage;
-			if (forEnd > 9) {
-				forStart = forEnd - 9
+		//파일 다운로드
+		$(document).on("click", "#downFile", function(e) {
+			e.preventDefault();
+			var i = "";
+	        i =$(this).attr('idx');
+			var file_name = i.split('*');
+			if(file_name[1] == "archave"){
+				location.href="boardFileDown.do?file_name="+encodeURI(file_name[0])+"&board_division="+file_name[1]+"&file_seq="+file_name[2];
 			}
-		} else {
-			forEnd = startPage + 4;
-		}
-	}
-	//--페이지네이션에 항상 10개가 보이도록 조절
-
-	//전체 페이지 수를 받아 돌린다.
-	for (var i = forStart; i <= forEnd; i++) {
-		if (startPage == i) {
-			pagination  +=  '<a class="focus" name="page_move" id="page_num" start_page="'+i+'" disabled>'
-					'<span>'+ i + '</span></a>';
-		} else {
-			pagination += ' <a name="page_move" id="page_num" start_page="'+i+'" style="cursor:pointer;" >'
-			        '<span>'+ i + '</span></a>';
-		}
-	}
-	//하단 페이지 부분에 붙인다.
-	$("#pagination").append(pagination);
-
-	//--페이지 셋팅
-	$("#searchBtn").click(function() {
-		$.ajax({ 
-			type: 'get' , 
-			url: '/mainDownList?startPage='+ startPage +'&visiblePages='+visiblePages ,
-			dataType : 'text' ,
-			success: function(data) { 
-				$('#Context').remove();
-				$('#pagination').empty();
-				$('#a').html(data).trigger("create");
-				history.go(-1);
-				$("#pagination").append(pagination);
-				document.board_search.submit();
-			} 
+		});
+		
+		//수정폼에서 기존 업로드된 파일 삭제시 id 값 c --> d로 변환시킴
+		$(document).on("click", "#delFile", function(e) {
+			e.preventDefault();
+			var i = "";
+		    i =$(this).attr('idx');
+			var obj = $('#flist_' + i);
+			var obj2 = $('#addfile_' + i);
+			if ($('#board_division').val() == "portfolio"){
+				$('#newFile').attr('disabled', false);
+			}
+			$(obj).find('#flag').val("D");
+			$(obj).hide();
+			$(obj2).show();
+			
 		});
 	});
 
-	//하단 네비바 클릭 시 이동
-	$(document).on("click","a[name='page_move']",function() {
 
-				var id_check = $(this).attr("id"); //해당 seq값을 가져오기위해 새로 추가
-				var totalPage = $('#totalPage').val(); //다운로드 목록 전체 페이지 수
-				var visiblePages = 10;//리스트 보여줄 페이지
-				var sp = $('#servletPath').val();
-				
-				if(id_check == "page_num"){
-				$('#startPage').val($(this).attr("start_page"));//보고 싶은 페이지
-				var startPageList = $('#startPage').val();
-				$('#startPageList').val(startPageList);
-				var startPage = $('#startPageList').val(); 
-				$('#visiblePages').val(visiblePages);
-				if (sp == "/mainDownList.do" || sp == "/main.do") {
-					
-					$.ajax({ 
-						type: 'get' , 
-						url: '/mainDownList?startPage='+ startPage +'&visiblePages='+visiblePages ,
-						dataType : 'text' ,
-						success: function(data) { 
-							$('#Context').remove();
-							$('#pagination').empty();
-							$('#a').html(data).trigger("create");
-							history.go(-1);
-							$("#pagination").append(pagination);
-						} 
-					});
-				}else{
-					document.board_form.submit(); 
-				}
-			}
-				if(id_check == "page_first"){
-					$.ajax({ 
-						type: 'get' , 
-						url: '/archaveList.do?startPage=1&visiblePages=10',
-						dataType : 'text' , 
-						success: function(data) { 
-							$('#Context').remove();
-							$('#pagination').empty();
-							$('#a').html(data).trigger("create");
-							history.go(-1);
-							$("#pagination").append(pagination);
-						} 
-					});
-
-				}else if(id_check == "page_last"){
-					$.ajax({ 
-						type: 'get' , 
-						url: '/archaveList.do?startPage='+totalPage+'&visiblePages=10',
-						dataType : 'text' , 
-						success: function(data) {
-							$('#Context').remove();
-							$('#pagination').empty();
-							$('#a').html(data).trigger("create");
-							history.go(-1);
-							$("#pagination").append(pagination);
-						} 
-					});
-
-				}
-		});
-	
-
-	
-});
 
