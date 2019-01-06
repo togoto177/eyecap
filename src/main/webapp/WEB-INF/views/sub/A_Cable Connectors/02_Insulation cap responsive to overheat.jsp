@@ -52,8 +52,8 @@
             <!-- #section-2 END-->
             <!-- #section-3 START-->
             <section class="section" id="sub-section-3">
-                <div class="sub_wrapper">
-                    <ol class="product_des_tab5">
+                <div class="sub_wrapper5">
+                    <ol class="product_des_tab">
                         <li class="tab_active">
                             <a href="#sub_product_des">
                                 Product features
