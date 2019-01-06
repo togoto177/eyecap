@@ -59,6 +59,11 @@ public class EyecapSubController {
 		return "sub/A_Cable Connectors/07_FireZero_Panel_Mat";
 	}
 	
+	@RequestMapping(value = "/B_01.do")
+	public String B_01() {
+		return "sub/B_Firestop_Products/01_fire_system";
+	}
+	
 	@RequestMapping(value = "/references.do")
 	public String references() {
 		
