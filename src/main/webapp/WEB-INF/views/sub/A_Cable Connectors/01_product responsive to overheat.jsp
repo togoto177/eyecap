@@ -316,7 +316,7 @@
                             </p>
                         </div>
                     </div>
-                    <div id="sub_product_function">
+                    <div id="sub_product_function" style="background:#f7f7f7;">
                         <div class="sub_wrapper">
                             <h4 class="sub_des_tit">
                                Product functions and features     
