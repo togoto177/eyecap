@@ -43,6 +43,21 @@ public class EyecapSubController {
 		
 		return "sub/A_Cable Connectors/04_Washer responsive to overheat";
 	}
+	@RequestMapping(value = "/A_05.do")
+	public String A_05() {
+		
+		return "sub/A_Cable Connectors/05_Terminal_Insulation_Cover";
+	}
+	@RequestMapping(value = "/A_06.do")
+	public String A_06() {
+		
+		return "sub/A_Cable Connectors/06_FireZero_Conduit";
+	}
+	@RequestMapping(value = "/A_07.do")
+	public String A_07() {
+		
+		return "sub/A_Cable Connectors/07_FireZero_Panel_Mat";
+	}
 	
 	@RequestMapping(value = "/references.do")
 	public String references() {

@@ -1121,6 +1121,7 @@ ol.pop_master_btn02 li a.pop_master_btn_cancle { background:#222222; color:#fff;
     ul.product_top_gallery { height:auto; overflow:hidden;}
     ul.product_top_gallery li { width:49%;}
     ul.product_top_gallery li:nth-child(2n) { margin-left:2%;}
+    ul.product_top_gallery2 li:nth-child(2n) { margin-left:2%;}
     ul.product_top_gallery li img { width:100%;}
     
     ol.product_des_tab.fixed { min-width: 100%; max-width:100%;}
@@ -1195,7 +1196,10 @@ ol.pop_master_btn02 li a.pop_master_btn_cancle { background:#222222; color:#fff;
     
     p.sub_des { width:90%; margin:0 auto;}
     
-    p.sub_des_des02 { text-align:center; padding-left:0;}     
+    p.sub_des_des02 { text-align:center; padding-left:0;}  
+    ul.product_top_gallery2 li{width: 100%; text-align: center;}
+    ul.product_top_gallery2 li img{width: 98%;}
+    ul.product_top_gallery2 li:nth-child(2n) { margin-left:0px;} 
 }
 
 @media screen and (max-width: 754px) {
