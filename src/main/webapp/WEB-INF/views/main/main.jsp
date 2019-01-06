@@ -192,11 +192,24 @@
                 <div class="container">
                     <h2 class="text_center">PRODUCT</h2>
                     <div class="title_red_line"></div>
-                    
+                    <form name="login_form" id="login_form">
+                    <c:if test="${sessionScope.corp_id == null}">
                     <div class="product_login">
-                        <input type="text" name="" placeholder="ID: Price require"/>
-                        <a href="#">Login</a>
+                    	<input type="hidden" id="loginDivision" name="loginDivision" value=corpUserLogin />
+                        <input type="text" id="user_id" name="corp_id" placeholder="ID: Price require"/>
+                        <a id="login_btn">Login</a>
                     </div>
+                    </c:if>
+                    <c:if test="${sessionScope.corp_id != null}">
+                    <div class="product_login">
+                    	유저 로그인 성공!!<br>
+                    	${sessionScope.corp_id}, 님 환영합니다.<br>
+                    	${sessionScope.corp_name}, 업체 환영합니다.<br>
+                    	${sessionScope.corp_country}, 나라 환영합니다.<br>
+                    	${sessionScope.corp_division}, 등급이십니다.
+                    </div>
+                    </c:if>
+                    </form>
                     
                     <div class="product_info_top">
                         <div class="reveal reveal-right product_info_left_img" style="position: absolute">

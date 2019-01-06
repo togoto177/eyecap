@@ -16,5 +16,10 @@ public class AdminDaoImpl implements AdminDao{
 	public Admin selectUserInfo(Map<String, Object> map) {
 		return sst.selectOne("admins.selectUserInfo", map);
 	}
+	
+	@Override
+	public Admin selectCorpUserInfo(Map<String, Object> map) {
+		return sst.selectOne("admins.selectCorpUserInfo", map);
+	}
 
 }

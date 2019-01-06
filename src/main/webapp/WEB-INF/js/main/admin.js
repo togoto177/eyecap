@@ -206,7 +206,7 @@ $(document).ready(function(){
 	        i =$(this).attr('idx');
 			var file_name = i.split('*');
 			if(file_name[1] == "archave"){
-				location.href="boardFileDown.do?file_name="+encodeURI(file_name[0])+"&board_division="+file_name[1]+"&file_seq="+file_name[2];
+				location.href="boardFileDown.do?file_name="+file_name[0]+"&board_division="+file_name[1]+"&file_seq="+file_name[2];
 			}
 		});
 		
@@ -225,7 +225,71 @@ $(document).ready(function(){
 			$(obj2).show();
 			
 		});
+		$(document).on("click", "#login_btn", function(e) {
+			
+			var params = $("#login_form").serialize()
+			if ($("#loginDivision").val() == 'adminLogin') {
+				if ($("#admin_id").val().length < 1) {
+					alert("아이디를 입력하세요.");
+					this.focus();
+					return false;
+				} else if ($("#admin_pwd").val().length < 1) {
+					alert("비밀번호를 입력해주세요");
+					this.focus();
+					return false;
+				}
+					$.ajax({
+					type : "POST",
+					url : "/loginTry.do",
+					data : params,
+					dataType : "json",
+					success : function(data) {
+						fail=data.fail;
+						sucess=data.sucess;
+						if (fail == "fail") {
+							alert('로그인에 실패하였습니다.');
+						} else if(sucess == "sucess"){
+							alert('로그인에 성공하였습니다.');
+							opener.document.location.reload();
+							self.close();
+						}
+					},
+					error : function(request, status, error) {
+						alert("code:" + request.status + "\n" + "error:" + error);
+					}
+				})
+			}else if($("#loginDivision").val() == 'corpUserLogin'){
+				if ($("#user_id").val().length < 1) {
+					alert("아이디를 입력하세요.");
+					this.focus();
+					return false;
+				}
+				$.ajax({
+					type : "POST",
+					url : "/loginTry.do",
+					data : params,
+					dataType : "json",
+					success : function(data) {
+						fail=data.fail;
+						sucess=data.sucess;
+						if (fail == "fail") {
+							alert('로그인에 실패하였습니다.');
+						} else if(sucess == "sucess"){
+							alert(data.corp_id+'로그인에 성공하였습니다.');
+							window.location.reload();
+							self.close();
+						}
+					},
+					error : function(request, status, error) {
+						alert("code:" + request.status + "\n" + "error:" + error);
+					}
+				})
+			}
+			
+				
+				
+				
+		});
 	});
-
 
 

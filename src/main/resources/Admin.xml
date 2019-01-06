@@ -22,4 +22,8 @@
 		and ad_pw = password(#{ad_pw})
 	</select>
 	
+	<select id="selectCorpUserInfo" parameterType="HashMap" resultType="admin">
+		select * from corp_tb where corp_id = #{corp_id} 
+	</select>
+	
 </mapper>

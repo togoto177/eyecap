@@ -7,4 +7,6 @@ import com.homepage.eyecap.model.Admin;
 
 public interface AdminDao {
 	Admin selectUserInfo(Map<String, Object> map);
+
+	Admin selectCorpUserInfo(Map<String, Object> map);
 }

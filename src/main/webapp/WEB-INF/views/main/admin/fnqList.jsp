@@ -6,6 +6,15 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<style type="text/css">
+     .fnqArea {
+           white-space: pre-wrap; /* CSS3*/
+           white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+           white-space: -pre-wrap; /* Opera 4-6 */
+           white-space: -o-pre-wrap; /* Opera 7 */
+           word-wrap: break-all; /* Internet Explorer 5.5+ */
+     }
+</style>
 					<h2 class="text_center">SUPPORT</h2>
 					<input type="hidden" id="fnqTotalCnt" name="totalCnt" value="${totalCnt}">
 					<input type="hidden" id="fnqTotalPage" name="totalPage" value="${totalPage}">
@@ -30,7 +39,8 @@
                                     <span class="ico_ar">+</span></h4>
                                 <ul style="display : none;"><!-- display none 제거해야함  -->
                                     <li>
-                                        <p>${fnq_List.board_content}</p>
+                                        <p><pre class="fnqArea">${fnq_List.board_content}</pre></p>
+                                        
                                     </li>
                                 <!-- add -->
                                 	<c:if test="${sessionScope.ad_id != null}">
@@ -150,7 +160,7 @@
                 				if(id_check == "page_first"){
                 					$.ajax({ 
                 						type: 'get' , 
-                						url: '/fnqList.do?startPage=1&visiblePages=10',
+                						url: '/fnqList.do?startPage=1&visiblePages=5',
                 						dataType : 'text' , 
                 						success: function(data) { 
                 							$('#fnqList').empty();
@@ -161,7 +171,7 @@
                 				}else if(id_check == "page_last"){
                 					$.ajax({ 
                 						type: 'get' , 
-                						url: '/fnqList.do?startPage='+totalPage+'&visiblePages=10',
+                						url: '/fnqList.do?startPage='+totalPage+'&visiblePages=5',
                 						dataType : 'text' , 
                 						success: function(data) {
                 							$('#fnqList').empty();

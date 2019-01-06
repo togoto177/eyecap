@@ -1,0 +1,411 @@
+@charset "UTF-8";
+.portfolioBody{
+	position: relative;
+	padding-top: 52;
+	padding-left: 200;
+	color: white;
+}
+.portTable{
+	width: 600;
+	margin: 0 auto;
+	position: relative;
+	padding-left: -200;
+}
+.portTable table{
+	font-size: 13;
+	width: 100%;
+	border-collapse: collapse;
+}
+.portTable table td{
+	text-align: center;
+}
+.portTable td{
+	color: white;
+	padding: 8 0;
+}
+.portTable table .portTd:hover{
+	background: rgba(0,0,0,0.5);
+}
+
+.portTable table .portTd:hover td{
+	color: #9999ff;
+}
+.portTable table .portTd a{
+	text-decoration: none;
+	color: white;
+	text-align: left;
+}
+.portTable table .portTd .title{
+	text-align: left;
+	padding-left: 10;
+}
+.portTable table .portTd img{
+	width: 15;
+}
+.portTable table .portTd:hover a{
+	color: #9999ff;
+}
+.portTitle img{
+	width: 18;
+}
+.portTitle{
+	padding: 20;
+}
+.portTitle a{
+	font-size: 20;
+	color: #9999ff;
+	font-weight: 600;
+	letter-spacing: 3.5;
+	font-family: HPSimplified_Rg;
+}
+.portSerch{
+	width: 600;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 5;
+	margin-top:10%;
+}
+.portSerch input{
+	float: right;
+	position: relative;
+	right: 25;
+	border: none;
+	background: none;
+	border-bottom: 1px solid white;
+	width: 110;
+}
+.portSerch img{
+	width: 10;
+	float: right;
+	position: relative;
+	top: 5;
+	right: -99;
+}
+.portTh td{
+	border-bottom: 1px solid #625fe0;
+}
+.portCount{
+	width: 600;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+.portCount img{
+	width: 10;
+	height: 10;
+}
+.portCount .portCount1 img{
+	transform: rotate(180deg);
+}
+.portCount .focus{
+	color: #9999ff;
+}
+.portCount ul{
+	list-style: none;
+	font-size: 13;
+	overflow: hidden;
+	left: 50%;
+	transform: translateX(-21%);
+	position: relative;
+	margin-top: 27;
+}
+.portCount li{
+	float: left;
+	padding: 0 5;
+}
+.portCount li img{
+	padding: 0 5;
+}
+.btnList{
+	position: relative;
+	overflow: hidden;
+	top: -38;
+	width: 85px;
+	float: right;
+}
+/* 등록 */
+.portBox{
+	width: 960;
+	height: 500;
+	margin: 0 auto;
+	background: white;
+	position: relative;
+	top: 90;
+}
+.portTitleView{
+	width: 960;
+	margin: 0 auto;
+	font-size: 20;
+	position: relative;
+	top: 80;
+}
+.portBox table label{
+	position: relative;
+	top: 7;
+	left: 5;
+	float: left;
+	/* width: 250px; */
+	height: 87%;
+}
+.portBox table {
+	width: 100%;
+	padding:15;
+	border-spacing: 7;
+}
+.portBox table td{
+	height: 35;
+	border: 1px solid #666666;
+	font-size: 13;
+}
+.portBox table input{
+	width: 69%;
+	float: right;
+	height: 100%;
+	border: none;
+	position: relative;
+	padding-left: 5;
+}
+.portBox table .titleText{
+	width: 100%;
+}
+.imgTd a{
+	float: left;
+	margin-right: 50;
+}
+.portBox table .imgTd{
+	vertical-align: top;
+	padding: 5 7;
+}
+.portBox table .imgTd input{
+	float: left;
+	width: 70%;
+	height: 30;
+}
+.portBox table select{
+	width: 100%;
+	height: 100%;
+	border: none;
+	text-align: center;
+}
+.portBox table .textarea textarea{
+	resize: none;
+	width: 100%;
+	height: 280;
+	border: none;
+	padding: 5 7;
+}
+.btnbox{
+	width: 960;
+	margin: 0 auto;
+	position: relative;
+	top: 100;
+}
+.btnbox .btnDiv2{
+	margin-right: 7;
+}
+.btnbox .btnDiv3{
+	margin-right: 7;
+}
+/* 이미지 파일 스타일 */
+.portBox table .imgTd .upload_text {/*읽기전용 인풋텍스트*/
+	float:left;
+	width:265px;/* 버튼 포함 전체 가로 길이*/
+	height: 25;
+	line-height:19px;
+	padding:0 3px;
+	border:1px solid #bbb;
+}
+
+div.upload-btn_wrap input.input_file {/*파일찾기 폼 투명하게*/
+	position:absolute;
+	top:0;
+	right:0;
+	cursor:pointer;
+	opacity:0;
+	width: 54;
+	filter:alpha(opacity=0);
+	-ms-filter:"alpha(opacity=0)";
+	-moz-opacity:0;
+}
+div.upload-btn_wrap {/*버튼테두리 감싼 div*/
+	overflow:hidden;
+	position:relative;
+	float:left;
+	width:50px;/*width, height 값은 button(찾아보기)값과 같아야함 */
+	height:27px;
+	padding-left:3px;
+}
+div.upload-btn_wrap button {/*버튼 div*/
+	width:50px;
+	height:27px;
+	font-weight:bold;
+	background:#333;
+	border:1px solid #333;
+	color:#fff;
+	position: relative;
+	top:-1;
+}
+
+/* 다운로드 */
+.portBox table .oneTitle input{
+	width: 100%;
+}
+.down div.upload-btn_wrap{
+	float: right;
+	margin: 3;
+}
+.downFile{
+	height: 100;
+	overflow: hidden;
+}
+.downFile .downFileBox{
+	overflow: hidden;
+	float: left;
+	width: 700;
+}
+.portBox table .down input{
+	height: 25;
+	margin: 3;
+	width: 620;
+	z-index: 1;
+}
+.portBox table .down label{
+	width: 200;
+}
+/* 문의글 확인 */
+.portBox .contactTable .oneTitle{
+	text-align: center;
+}
+.portBox .contactTable label{
+	width: 100;
+	top: 5;
+}
+.portBox .contactTable .oneTitle a{
+	position: relative;
+	top: 0;
+}
+.portBox .contactTable .tdText a{
+	position: relative;
+	top: 3;
+	left: 5;
+}
+.portBox .contactTable .tdText{
+	height: 290;
+	vertical-align: top;
+}
+.portBox .contactTable a{
+	position: relative;
+	top: 4;
+}
+.portBox .contactTable select{
+	width: 100;
+	float: right;
+	border: 1px solid #666666;
+	height: 28;
+	padding: 2;
+}
+.portBox .contactTable img{
+	width: 20;
+	top: 3;
+	margin-left: 10;
+	position: relative;
+}
+.portBox .contactTable .Email{
+	position: relative;
+	top: -3;
+}
+.portBox .contactTable .btn1{
+	top: 6;
+	padding: 8 19;
+	letter-spacing: 0;
+}
+.portBox .contactTable .noBorder td{
+	border: 0;
+}
+.portBox .contactTable .btnDiv1{
+	width: 82;
+	margin-left: 5;
+}
+
+/* 내정보수정 */
+.infoCon{
+	width: 365;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	top: 150px;
+}
+.infoCon .infoCon1{
+	width: 98%;
+	margin-bottom: 5;
+	overflow: hidden;
+	border: 1px solid white;
+}
+.infoCon .infoCon1 .label{
+	width: 30%;
+	float: left;
+	padding: 5 12;
+}
+.infoCon .infoCon1 .input{
+	width: 60%;
+	float: left;
+	height: 25;
+}
+.infoCon .infoCon1 .input input{
+	width: 98%;
+	height: 100%;
+	background: none;
+	padding: 5;
+	border: 0;
+	margin: 3;
+	color: white;
+}
+.pubText{
+	width: 353;
+	text-align: right;
+	margin: 0 auto;
+	top: 150px;
+	position: relative;
+}
+.pubText a{
+	color: #9999ff;
+	font-size: 12;
+}
+.butEdit{
+	width: 367;
+	margin: 0 auto;
+	text-align: center;
+	font-family: HPSimplified_Rg;
+	letter-spacing: 2;
+	font-size: 15;
+	color: white;
+	position: relative;
+	top: 180;
+}
+.butEdit a{
+	background: #9900ff;
+	padding: 9px 164px;
+	position: relative;
+	left: -2;
+}
+
+/* admin */
+.adminList .portTd .title{
+	padding: 0;
+	text-align: center;
+}
+.adminList .textLeft{
+	text-align: left;
+	padding-left: 10;
+}
+.portSerch .infoText{
+	width: 100%;
+	text-align: right;
+	font-size: 12;
+}
+.portSerch .infoText .color{
+	text-decoration: none;
+	color: purple;
+	letter-spacing: 2;
+}

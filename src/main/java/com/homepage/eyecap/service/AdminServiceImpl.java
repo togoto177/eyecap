@@ -17,4 +17,8 @@ public class AdminServiceImpl implements AdminService {
 	public Admin selectUserInfo(Map<String, Object> map) {
 		return ad.selectUserInfo(map);
 	}
+	@Override
+	public Admin selectCorpUserInfo(Map<String, Object> map) {
+		return ad.selectCorpUserInfo(map);
+	}
 }

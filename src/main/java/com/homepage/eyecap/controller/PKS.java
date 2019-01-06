@@ -51,15 +51,6 @@ public class PKS {
 	@Autowired
 	BoardFileService bfs;
 	
-	//메인테스트작업중 다시 지울거임
-	@RequestMapping(value = "/main_PKS_TEST.do")
-	public String main_PKS_TEST(@RequestParam Map<String, Object> paramMap, Model model, HttpSession session) {
-		
-		model.addAttribute("result", paramMap.get("result"));
-		
-		return "main/main_PKS_TEST";
-	}
-	
 	//로그인폼
 	@RequestMapping(value = "/popupLogin.do")
 	public ModelAndView popupLogin(HttpServletRequest request, SessionStatus status, HttpServletResponse response,
@@ -82,19 +73,40 @@ public class PKS {
 	public Map<String, Object> loginTry(HttpServletRequest request, @RequestParam Map<String, Object> map) throws Exception {
 		/*로그인*/
 		
-		Admin admin = as.selectUserInfo(map);
+		Object divison = map.get("loginDivision");
+		if (divison.equals("adminLogin")) {
+			System.out.println(divison);
+			Admin admin = as.selectUserInfo(map);
 
-		if (admin == null) {
-			map.put("fail", "fail");
-		}else{
-			request.getSession().setAttribute("ad_id", map.get("ad_id"));
-			request.getSession().setAttribute("ad_seq", admin.getAd_seq());
-			request.getSession().setAttribute("ad_name", admin.getAd_name());
-			request.getSession().setAttribute("ad_contact", admin.getAd_contact());
-			request.getSession().setAttribute("ad_email", admin.getAd_email());
-			request.getSession().setMaxInactiveInterval(60*30);
-			map.put("sucess", "sucess");
+				if (admin == null) {
+					map.put("fail", "fail");
+				}else{
+					request.getSession().setAttribute("ad_id", map.get("ad_id"));
+					request.getSession().setAttribute("ad_seq", admin.getAd_seq());
+					request.getSession().setAttribute("ad_name", admin.getAd_name());
+					request.getSession().setAttribute("ad_contact", admin.getAd_contact());
+					request.getSession().setAttribute("ad_email", admin.getAd_email());
+					request.getSession().setMaxInactiveInterval(60*30);
+					map.put("sucess", "sucess");
+				}
+		
+		}else if (divison.equals("corpUserLogin")) {
+			System.out.println(divison);
+			Admin admin = as.selectCorpUserInfo(map);
+
+				if (admin == null) {
+					map.put("fail", "fail");
+				}else{
+					request.getSession().setAttribute("corp_id", map.get("corp_id"));
+					request.getSession().setAttribute("corp_name", admin.getCorp_name());
+					request.getSession().setAttribute("corp_division", admin.getCorp_division());
+					request.getSession().setAttribute("corp_country", admin.getCorp_country());
+					request.getSession().setMaxInactiveInterval(60*30);
+					map.put("sucess", "sucess");
+				}
+		
 		}
+		
 		return map;
 	}
 	

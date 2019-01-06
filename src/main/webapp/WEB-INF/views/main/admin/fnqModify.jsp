@@ -24,13 +24,14 @@
 				});	
 				
 				$(document).on("click", "#modifyFnQSubmit", function(e) {
+					e.preventDefault();
+				    oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
 //					var params = $("#FnQ_form").serialize();
 //			var params = new FormData($('#archave_form')[0]);
 			var form = $('#FnQ_form')[0];
 		    var params = new FormData(form);
 		    var startPage = $('#fnqStartPageList').val(); 
 		    var visiblePages = 5;//리스트 보여줄 페이지
-		    oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []); 
 					$.ajax({
 						type : "POST",
 						url : "/ModifyAction.do",
