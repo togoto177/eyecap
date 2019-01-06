@@ -38,6 +38,11 @@ public class EyecapSubController {
 		
 		return "sub/A_Cable Connectors/03_Tubular Terminal lug responsive to overheat";
 	}
+	@RequestMapping(value = "/A_04.do")
+	public String A_04() {
+		
+		return "sub/A_Cable Connectors/04_Washer responsive to overheat";
+	}
 	
 	@RequestMapping(value = "/references.do")
 	public String references() {
