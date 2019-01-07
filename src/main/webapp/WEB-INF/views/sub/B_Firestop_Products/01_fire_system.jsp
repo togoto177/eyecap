@@ -5,7 +5,14 @@
 <html lang="ko">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<script type="text/javascript">
+jQuery(document).ready(function($){
+	for(var j = 1; j < 10; j++){
+		$("#B_li_0"+j).attr("class", "border_bd");
+	}
+	$("#B_li_01").attr("class","active border_bd");
+});
+</script>
 <title>Fire Products</title>
 </head>
 <body>
@@ -41,6 +48,13 @@
             </section>
             <!-- #section-1 END-->
             <!-- #section-2 START-->
+            <section class="section" id="sub-section-2">
+              <div class="sub_wrapper">
+                  <h3 class="sub_content_title">
+                    FIRESTOP SYSTEM
+                  </h3>
+               </div>
+            </section>
             <section class="section" id="sub-section-3">
                 <div class="sub_wrapper">
                     <ol class="product_des_tab">
@@ -90,7 +104,7 @@
                             </ul>
                     	</div>
                 	</div>
-					<div id="sub_product_des">
+					<div id="sub_product_function">
 						<div class="sub_wrapper">
 							<h4 class="sub_des_tit">
                                 FIREZEROCAP APPLICATION
@@ -374,7 +388,7 @@
 					    </div>
 					</div>
 					
-					<div id="sub_product_des">
+					<div id="sub_product_test">
                     	<div class="sub_wrapper">
                     		<h4 class="sub_des_tit">
                                 FIRESTOP Product comparison

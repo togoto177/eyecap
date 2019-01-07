@@ -5,13 +5,14 @@
 <html lang="ko">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script>
-	jQuery(document).ready(function($){
-		/* for(var j = 1; j < 10; j++){
-			$("#A_li_0"+j).attr("class", "border_bd");
-		}
-		$("#A_li_01").attr("class","active border_bd"); */
-	});
+<script type="text/javascript">
+jQuery(document).ready(function($){
+	for(var j = 1; j < 10; j++){
+		$("#B_li_0"+j).attr("class", "border_bd");
+	}
+	$("#B_li_02").attr("class","active border_bd");
+});
+</script>
 </script>
 <title>Fire Products</title>
 </head>
