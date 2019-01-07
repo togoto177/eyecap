@@ -229,7 +229,7 @@ $(document).ready(function(){
 	        i =$(this).attr('idx');
 			var file_name = i.split('*');
 			if(file_name[1] == "archave"){
-				location.href="boardFileDown.do?file_name="+file_name[0]+"&board_division="+file_name[1]+"&file_seq="+file_name[2];
+				location.href="boardFileDown.do?file_name="+encodeURI(file_name[0])+"&board_division="+file_name[1]+"&file_seq="+file_name[2];
 			}
 		});
 		

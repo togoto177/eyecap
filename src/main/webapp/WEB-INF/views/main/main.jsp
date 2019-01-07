@@ -9,6 +9,7 @@
 <%@ include file="includeMAin.jsp"%>
 <html lang="ko">
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>EyeCapInternational</title>
 	<link rel="canonical" href="http://eyecap.kr/">
 	<meta name="description" content="EyeCapInternational">
@@ -62,7 +63,7 @@
                     <a href="#" class="lnk-moving" data-url="section-3">REFERENCES</a>
                     <a href="#" class="lnk-moving" data-url="section-4">SUPPORT</a>
                     <a href="#" class="lnk-moving" data-url="section-5">ARCHAVE</a>
-                    <a href="http://eyecapkorea.com/index.php" class="lnk-moving radius_menu" target="blank">EYECAPKOREA</a>
+                    <a href="http://eyecapkorea.com/index.php" class="lnk-moving1 radius_menu" target="blank">EYECAPKOREA</a>
                 </nav>
             </div>
         </header>
