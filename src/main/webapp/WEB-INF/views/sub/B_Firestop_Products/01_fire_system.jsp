@@ -58,7 +58,7 @@ jQuery(document).ready(function($){
             <section class="section" id="sub-section-3">
                 <div class="sub_wrapper">
                     <ol class="product_des_tab">
-                        <li class="active">
+                        <li class="tab_active">
                             <a href="#sub_product_des">
                                 What's Fire Preventive Block?
                             </a>

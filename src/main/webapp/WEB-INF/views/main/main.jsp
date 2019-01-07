@@ -88,7 +88,7 @@
                         </h2>
                   </div>
                   <div class="swiper-slide intro">
-                      <img src="resources/main/main_slide_02.jpg" alt="main-slider02" />
+                      <img style="height: 100%; width: 100%;" src="resources/main/main_slide_02.jpg" alt="main-slider02" />
                       <h2 class="reveal reveal-top">
                             <p>
                                 Since its establishment, EYECAP have made our position secured<br/>
@@ -255,7 +255,7 @@
                                 to prevent fire and harmful gas from being spread from the other side of floors or walls.<br/>
                                 It also provides as system, not components, resulting in less manpower, time and money.
                             </p>
-                            <a href="#">More Products &gt;</a>
+                            <a href="B_01.do">More Products &gt;</a>
                             <div class="triangle_right"></div>
                         </div>
                         <div class="reveal reveal-left product_info_right_img">
@@ -275,7 +275,7 @@
                     <div class="explanation">
                         <div class="reveal reveal-bottom">
                             <h5>Please check the references and customer list.</h5>
-                            <a class="click_btn" href="#">
+                            <a class="click_btn" href="/references.do">
                                 Click <span class="click_right_arrow"></span>
                             </a>
                         </div>

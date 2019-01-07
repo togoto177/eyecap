@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
               <div class="sub_top_visual2">
                   <div class="sub_wrapper">
                       <h2 class="sub_title">
-                        Cable Connectors
+                        Fire Products
                       </h2>
                       <div class="location">
                         <a href="/" class="home">Home</a>
