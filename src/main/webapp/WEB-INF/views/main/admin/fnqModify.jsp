@@ -8,7 +8,7 @@
 <script type="text/javascript">
 			$(document).ready(function() {
 				
-				// 네이버 에디터  
+				/* // 네이버 에디터  
 				var oEditors = [];
 				
 				nhn.husky.EZCreator.createInIFrame({
@@ -21,11 +21,16 @@
 						bUseVerticalResizer : true, // 모드 탭(Editor | HTML | TEXT) 사용 여부 (true:사용/ false:사용하지 않음) 
 						bUseModeChanger : true, 
 					}
-				});	
+				});	 */
 				
 				$(document).on("click", "#modifyFnQSubmit", function(e) {
 					e.preventDefault();
-				    oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
+					var str = $('#content').val();
+
+					str = str.split('<br>').join("\r\n");
+
+					$('#content').val(str);
+				    /* oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []); */
 //					var params = $("#FnQ_form").serialize();
 //			var params = new FormData($('#archave_form')[0]);
 			var form = $('#FnQ_form')[0];
@@ -73,7 +78,7 @@
 		    							/* $("#pagination").append(pagination); */
 		    						} 
 		    					});
-								window.location.reload();
+								/* window.location.reload(); */
 							} else {
 								alert("code:" + data.code + "\n" + "msg:" + data.msg);
 							} 

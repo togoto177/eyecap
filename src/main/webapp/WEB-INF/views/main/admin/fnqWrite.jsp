@@ -3,7 +3,7 @@
 			<script type="text/javascript">
 			$(document).ready(function() {
 				
-				// 네이버 에디터  
+				/* // 네이버 에디터  
 				var oEditors = [];
 				
 				nhn.husky.EZCreator.createInIFrame({
@@ -16,11 +16,16 @@
 						bUseVerticalResizer : true, // 모드 탭(Editor | HTML | TEXT) 사용 여부 (true:사용/ false:사용하지 않음) 
 						bUseModeChanger : true, 
 					}
-				});	
+				});	 */
 				
 				$(document).on("click", "#writeFnQSubmit", function(e) {
 					e.preventDefault();
-					oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []); 
+/* 					var str = $('#content').val();
+
+					str = str.replace(/(?:\r\n|\r|\n)/g, '<br>');
+
+					$('#content').val(str); */
+					/* oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);  */
 //					var params = $("#FnQ_form").serialize();
 //				var params = new FormData($('#archave_form')[0]);
 				var form = $('#FnQ_form')[0];
@@ -40,7 +45,7 @@
 					var ir1 = $("#content").val();
 					if(ir1 == '<br>' || ir1 == ""  || ir1 == null || ir1 == '&nbsp;' || ir1 == '<p>&nbsp;</p>')  {
 			             alert("내용을 입력하세요.");
-			             oEditors.getById["content"].exec("FOCUS"); //포커싱
+			             /* oEditors.getById["content"].exec("FOCUS"); //포커싱 */
 			             return false;
 			        }
 					$.ajax({
@@ -65,7 +70,7 @@
 		    							/* $("#pagination").append(pagination); */
 		    						} 
 		    					});
-								window.location.reload();
+								/* window.location.reload(); */
 							} else {
 								alert("code:" + data.code + "\n" + "msg:" + data.msg);
 							}    
