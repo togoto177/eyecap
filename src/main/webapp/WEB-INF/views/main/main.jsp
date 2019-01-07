@@ -10,11 +10,19 @@
 <html lang="ko">
 <head>
 	<title>EyeCapInternational</title>
+	<link rel="canonical" href="http://eyecap.kr/">
+	<meta name="description" content="EyeCapInternational">
+	<meta name="Keywords" content="eyecap, EyeCapInternational, eyecapinternational, eyecapkorea">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="EyeCapInternational">
+	<meta property="og:description" content="EyeCapInternational">
+	<meta property="og:url" content="http://eyecap.kr/">
 	<script type="text/javascript">
  	jQuery(document).ready(function() {
 		$.ajax({ 
-			type: 'get' , 
+			type: 'post' , 
 			url: '/archaveList.do',
+			cache : false,
 			dataType : 'html' ,
 			success: function(data) {
 	//			$('#pagination').empty();
@@ -24,8 +32,9 @@
 			} 
 		});
 		$.ajax({ 
-			type: 'get' , 
+			type: 'post' , 
 			url: '/fnqList.do',
+			cache : false,
 			dataType : 'html' ,
 			success: function(data) {
 	//			$('#pagination').empty();
