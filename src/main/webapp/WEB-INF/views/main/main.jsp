@@ -116,78 +116,70 @@
                         <div class="swiper-wrapper">
                           <!-- Cable Connectors -->
                           <div class="swiper-slide">
-                            <div class="icon_area"></div>
-                            <p class="icon_title">About Cable connectors</p>
-                          </div>
-                          <div class="swiper-slide">
-                           <div class="icon_area"></div>
+                           <a href="/A_01.do"><div class="icon_area" style="text-align: center;"><img style="position: relative; top: 22%;" alt="" src="../../resources/main/img_01.png"></div></a>
                            <p class="icon_title">Insulation cap responsive to overheat</p>  
                           </div>
                           <div class="swiper-slide">
-                            <div class="icon_area"></div>
+                            <a href="/A_02.do"><div class="icon_area" style="text-align: center;"><img style="position: relative; top: 22%;" alt="" src="../../resources/main/img_02.png"></div></a>
                             <p class="icon_title">Tubular Terminal lug responsive to overheat</p>
                           </div>
                           <div class="swiper-slide">
-                            <div class="icon_area"></div>
+                            <a href="/A_03.do"><div class="icon_area"></div></a>
                             <p class="icon_title">Washer responsive to overheat</p>
                           </div>
                           <div class="swiper-slide">
-                            <div class="icon_area"></div>
+                            <a href="/A_04.do"><div class="icon_area"></div></a>
                             <p class="icon_title">Terminal Insulation Cover</p>
                           </div>
                           <div class="swiper-slide">
-                            <div class="icon_area"></div>
+                            <a href="/A_05.do"><div class="icon_area"></div></a>
                             <p class="icon_title">FireZero Conduit</p>
                           </div>
                           <div class="swiper-slide">
-                            <div class="icon_area"></div>
+                            <a href="/A_06.do"><div class="icon_area"></div></a>
                             <p class="icon_title">FireZero Panel Mat</p>
                           </div>
                           <div class="swiper-slide">
-                            <div class="icon_area"></div>
+                            <a href="/A_07.do"><div class="icon_area"></div></a>
                             <p class="icon_title">FireZero Trayl Mat</p>
                           </div>
                           <!-- Firestop Products -->
                           <div class="swiper-slide">
-                           <div class="icon_area"></div>
-                           <p class="icon_title">About Firestop products</p>  
+                            <a href="/B_01.do"><div class="icon_area"></div></a>
+                            <p class="icon_title">Vertical penetration - steel pipe</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="/B_02.do"><div class="icon_area"></div></a>
+                            <p class="icon_title">Vertical penetration - PVC pipe</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="/B_03.do"><div class="icon_area"></div></a>
+                            <p class="icon_title">Wall penetration - steel pipe</p>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="/B_04.do"><div class="icon_area"></div></a>
+                            <p class="icon_title">Wall penetration - PVC Pipe</p>
+                          </div>
+                          <!-- <div class="swiper-slide">
+                            <div class="icon_area"></div>
+                            <p class="icon_title">Collar Jacket</p>
                           </div>
                           <div class="swiper-slide">
                             <div class="icon_area"></div>
-                            <p class="icon_title">Tubular Terminal lug responsive to overheat</p>
+                            <p class="icon_title">Duct - Vertical</p>
                           </div>
                           <div class="swiper-slide">
                             <div class="icon_area"></div>
-                            <p class="icon_title">Washer responsive to overheat</p>
+                            <p class="icon_title">Duct - Wall</p>
                           </div>
                           <div class="swiper-slide">
                             <div class="icon_area"></div>
-                            <p class="icon_title">Terminal Insulation Cover</p>
+                            <p class="icon_title">Cable Tray</p>
                           </div>
                           <div class="swiper-slide">
                             <div class="icon_area"></div>
-                            <p class="icon_title">FireZero Conduit</p>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="icon_area"></div>
-                            <p class="icon_title">FireZero Panel Mat</p>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="icon_area"></div>
-                            <p class="icon_title">FireZero Trayl Mat</p>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="icon_area"></div>
-                            <p class="icon_title">FireZero Trayl Mat</p>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="icon_area"></div>
-                            <p class="icon_title">FireZero Trayl Mat</p>
-                          </div>
-                          <div class="swiper-slide">
-                            <div class="icon_area"></div>
-                            <p class="icon_title">FireZero Trayl Mat</p>
-                          </div>
+                            <p class="icon_title">Firestop Components(Fixed Clamp)</p>
+                          </div> -->
                         </div>
                         <!-- Add Arrows -->
                         <div class="swiper-button-next">&lt;</div>

@@ -37,7 +37,9 @@ body{
 div.sub-main-content { padding-top:100px;}
 div.sub_top_visual { width:100%; height:320px; background:url(../../resources/sub/A/breadcrumbs.jpg) no-repeat center; background-size:cover;}
 div.sub_top_visual2 { width:100%; height:320px; background:url(../../resources/sub/B/backB.jpg) no-repeat center; background-size:cover;}
+div.sub_top_visual3 { width:100%; height:320px; background:url(../../resources/sub/references/img_01.jpg) no-repeat center; background-size:cover;}
 div.sub_top_visual2 div.sub_wrapper { padding-top:115px;} 
+div.sub_top_visual3 div.sub_wrapper { padding-top:125px;} 
 div.sub_wrapper { min-width:1200px; margin:0 auto; max-width:1200px; height:auto;}
 div.sub_wrapper5 { min-width:1200px; margin:0 auto; max-width:1200px; height:auto;}
 div.sub_top_visual div.sub_wrapper { padding-top:115px;} 

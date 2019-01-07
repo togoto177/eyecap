@@ -5,28 +5,31 @@
 <html lang="ko">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>References</title>
+<title>REFERENCES</title>
 </head>
 <body>
 
 <div id="wrapper">
         <jsp:include flush="true" page="../headerSub.jsp"></jsp:include>
-        
-        <div class="sub-main-content">   
+
+        <!-- TODO : Main Content -->
+        <div class="sub-main-content">
+            <section class="section" id="sub-section-1">     
               <div class="sub_top_visual3">
-                  <div class="sub_wrapper" style="text-align: center;">
+                  <div class="sub_wrapper">
                       <h2 class="sub_title">
                         REFERENCES
                       </h2>
                   </div>
               </div>
+              </section>
               
               <div class="sub_wrapper" style="margin: 5% 0; width: 100%; max-width: 100%;">
                   <h3 class="sub_content_title">
                     REFERENCES
                   </h3>
-               </div>
-             </div>
+                  </div>
+</div>
         
         
         
