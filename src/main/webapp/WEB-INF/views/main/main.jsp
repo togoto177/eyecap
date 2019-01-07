@@ -67,7 +67,7 @@
               <div class="swiper-container">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide intro">
-                      <img src="resources/main/main_slide_01.jpg" alt="main-slider01" />
+                      <img style="height: 100%; width: 100%;" src="resources/main/main_slide_01.jpg" alt="main-slider01" />
                       <h2 class="reveal reveal-top">
                             <p>
                                 Since its establishment, EYECAP have made our position secured<br/>
