@@ -1084,7 +1084,10 @@ ol.pop_master_btn02 li a.pop_master_btn_cancle { background:#222222; color:#fff;
 	padding: 1px 15px;
 	cursor: pointer;
 }
-
+/* ADD */
+#section-1 .swiper-container{
+	height: inherit;
+}
 
 /*MEDIA QUERY*/
 @media screen and (max-width: 1399px){
@@ -1172,6 +1175,10 @@ ol.pop_master_btn02 li a.pop_master_btn_cancle { background:#222222; color:#fff;
 
 @media screen and (max-width:954px) {
     #section-5 th:nth-child(2) { width:20%;}
+    
+    /* ADD */
+    #section-1{height: 653px;}
+    #section-1 .swiper-container{margin-top: 120px;}
 }
 
 @media screen and (max-width: 889px) {
@@ -1258,6 +1265,11 @@ ol.pop_master_btn02 li a.pop_master_btn_cancle { background:#222222; color:#fff;
 }
 
 @media screen and (max-width: 479px) {
+	
+	/* ADD */
+	#section-1{height: 470px;}
+    #section-1 .swiper-container{margin-top: 163px;}
+	
     body { min-width:100%;}
     
     /*MAIN*/
