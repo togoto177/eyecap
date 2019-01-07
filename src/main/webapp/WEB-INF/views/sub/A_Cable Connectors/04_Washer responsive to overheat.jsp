@@ -5,6 +5,14 @@
 <html lang="ko">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+jQuery(document).ready(function($){
+	for(var j = 1; j < 10; j++){
+		$("#A_li_0"+j).attr("class", "border_bd");
+	}
+	$("#A_li_04").attr("class","active border_bd");
+});
+</script>
 <title>Cable Connectors</title>
 </head>
 <body>

@@ -16,7 +16,7 @@
         <!-- TODO : Main Content -->
         <div class="sub-main-content">
             <section class="section" id="sub-section-1">     
-              <div class="sub_top_visual">
+              <div class="sub_top_visual2">
                   <div class="sub_wrapper">
                       <h2 class="sub_title">
                         Fire Products
@@ -37,52 +37,7 @@
                       </div>
                   </div>
               </div>
-              <div class="sub_menu_tab">
-                  <div class="sub_wrapper">
-                   <ul>
-                    <li class="active border_bd">
-                        <a href="">
-                            FIRESTOP SYSTEM
-                        </a>
-                    </li>
-                    <li class="border_bd">
-                        <a href="">
-                            FIREZERO CAP - vertical penetration - steel pipe
-                        </a>
-                    </li>
-                    <li class="border_bd">
-                        <a href="">
-                            FIREZERO CAP - vertical penetration - PVC pipe
-                        </a>
-                    </li>
-                    <li class="border_bd">
-                        <a href="">
-                            Sidewall penetratingpanel of steel pipe
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Sidewall penetrating panel of PVC pipe
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Fixed clamp for sleeve-intergrated pipe riser
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            SPECIFICATION
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Firezero Panel Mat
-                        </a>
-                    </li>                     
-                  </ul>
-                  </div>
-              </div>
+              <jsp:include flush="true" page="../sub_menuB.jsp"></jsp:include> 
             </section>
             <!-- #section-1 END-->
             <!-- #section-2 START-->
@@ -424,7 +379,7 @@
                     		<h4 class="sub_des_tit">
                                 FIRESTOP Product comparison
                             </h4>
-                            <ul class="sub_des_box05">
+                            <ul class="sub_des_box">
                            		<li>
 									<p class="sub_des_tit02">
 										COMPARISION TABLE
@@ -443,111 +398,156 @@
                                         		Product
                                         	</td>
                                         	<td>
-                                        		
+                                        		<img style="width: 100%;" alt="product" src="resources/sub/B/01/img_01.jpg">
                                         	</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Materials used</td>
+                                        	<td>Complete product type of FIREZERO</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Working method</td>
+                                        	<td>Easy installation as it’s already complete product</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Whether a need to hire a professional labor</td>
+                                        	<td>X</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Maintenance</td>
+                                        	<td>No need for maintenance<br />(But, if necessary, simply changeable)</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Level of pipe support</td>
+                                        	<td>Very high</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Use of thermal insulating materials</td>
+                                        	<td>No need to use for thermal insulating materials less than 60.5mm</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Application on new piping</td>
+                                        	<td>Applicable on new piping</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Mechanical strength after installation</td>
+                                        	<td>Very high</td>
+                                        </tr>
+                                    </table>
+								</li>
+								
+								<li>
+									<p class="sub_des_tit02">
+										COMPARISION TABLE
+									</p>
+									<table class="table04">
+                                        <tr>
+                                        	<td>
+                                        		Classification
+                                        	</td>
+                                        	<td>
+                                        		FIREZERO CAP
+                                        	</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>
+                                        		Product
+                                        	</td>
+                                        	<td>
+                                        		<img style="width: 100%;" alt="product" src="resources/sub/B/01/img_02.jpg">
+                                        	</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Materials used</td>
+                                        	<td>Various Firestop materials are required such as Firestop sealant,
+											 Firestop strip, Firestop board, and mineral wool. 
+											(It may differ from companies.)</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Working method</td>
+                                        	<td>Each Firestop product needs to be installed in a certain order to 
+											comply with its own certificate system</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Whether a need to hire a professional labor</td>
+                                        	<td>O</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Maintenance</td>
+                                        	<td>It has to be redone from the beginning to comply with their own certificate system</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Level of pipe support</td>
+                                        	<td>Very low</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Use of thermal insulating materials</td>
+                                        	<td>Thermal insulating materials shall be used for all pipe diameters.</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Application on new piping</td>
+                                        	<td>Damage on fireproof function due to new piping</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Mechanical strength after installation</td>
+                                        	<td>Very low</td>
                                         </tr>
                                     </table>
 								</li>
 							</ul>
+							
+							<ul class="sub_des_box">
+                           		<li style="width: 100%;">
+									<p class="sub_des_tit02">
+										PERFORMANCE TEST
+									</p>
+									<table class="table04">
+										<tr>
+											<td>Classification</td>
+											<td>Test method</td>
+											<td>FIRE ZERO</td>
+											<td>Other products</td>
+										</tr>
+										<tr>
+											<td>Fire resistant test</td>
+											<td>KSFISO 10295-1*</td>
+											<td>Standards satisfied</td>
+											<td>Standards satisfied</td>
+										</tr>
+										<tr>
+											<td>Thermal insulation</td>
+											<td>KSFISO 10295-1*</td>
+											<td>Standards satisfied</td>
+											<td>Standards satisfied</td>
+										</tr>
+									</table>
+									<a style="font-size: 14px; color: #666666;">*Test method for fire resistance of construction materials</a>
+								</li>
+							</ul>
+							
+							<ul class="sub_des_box">
+                           		<li style="width: 100%;">
+									<p class="sub_des_tit02">
+										Certificate of “FM APPROVED”
+									</p>
+									<p class="sub_des_des" style="text-align: center;">
+                                        - The FM APPROVED mark is recognized and respected worldwide.<br />
+										  &ensp;Our certification instills confidence and commands respect in the 
+										  marketplace<br />
+										- It is the only Korean Firestop system as of .December 2017 in Korea.
+                                    </p>
+                                    <div style="margin: 5px; margin-top:10px; text-align: center;">
+                                    <img alt="" src="resources/sub/B/01/img_03.jpg">
+                                    </div>
+								</li>
+							</ul>
                         </div>
                     </div>
-                    <div id="sub_product_function" style="background:#f7f7f7;">
-                        <div class="sub_wrapper">
-                            <h4 class="sub_des_tit">
-                               Product functions and features     
-                            </h4>
-                            <p class="sub_des_des02">
-                                - It allows you to visually inspect the compression ofterminal connection by checking an insulation cap of a copper terminal.<br><br>
-                                - An indicator placed in a copper terminal allows you to see if a cable is properly connected.<br><br>
-                                - It allows you to see overheat with the color change of an indicatortab and an insulation cap.
-                            </p>
-                        </div>
-                    </div>
-                    <div id="sub_product_test">
-                        <div class="sub_wrapper">
-                        <h4 class="sub_des_tit">
-                           Heat-resistance test 
-                        </h4>
-                        <p class="sub_des_tit03">
-                            <em class="txt_red">1.</em>Heat-resistance test for the insulation cap of fire-retardant cable (4SQ) 
-                        </p>
-                        <ul class="sub_des_box03">
-                            <li>
-                                <img src="resources/sub/A/01/product_test_01.jpg" alt="" />
-                                <p class="sub_des_des">
-                                    Heat up the middle area of a fire-retardant cable (4SQ) that has a 
-                                    silicon-insulated cap on one end and a PVC-insulated cap on the other end.
-                                </p>
-                            </li>
-                            <li>
-                                <img src="resources/sub/A/01/product_test_02.jpg" alt="" />
-                                <p class="sub_des_des">
-                                    The PVC-insulated cap of a fire-retardant cable starts meltdown at the temperature of 118℃.
-                                </p>
-                            </li>  
-                        </ul>
-                        <ul class="sub_des_box03">
-                            <li>
-                                <img src="resources/sub/A/01/product_test_03.jpg" alt="" />
-                            </li>
-                            <li>
-                                <img src="resources/sub/A/01/product_test_04.jpg" alt="" />
-                            </li>
-                            <li class="last_merge">
-                                <p class="sub_des_des">
-                                    The PVC-insulated cap is carbonizedat the temperature of 128℃, and it generates
-                                    <em class="txt_red">hydrogen chloride gas.</em>
-                                </p>
-                            </li>
-                        </ul>
-                        <br>
-                        <br>
-                        <br>
-                        <p class="sub_des_tit03">
-                            <em class="txt_red">2.</em>Heat-resistance test for a non-fire-retardant cable
-                        </p>
-                        <ul class="sub_des_box03">
-                            <li>
-                                <img src="resources/sub/A/01/product_test_05.jpg" alt="" />
-                                <p class="sub_des_des">
-                                    Heat up the middle area of a fire-retardant cable (35SQ) that has a 
-                                    silicon-insulated cap on one end and a PVC-insulated cap on the other end. 
-                                </p>
-                            </li>
-                            <li>
-                                <img src="resources/sub/A/01/product_test_06.jpg" alt="" />
-                                <p class="sub_des_des">
-                                    The PVC cap starts meltdown with carbonization at the temperature of 120℃.
-                                </p>
-                            </li>  
-                        </ul>
-                        <ul class="sub_des_box03">
-                            <li>
-                                <img src="resources/sub/A/01/product_test_07.jpg" alt="" />
-                            </li>
-                            <li>
-                                <img src="resources/sub/A/01/product_test_08.jpg" alt="" />
-                            </li>
-                            <li class="last_merge">
-                                <p class="sub_des_des">
-                                    The cable sheath is combusted at132℃, and the secondary ignition of the PVC cap causeshydrogen chloride gas and its total destruction.
-                                    The siliconcap prevents the flame from moving to the rest of the silicon cap and eventually remains its shape. 
-                                </p>
-                            </li>
-                        </ul>
-                        <br>
-                        <br>
-                        <br>
-                        <p class="sub_des_tit03">
-                            <em class="txt_red">3.</em>Test result
-                        </p>
-                        <p class="sub_des_des03">
-                            The PVC-insulated cap melts down at the temperature of 118℃even before its sheath is melt down, and it generates toxic gas at 128℃, and the meltdown causes drippings, which may 
-                            lead to the secondary fire. Whereas silicon-insulated cap stops the flame on the cable sheath from moving to the silicon cap, helps it to be extinguished by itself, and eventually prevents 
-                            the fire from being spread. Thus, it is verified that silicon-insulated cap has better performance in preventing fire caused by overheat than a PVC cap.
-                        </p>
-                    </div>
-                </div>
+                    
+                    
+                    
+                    
+                    
             </section>
             <!-- #section-2 END-->
         </div>

@@ -58,10 +58,31 @@ public class EyecapSubController {
 		
 		return "sub/A_Cable Connectors/07_FireZero_Panel_Mat";
 	}
+	@RequestMapping(value = "/A_08.do")
+	public String A_08() {
+		
+		return "sub/A_Cable Connectors/08_FireZero_Tray_Mat";
+	}
 	
 	@RequestMapping(value = "/B_01.do")
 	public String B_01() {
 		return "sub/B_Firestop_Products/01_fire_system";
+	}
+	@RequestMapping(value = "/B_02.do")
+	public String B_02() {
+		return "sub/B_Firestop_Products/02_Vertical_penetration_-_steel_pipe";
+	}
+	@RequestMapping(value = "/B_03.do")
+	public String B_03() {
+		return "sub/B_Firestop_Products/03_Vertical_penetration_-_PVC_pipe";
+	}
+	@RequestMapping(value = "/B_04.do")
+	public String B_04() {
+		return "sub/B_Firestop_Products/04_Wall_penetration_-_steel__pipe";
+	}
+	@RequestMapping(value = "/B_05.do")
+	public String B_05() {
+		return "sub/B_Firestop_Products/05_Wall_penetration_-_PVC_Pipe";
 	}
 	
 	@RequestMapping(value = "/references.do")

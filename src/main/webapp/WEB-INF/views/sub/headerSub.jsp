@@ -8,10 +8,10 @@
             <a href="#" class="lnk-moving on hover" data-url="section-2">PRODUCTS</a>
 	            <ul class="sub_hover">
 	                <li>
-	                    <a href="">Cable connetors - EYECAP</a>
+	                    <a href="A_01.do">Cable connetors - EYECAP</a>
 	                </li>
 	                <li>
-	                    <a href="">Firestop product - FIREZERO</a>
+	                    <a href="B_01.do">Firestop product - FIREZERO</a>
 	                </li>
 	            </ul>
             <a href="references.do" class="lnk-moving" data-url="section-3">REFERENCES</a>

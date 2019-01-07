@@ -6,6 +6,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Cable Connectors</title>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+	for(var j = 1; j < 10; j++){
+		$("#A_li_0"+j).attr("class", "border_bd");
+	}
+	$("#A_li_06").attr("class","active border_bd");
+});
+</script>
 </head>
 <body>
 

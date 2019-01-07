@@ -1120,7 +1120,9 @@ ol.pop_master_btn02 li a.pop_master_btn_cancle { background:#222222; color:#fff;
     
     ul.product_top_gallery { height:auto; overflow:hidden;}
     ul.product_top_gallery li { width:49%;}
+    ul.product_top_gallery .width3 { width:48%; margin-left:2%;}
     ul.product_top_gallery li:nth-child(2n) { margin-left:2%;}
+    ul.product_top_gallery .width3:nth-child(2n) { margin-left:2%;}
     ul.product_top_gallery2 li:nth-child(2n) { margin-left:2%;}
     ul.product_top_gallery li img { width:100%;}
     
