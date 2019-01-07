@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+jQuery(document).ready(function($){			
 	
 	/* Swiper02 */
 	$(".swiper-container").each(function(index, element){
@@ -11,20 +11,45 @@ jQuery(document).ready(function($){
             clickable: true,
           },
         });
-        
-        /* 권수 체크 */    
-         var swiper02 = new Swiper('.instance-1', {
-          slidesPerView: 9,
-          spaceBetween: 30,
-          slidesPerGroup: 3,
-          loop: true,
-          loopFillGroupWithBlank: true,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });                    
-    });
+             
+    			var swiper02 = new Swiper('.instance-1', {
+    				slidesPerView: "9",
+    				spaceBetween: 30,
+    				
+//    				slidesPerGroup: "9",
+    				loop: true,
+    				loopFillGroupWithBlank: true,
+    				navigation: {
+    					nextEl: '.swiper-button-next',
+    					prevEl: '.swiper-button-prev',
+    				},
+    				breakpoints : {// 반응형		
+    					1199 : { // pc
+    						slidesPerView : 8
+    					},		
+    					1023 : {  // 모바일
+    						slidesPerView : 7	
+    					},
+    					779 : {  // 모바일
+    						slidesPerView : 6	
+    					},
+    					754 : {  // 모바일
+    						slidesPerView : 5	
+    					},
+    					479 : {  // 모바일
+    						slidesPerView : 3	
+    					},
+    					292 : {  // 모바일
+    						slidesPerView : 2	
+    					},
+    					188 : {  // 모바일
+    						slidesPerView : 1	
+    					}
+    				},
+    			});                    
+    		});
+
+	
 	
 	/* scrollMain */
 	$(window).on("scroll", function() {
@@ -171,15 +196,13 @@ function Close02 () {
 
 function popAcWrite(seq) {
 	$.ajax({ 
-		type: 'get' , 
+		type: 'post' , 
 		url: '/archaveWriteForm.do',
+		cache : false,
 		dataType : 'html' ,
 		success: function(data) {
 			$('#pop_master02').empty();
-//			$('#pagination').empty();
 			$('#pop_master02').html(data);
-//			history.go(-1);
-//			$("#pagination").append(pagination);
 			var popup2 = document.getElementById("pop_master02");
 			popup2.classList.add("show");
 		} 
@@ -188,15 +211,13 @@ function popAcWrite(seq) {
 
 function popAcModify(seq) {
 	$.ajax({ 
-		type: 'get' , 
+		type: 'post' , 
 		url: '/archaveModifyForm.do?board_seq='+seq ,
+		cache : false,
 		dataType : 'html' ,
 		success: function(data) {
 			$('#pop_master02').empty();
-//			$('#pagination').empty();
 			$('#pop_master02').html(data);
-//			history.go(-1);
-//			$("#pagination").append(pagination);
 			var popup2 = document.getElementById("pop_master02");
 			popup2.classList.add("show");
 		} 
@@ -209,15 +230,12 @@ function Close () {
 
 function popFnQWrite() {
 	$.ajax({ 
-		type: 'get' , 
+		type: 'post' , 
 		url: '/fnqWriteForm.do',
+		cache : false,
 		dataType : 'html' ,
 		success: function(data) {
-			alert();
-//			$('#pagination').empty();
 			$('#pop_master').html(data);
-//			history.go(-1);
-//			$("#pagination").append(pagination);
 			var popup = document.getElementById("pop_master");
 			popup.classList.add("show");
 			
@@ -227,15 +245,12 @@ function popFnQWrite() {
 
 function popFnQModify(seq) {
 	$.ajax({ 
-		type: 'get' , 
+		type: 'post' , 
 		url: '/fnqModifyForm.do?board_seq='+seq,
+		cache : false,
 		dataType : 'html' ,
 		success: function(data) {
-			alert();
-//			$('#pagination').empty();
 			$('#pop_master').html(data);
-//			history.go(-1);
-//			$("#pagination").append(pagination);
 			var popup = document.getElementById("pop_master");
 			popup.classList.add("show");
 		} 

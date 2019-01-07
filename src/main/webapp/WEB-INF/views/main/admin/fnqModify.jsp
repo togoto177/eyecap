@@ -32,6 +32,25 @@
 		    var params = new FormData(form);
 		    var startPage = $('#fnqStartPageList').val(); 
 		    var visiblePages = 5;//리스트 보여줄 페이지
+		    if (confirm("글을 등록 하시겠습니까?") == true){    //확인
+				// 제목 유효성 검사
+				if($(".fnqboard_title").val() == '' || $(".fnqboard_title").val() == null ){
+				    alert("제목을 입력해주세요.");
+				    return false;
+				}
+				if($(".fnqboard_title").val().length > 41){
+				    alert("제목은 40자이상 입력할 수 없습니다.");
+				    return false;
+				}
+				
+				// 내용 유효성 검사
+				var ir1 = $("#content").val();
+
+		        if(ir1 == '<br>' || ir1 == ""  || ir1 == null || ir1 == '&nbsp;' || ir1 == '<p>&nbsp;</p>')  {
+		             alert("내용을 입력하세요.");
+		             oEditors.getById["content"].exec("FOCUS"); //포커싱
+		             return false;
+		        }
 					$.ajax({
 						type : "POST",
 						url : "/ModifyAction.do",
@@ -44,7 +63,7 @@
 							if(data.code == '1') {
 								alert("게시글이 수정되었습니다.");
 								$.ajax({ 
-		    						type: 'get' , 
+		    						type: 'POST' , 
 		    						url: '/fnqList.do?startPage='+ startPage +'&visiblePages='+visiblePages,
 		    						dataType : 'text' ,
 		    						success: function(data) { 
@@ -54,6 +73,7 @@
 		    							/* $("#pagination").append(pagination); */
 		    						} 
 		    					});
+								window.location.reload();
 							} else {
 								alert("code:" + data.code + "\n" + "msg:" + data.msg);
 							} 
@@ -62,6 +82,7 @@
 							alert("code:" + request.status + "\n" + "error:" + error);
 						}
 					})
+		    }
 				});
 			
 				});	
@@ -71,12 +92,12 @@
                             </h4>
                             <input type="hidden" id="board_seq" name="board_seq" value="${board_read.board_seq}">
                         <input type="hidden" id="board_division" name="board_division" value="${board_read.board_division}">
-                            <input id="pop_master_faq_tit" name="board_title" type="text" value="${board_read.board_title}" >
+                            <input id="pop_master_faq_tit" class="fnqboard_title" name="board_title" type="text" value="${board_read.board_title}" placeholder="Title">
                             <textarea id="content" name="board_content">${board_read.board_content}</textarea>
                             <ol class="pop_master_btn">
                                 <li>
                                     <!-- <a href="" class="pop_master_btn_modify" onclick="modifyFnQSubmit();">Submit</a> -->
-                                    <a id="modifyFnQSubmit" class="pop_master_btn_modify" >Submit</a>
+                                    <a style="cursor: pointer;" id="modifyFnQSubmit" class="pop_master_btn_modify" >Submit</a>
                                 </li>
                                  <li>
                                     <a href="" class="pop_master_btn_delete">Delete</a>

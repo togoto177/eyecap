@@ -31,7 +31,14 @@
 	                        </c:if>
 	                    </div>
                     <div id="accordian">
-                        <ul>
+                        <ul> 
+                        <c:choose>
+						<c:when test="${fn:length(fnq_List) == 0}">												
+							<li class="accordian_dotted">
+							조회결과가 없습니다.
+							</li>
+						</c:when>
+						<c:otherwise>
                         	<c:forEach var="fnq_List" items="${fnq_List}"  varStatus="status">
                             <!-- <li class="accordian_dotted active reveal reveal-top"> -->
                             <li class="accordian_dotted">
@@ -45,10 +52,10 @@
                                 <!-- add -->
                                 	<c:if test="${sessionScope.ad_id != null}">
                                     <li class="btn_master">
-                                        <a onClick="popFnQModify(${fnq_List.board_seq});" class="btn_master_modify">
+                                        <a style="cursor: pointer;" onClick="popFnQModify(${fnq_List.board_seq});" class="btn_master_modify">
                                             Modify
                                         </a>
-                                        <a class="btn_master_delete" id="aDelete" idx="${fnq_List.board_seq}*${fnq_List.board_division}">
+                                        <a style="cursor: pointer;" class="btn_master_delete" id="aDelete" idx="${fnq_List.board_seq}*${fnq_List.board_division}">
                                             Delete
                                         </a>
                                     </li>
@@ -56,18 +63,27 @@
                                 </ul>
                             </li>
                             </c:forEach>
+                            </c:otherwise>
+                            </c:choose>
                         </ul>
                         <!-- add -->
                         <form name="FnQ_form" id="FnQ_form" enctype="multipart/form-data">
-                        <div id="pop_master">
+                        <div id="pop_master" style="z-index: 1">
                             
                         </div>
                         <!-- <div class="reveal reveal-top board_pg"> -->
-                    		<div class="reveal-top board_pg">
-		                       <ul id="fnqPagination">
-		                           
-		                       </ul>
-                    		</div>
+                        <c:choose>
+						<c:when test="${fn:length(fnq_List) == 0}">												
+						</c:when>
+						<c:otherwise>
+						<br>
+                   		<div class="reveal-top board_pg">
+	                       <ul id="fnqPagination">
+	                           
+	                       </ul>
+                   		</div>
+                   		</c:otherwise>
+                   		</c:choose>
                     		<script type="text/javascript">
                     var startPage = $('#fnqStartPageList').val(); //현재 페이지
                 	var totalPage = $('#fnqTotalPage').val(); //전체 페이지
@@ -119,7 +135,7 @@
                 		var sch_value = $('#sch_value').val();
                 		var sch_type = $('#sch_type').val();
                 		$.ajax({ 
-                			type: 'get' , 
+                			type: 'POST' , 
                 			url: '/fnqList.do?sch_value='+ sch_value +'&sch_type='+sch_type,
                 			dataType : 'html' ,
                 			success: function(data) { 
@@ -145,7 +161,7 @@
                 				var startPage = $('#fnqStartPageList').val(); 
                 				$('#fnqVisiblePages').val(visiblePages);
                 					$.ajax({ 
-                						type: 'get' , 
+                						type: 'POST' , 
                 						url: '/fnqList.do?startPage='+ startPage +'&visiblePages='+visiblePages ,
                 						dataType : 'text' ,
                 						success: function(data) { 
@@ -159,7 +175,7 @@
                 				
                 				if(id_check == "page_first"){
                 					$.ajax({ 
-                						type: 'get' , 
+                						type: 'POST' , 
                 						url: '/fnqList.do?startPage=1&visiblePages=5',
                 						dataType : 'text' , 
                 						success: function(data) { 
@@ -170,7 +186,7 @@
 
                 				}else if(id_check == "page_last"){
                 					$.ajax({ 
-                						type: 'get' , 
+                						type: 'POST' , 
                 						url: '/fnqList.do?startPage='+totalPage+'&visiblePages=5',
                 						dataType : 'text' , 
                 						success: function(data) {

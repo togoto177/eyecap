@@ -3,7 +3,7 @@
                         </h4>
                         <input type="hidden" id="board_division" name="board_division" value="archave">
                         <input type="checkbox" id="board_notice" name="board_notice" value="1"> Notice
-                        <input id="pop_master_write_tit" name="board_title" type="text" placeholder="Title" >
+                        <input id="pop_master_write_tit" class="acboard_title" name="board_title" type="text" placeholder="Title" >
                         <!-- <input id="pop_master_write_serch" name="serch_tit" type="text"> -->
                         
                         <div id="fileDiv">
@@ -23,7 +23,7 @@
                         <ol class="pop_master_btn02">
                             <li>
 <!--                                 <a href="" class="pop_master_btn_submit" onclick="writeAcSubmit();">SUBMIT</a> -->
-                                <a id="writeAcSubmit" class="pop_master_btn_submit" >SUBMIT</a>
+                                <a style="cursor: pointer;" id="writeAcSubmit" class="pop_master_btn_submit" >SUBMIT</a>
                             </li>
                              <li class="margin_none">
                                 <a onclick="Close02();" class="pop_master_btn_cancle">CANCLE</a>

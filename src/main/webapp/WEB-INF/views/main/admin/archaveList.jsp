@@ -24,6 +24,13 @@
                             <th scope="col">File Download</th>
                             <th scope="col">&nbsp;</th>
                         </tr>
+                        <c:choose>
+						<c:when test="${fn:length(archave_list) == 0}">												
+							<tr>
+								<td colspan="5" align="center">조회결과가 없습니다.</td>
+							</tr>
+						</c:when>
+						<c:otherwise>
                         <c:forEach var="archave_list" items="${archave_list}"  varStatus="status">
                         <tr>
                         	<c:if test="${archave_list.board_notice == 0}">
@@ -46,8 +53,9 @@
                             <c:set var="split_file_ori" value="${fn:split(archave_list.file_ori_name,'|')}" />
 							<c:forEach var="boardlist" items="${split_file}" varStatus="status">
 							<c:set var="fileLength" value="${split_file_ori[status.index]}" />
-                            <span class="file_down" id="downBtn" onclick="downFile('${boardlist}');"></span>
-                            <a id="downFile" idx="${boardlist}">
+                            <%-- <span class="file_down" id="downFile" idx="${boardlist}"></span> --%>
+                            <span class="file_down" id="downFile" idx="${boardlist}"></span>
+                            <a style="cursor: pointer;" id="downFile" idx="${boardlist}">
 							${fileLength}
 							</a>																
 							<br/>
@@ -61,21 +69,30 @@
                             </td>
                         </tr>
                         </c:forEach>
+                        </c:otherwise>
+                        </c:choose>
                     </table>
                       
                    <!-- add -->
                     <!-- <div id="btn_master_write" class="reveal action"> -->
                     <div id="btn_master_write">
                     	<c:if test="${sessionScope.ad_id != null}">
-                        <a onClick="popAcWrite();">Write</a>
+                        <a style="cursor: pointer;" onClick="popAcWrite();">Write</a>
                         </c:if>
                     </div>
                     <!-- <div class="reveal reveal-top board_pg"> -->
+                    <c:choose>
+						<c:when test="${fn:length(archave_list) == 0}">												
+						</c:when>
+						<c:otherwise>
+						<br>
                     <div class="reveal-top board_pg">
                         <ul id="archavePagination">
                             
                         </ul>
                     </div>
+                    </c:otherwise>
+                    </c:choose>
                     <script type="text/javascript">
                     var startPage = $('#archaveStartPageList').val(); //현재 페이지
                 	var totalPage = $('#archaveTotalPage').val(); //전체 페이지
@@ -131,7 +148,7 @@
                 		var sch_value = $('#sch_value').val();
                 		var sch_type = $('#sch_type').val();
                 		$.ajax({ 
-                			type: 'get' , 
+                			type: 'POST' , 
                 			url: '/archaveList.do?sch_value='+ sch_value +'&sch_type='+sch_type,
                 			dataType : 'html' ,
                 			success: function(data) { 
@@ -157,7 +174,7 @@
                 				var startPage = $('#archaveStartPageList').val(); 
                 				$('#archaveVisiblePages').val(visiblePages);
                 					$.ajax({ 
-                						type: 'get' , 
+                						type: 'POST' , 
                 						url: '/archaveList.do?startPage='+ startPage +'&visiblePages='+visiblePages ,
                 						dataType : 'text' ,
                 						success: function(data) { 
@@ -171,7 +188,7 @@
                 				
                 				if(id_check == "page_first"){
                 					$.ajax({ 
-                						type: 'get' , 
+                						type: 'POST' , 
                 						url: '/archaveList.do?startPage=1&visiblePages=10',
                 						dataType : 'text' , 
                 						success: function(data) { 
@@ -182,7 +199,7 @@
 
                 				}else if(id_check == "page_last"){
                 					$.ajax({ 
-                						type: 'get' , 
+                						type: 'POST' , 
                 						url: '/archaveList.do?startPage='+totalPage+'&visiblePages=10',
                 						dataType : 'text' , 
                 						success: function(data) {
@@ -198,7 +215,7 @@
                 	</script>
                     </form> 
                     <form name="archave_form" id="archave_form" enctype="multipart/form-data">
-                    <div id="pop_master02">
+                    <div id="pop_master02" style="z-index:1;" >
                     </div>
                     </form>
                     <!-- .form_select START-->

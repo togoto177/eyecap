@@ -42,7 +42,7 @@ import com.homepage.eyecap.service.BoardService;
 import com.homepage.eyecap.util.CommandMap;
 
 @Controller
-public class PKS {
+public class AdminController {
 	
 	@Autowired
 	AdminService as;
@@ -211,7 +211,7 @@ public class PKS {
 		      
 		    }
 	//글 삭제 액션
-	@RequestMapping(value = "/board_delete.do" , method = RequestMethod.GET)
+	@RequestMapping(value = "/board_delete.do" , method=RequestMethod.POST)
 	@ResponseBody
 	public Map<String, Object> board_delete(Board board, BoardFile boardFile, int[] board_seq, HttpServletRequest request, HttpSession session) {
 			
@@ -242,7 +242,7 @@ public class PKS {
 			
 			}
 	//archave 작성창
-		@RequestMapping(value = "/archaveWriteForm.do")
+		@RequestMapping(value = "/archaveWriteForm.do", method = RequestMethod.POST)
 		public String archaveWriteForm(@RequestParam Map<String, Object> paramMap, Model model, Board board, HttpServletRequest request) {
 			String path =  request.getServletPath();
 			model.addAttribute("servletPath", path);
@@ -252,7 +252,7 @@ public class PKS {
 		}	
 	
 	//archave 수정창
-	@RequestMapping(value = "/archaveModifyForm.do")
+	@RequestMapping(value = "/archaveModifyForm.do", method = RequestMethod.POST)
 	public String archaveModifyForm(@RequestParam Map<String, Object> paramMap, Model model, Board board, HttpServletRequest request) {
 		String path =  request.getServletPath();
 		model.addAttribute("servletPath", path);
@@ -263,7 +263,7 @@ public class PKS {
 	}
 	
 	//Fnq 작성창
-	@RequestMapping(value = "/fnqWriteForm.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/fnqWriteForm.do", method = RequestMethod.POST)
 	public String fnqWriteForm(@RequestParam Map<String, Object> paramMap, Model model, Board board, HttpServletRequest request) {
 		String path =  request.getServletPath();
 		model.addAttribute("servletPath", path);
@@ -273,7 +273,7 @@ public class PKS {
 	}
 	
 	//Fnq 수정창
-	@RequestMapping(value = "/fnqModifyForm.do")
+	@RequestMapping(value = "/fnqModifyForm.do", method = RequestMethod.POST)
 	public String fnqModifyForm(@RequestParam Map<String, Object> paramMap, Model model, Board board, HttpServletRequest request) {
 		String path =  request.getServletPath();
 		model.addAttribute("servletPath", path);
@@ -416,7 +416,7 @@ public class PKS {
 			    }
 
 		//아카이브 리스트
-		@RequestMapping(value = "/archaveList.do")
+		@RequestMapping(value = "/archaveList.do", method=RequestMethod.POST)
 		public String archaveList(@RequestParam Map<String, Object> paramMap, Model model, Board board, HttpServletRequest request) {
 			
 			//조회 하려는 페이지
@@ -551,7 +551,7 @@ public class PKS {
 	   		
 	   	}
 		
-		@RequestMapping(value = "/fnqList.do")
+		@RequestMapping(value = "/fnqList.do", method=RequestMethod.POST)
 		public String fnqList(@RequestParam Map<String, Object> paramMap, Model model, Board board, HttpServletRequest request) {
 			
 			//조회 하려는 페이지

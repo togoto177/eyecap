@@ -74,6 +74,8 @@ nhn.husky.EZCreator = new (function(){
 				elIFrame.style.width =  "100%";
 				elIFrame.style.height = nEditorHeight+ "px";
 				elIFrame.contentWindow.document.body.style.margin = "0";
+				//eyecap 네이버에디터 추가 권수
+				elIFrame.contentWindow.document.body.style.paddingLeft = "37px";
 			}catch(e){
 				nhn.husky.EZCreator.hideBlocker(true);
 				elIFrame.style.border = "5px solid red";

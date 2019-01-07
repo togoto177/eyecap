@@ -28,10 +28,9 @@ $(document).ready(function(){
 	
 	
 	$(document).on("click", ".fileSearch", function(e) {
-		e.preventDefault();
-		var i = "";
-        i =$(this).attr('idx');
-        alert(i);
+	e.preventDefault();
+	var i = "";
+    i =$(this).attr('idx');
 	$('#input-file'+i).click();
 	var fileTarget = $('#input-file'+i); 
 	fileTarget.on('change', function(){ // 값이 변경되면 
@@ -71,7 +70,7 @@ $(document).ready(function(){
 		var fnqStartPage = $('#fnqStartPageList').val(); 
 		if (confirm("정말 삭제하시겠습니까??") == true){    //확인
 			$.ajax({
-				type : "GET",
+				type : "post",
 				url : "/board_delete.do?board_seq="+id,
 				data : id,
 				dataType : "json",
@@ -81,8 +80,9 @@ $(document).ready(function(){
 /*			            location.reload();*/
 			            if (division == 'archave') {
 			            	$.ajax({ 
-	    						type: 'get' , 
+	    						type: 'post' , 
 	    						url: '/archaveList.do?startPage='+ acStartPage +'&visiblePages=10',
+	    						cache : false,
 	    						dataType : 'text' ,
 	    						success: function(data) { 
 	    							/* $('#pagination').empty(); */
@@ -93,8 +93,9 @@ $(document).ready(function(){
 	    					});	
 						}else if (division == 'fnq') {
 			            	$.ajax({ 
-	    						type: 'get' , 
+	    						type: 'post' , 
 	    						url: '/fnqList.do?startPage='+ fnqStartPage +'&visiblePages=5',
+	    						cache : false,
 	    						dataType : 'text' ,
 	    						success: function(data) { 
 	    							/* $('#pagination').empty(); */
@@ -123,7 +124,16 @@ $(document).ready(function(){
 		/*var params = $("#archave_form").serialize();*/
 		var form = $('#archave_form')[0];
 	    var params = new FormData(form);
-		
+	    if (confirm("글을 등록 하시겠습니까?") == true){    //확인
+			// 제목 유효성 검사
+			if($(".acboard_title").val() == '' || $(".acboard_title").val() == null ){
+			    alert("제목을 입력해주세요.");
+			    return false;
+			}
+			if($(".acboard_title").val().length > 41){
+			    alert("제목은 40자이상 입력할 수 없습니다.");
+			    return false;
+			}
 		$.ajax({
 			type : "POST",
 			url : "/mainBoardAction.do",
@@ -137,8 +147,9 @@ $(document).ready(function(){
 		            alert("게시글이 등록되었습니다.");
 /*		            location.reload();*/
 		        	$.ajax({ 
-		    			type: 'get' , 
+		    			type: 'post' , 
 		    			url: '/archaveList.do',
+		    			cache : false,
 		    			dataType : 'html' ,
 		    			success: function(data) {
 		    				$('#archaveList').empty();
@@ -154,7 +165,7 @@ $(document).ready(function(){
 				alert("code:" + request.status + "\n" + "error:" + error);
 			}
 		});
-	
+	    }
 	});
 	
 		
@@ -166,6 +177,16 @@ $(document).ready(function(){
 		    var params = new FormData(form);
 		    var startPage = $('#archaveStartPageList').val(); 
 		    var visiblePages = 10;//리스트 보여줄 페이지
+		    if (confirm("글을 등록 하시겠습니까?") == true){    //확인
+				// 제목 유효성 검사
+				if($(".acboard_title").val() == '' || $(".acboard_title").val() == null ){
+				    alert("제목을 입력해주세요.");
+				    return false;
+				}
+				if($(".acboard_title").val().length > 41){
+				    alert("제목은 40자이상 입력할 수 없습니다.");
+				    return false;
+				}
 			$.ajax({
 				type : "POST",
 				url : "/ModifyAction.do",
@@ -178,8 +199,9 @@ $(document).ready(function(){
 					if(data.code == '1') {
 						alert("게시글이 수정되었습니다.");
 						$.ajax({ 
-    						type: 'get' , 
+    						type: 'post' , 
     						url: '/archaveList.do?startPage='+ startPage +'&visiblePages='+visiblePages ,
+    						cache : false,
     						dataType : 'text' ,
     						success: function(data) { 
     							/* $('#pagination').empty(); */
@@ -197,6 +219,7 @@ $(document).ready(function(){
 					alert("code:" + request.status + "\n" + "error:" + error);
 				}
 			})
+		    }
 			});
 		
 		//파일 다운로드
@@ -277,7 +300,7 @@ $(document).ready(function(){
 						} else if(sucess == "sucess"){
 							alert(data.corp_id+'로그인에 성공하였습니다.');
 							window.location.reload();
-							self.close();
+							/*self.close();*/
 						}
 					},
 					error : function(request, status, error) {
