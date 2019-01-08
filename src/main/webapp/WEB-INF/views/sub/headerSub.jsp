@@ -16,8 +16,8 @@
 	            </ul>
             <a href="/references.do" class="lnk-moving1" data-url="section-3">REFERENCES</a>
             <a href="#" class="lnk-moving1" data-url="section-4">SUPPORT</a>
-            <a href="#" class="lnk-moving1" data-url="section-5">ARCHAVE</a>
-            <a href="http://eyecapkorea.com/index.php" class="lnk-moving1 radius_menu" target="blank">EYECAPKOREA</a>
+            <a href="#" class="lnk-moving1" data-url="section-5">ARCHIVE</a>
+            <a href="http://eyecapkorea.com/index_e.php" class="lnk-moving1 radius_menu" target="blank">EYECAPKOREA</a>
         </nav>
     </div>
 </div>

@@ -5,7 +5,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-					<h2 class="text_center">ARCHAVE</h2>
+					<h2 class="text_center">ARCHIVE</h2>
                     <div class="title_red_line"></div>
                     <form name="archave_list"  method="get" id="archave_list">
 					<input type="hidden" id="board_division" name="board_division" value="archave" />

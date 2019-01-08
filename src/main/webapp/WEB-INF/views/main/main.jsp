@@ -62,8 +62,8 @@
                     <a href="#" class="lnk-moving" data-url="section-2">PRODUCTS</a>
                     <a href="#" class="lnk-moving" data-url="section-3">REFERENCES</a>
                     <a href="#" class="lnk-moving" data-url="section-4">SUPPORT</a>
-                    <a href="#" class="lnk-moving" data-url="section-5">ARCHAVE</a>
-                    <a href="http://eyecapkorea.com/index.php" class="lnk-moving1 radius_menu" target="blank">EYECAPKOREA</a>
+                    <a href="#" class="lnk-moving" data-url="section-5">ARCHIVE</a>
+                    <a href="http://eyecapkorea.com/index_e.php" class="lnk-moving1 radius_menu" target="blank">EYECAPKOREA</a>
                 </nav>
             </div>
         </header>
@@ -297,7 +297,7 @@
             <div class="footer-inner">
                 <div class="footer_left">
                     <span>
-                        <em>#1806, Windstone bldg., 275-2 Yangjae-dong Seocho-gu, Seoul, Korea.<br />
+                        <em>#79 nonhyunro, seochoku, Seoul, Korea 06775<br />
                             Representative: Jessica Lee | Business Registration No.: 124-87-47904&nbsp;&nbsp;<a id="popupLogin"><img alt="adminLogin" src="/resources/main/key.png"></a>
                         </em>
                     </span>

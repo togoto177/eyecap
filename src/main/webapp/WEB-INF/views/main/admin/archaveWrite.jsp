@@ -1,5 +1,5 @@
 						<h4 class="pop_master_tit">
-                            ARCHAVE - Write new post
+                            ARCHIVE - Write new post
                         </h4>
                         <input type="hidden" id="board_division" name="board_division" value="archave">
                         <input type="checkbox" id="board_notice" name="board_notice" value="1"> Notice

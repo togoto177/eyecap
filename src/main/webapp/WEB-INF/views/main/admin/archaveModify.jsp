@@ -6,7 +6,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 						<h4 class="pop_master_tit">
-                            ARCHAVE - Write new post
+                            ARCHIVE - Write new post
                         </h4>
                         <input type="hidden" id="board_seq" name="board_seq" value="${board_read.board_seq}">
                         <input type="hidden" id="board_division" name="board_division" value="${board_read.board_division}">

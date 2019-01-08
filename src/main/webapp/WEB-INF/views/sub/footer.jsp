@@ -3,7 +3,7 @@
     <div class="footer-inner">
         <div class="footer_left">
             <span>
-                <em>#1806, Windstone bldg., 275-2 Yangjae-dong Seocho-gu, Seoul, Korea.<br />
+                <em>#79 nonhyunro, seochoku, Seoul, Korea 06775<br />
                     Representative: Jessica Lee | Business Registration No.: 124-87-47904
                 </em>
             </span>
