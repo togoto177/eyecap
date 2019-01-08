@@ -199,7 +199,7 @@
                     <div class="product_login">
                     	<input type="hidden" id="loginDivision" name="loginDivision" value=corpUserLogin />
                         <input type="text" id="user_id" name="corp_id" placeholder="ID: Price require"/>
-                        <a id="login_btn">Login</a>
+                        <a id="login_btn" style="cursor: pointer;">Login</a>
                     </div>
                     </c:if>
                     <c:if test="${sessionScope.corp_id != null}">

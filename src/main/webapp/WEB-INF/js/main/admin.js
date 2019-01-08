@@ -249,7 +249,8 @@ $(document).ready(function(){
 			
 		});
 		$(document).on("click", "#login_btn", function(e) {
-			
+			alert("작업 중 입니다.");
+			/*업체로그인 주석처리 나중에 다시 풀거임
 			var params = $("#login_form").serialize()
 			if ($("#loginDivision").val() == 'adminLogin') {
 				if ($("#admin_id").val().length < 1) {
@@ -300,7 +301,7 @@ $(document).ready(function(){
 						} else if(sucess == "sucess"){
 							alert(data.corp_id+'로그인에 성공하였습니다.');
 							window.location.reload();
-							/*self.close();*/
+							self.close();
 						}
 					},
 					error : function(request, status, error) {
@@ -308,7 +309,7 @@ $(document).ready(function(){
 					}
 				})
 			}
-			
+			*/
 				
 				
 				
