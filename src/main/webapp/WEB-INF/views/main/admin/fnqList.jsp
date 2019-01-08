@@ -35,7 +35,7 @@
                         <c:choose>
 						<c:when test="${fn:length(fnq_List) == 0}">												
 							<li class="accordian_dotted">
-							조회결과가 없습니다.
+							We did not find results.
 							</li>
 						</c:when>
 						<c:otherwise>

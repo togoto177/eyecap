@@ -27,7 +27,7 @@
                         <c:choose>
 						<c:when test="${fn:length(archave_list) == 0}">												
 							<tr>
-								<td colspan="5" align="center">조회결과가 없습니다.</td>
+								<td colspan="5" align="center">We did not find results.</td>
 							</tr>
 						</c:when>
 						<c:otherwise>
