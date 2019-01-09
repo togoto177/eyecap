@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="logs">
+	<resultMap type="Pro_log" id="pro_logResult">
+		<result property="pro_name" column="pro_name" />
+		<result property="pro_date" column="pro_date" />
+		<result property="pro_hit" column="pro_hit" />
+	</resultMap>
+	
+	
+	<!-- 파일 다운로드 시 해당 경로에 파일이 있을경우 file_hit 1씩 증가 -->
+    <insert id="proHitInsert" parameterType="Pro_log">
+    insert into pro_log_tb value (#{pro_name}, #{pro_date}, 1);
+    </insert>
+    
+    <select id="proHitRead" resultType="Pro_log" parameterType="int"> 
+    select * from pro_log_tb where pro_name = #{pro_name} and pro_date =#{pro_date};
+	</select>
+	
+	<update id="proHitUpdate" parameterType="int">
+    update pro_log_tb set pro_hit = pro_hit + 1 where pro_name = #{pro_name} and pro_date =#{pro_date};
+    </update>	
+</mapper>

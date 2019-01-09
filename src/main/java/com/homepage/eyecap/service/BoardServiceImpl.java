@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.homepage.eyecap.dao.BoardDao;
 import com.homepage.eyecap.model.Board;
+import com.homepage.eyecap.model.Pro_log;
 
 @Service
 public class BoardServiceImpl implements BoardService {
@@ -53,6 +54,22 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public int fnq_cnt(Map<String, Object> paramMap) {
 		return bd.fnq_cnt(paramMap);
+	}
+
+	@Override
+	public void proHitInsert(Pro_log pro_log) {
+		bd.proHitInsert(pro_log);
+	}
+
+	@Override
+	public Pro_log proHitRead(Pro_log pro_log) {
+		return bd.proHitRead(pro_log);
+	}
+
+	@Override
+	public void proHitUpdate(Pro_log pro_log) {
+		bd.proHitUpdate(pro_log);
+		
 	}
 
 }

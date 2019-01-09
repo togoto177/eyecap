@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.homepage.eyecap.model.Board;
+import com.homepage.eyecap.model.Pro_log;
 
 @Repository
 public class BoardDaoImpl implements BoardDao{
@@ -54,4 +55,21 @@ public class BoardDaoImpl implements BoardDao{
 	public int fnq_cnt(Map<String, Object> paramMap) {
 		return sst.selectOne("boards.fnq_cnt", paramMap);
 	}
+
+	@Override
+	public void proHitInsert(Pro_log pro_log) {
+		sst.insert("logs.proHitInsert", pro_log);
+	}
+
+	@Override
+	public Pro_log proHitRead(Pro_log pro_log) {
+		return sst.selectOne("logs.proHitRead", pro_log);
+	}
+
+	@Override
+	public void proHitUpdate(Pro_log pro_log) {
+		sst.update("logs.proHitUpdate", pro_log);
+		
+	}
+	
 }

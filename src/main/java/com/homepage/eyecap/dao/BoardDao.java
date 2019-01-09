@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.homepage.eyecap.model.Board;
+import com.homepage.eyecap.model.Pro_log;
 
 
 public interface BoardDao {
@@ -24,4 +25,10 @@ public interface BoardDao {
 	public List<Board> fnq_list(Map<String, Object> paramMap);
 
 	public int fnq_cnt(Map<String, Object> paramMap);
+
+	public void proHitInsert(Pro_log pro_log);
+
+	public Pro_log proHitRead(Pro_log pro_log);
+
+	public void proHitUpdate(Pro_log pro_log);
 }
