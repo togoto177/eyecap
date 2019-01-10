@@ -248,9 +248,13 @@ $(document).ready(function(){
 			$(obj2).show();
 			
 		});
-		$(document).on("click", "#login_btn", function(e) {
+		
+		$(document).on("click", "#user_login", function(e) {
 			alert("작업 중 입니다.");
-			/*업체로그인 주석처리 나중에 다시 풀거임
+		});
+		
+		$(document).on("click", "#login_btn", function(e) {
+
 			var params = $("#login_form").serialize()
 			if ($("#loginDivision").val() == 'adminLogin') {
 				if ($("#admin_id").val().length < 1) {
@@ -309,7 +313,6 @@ $(document).ready(function(){
 					}
 				})
 			}
-			*/
 				
 				
 				

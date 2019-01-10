@@ -161,7 +161,7 @@
                 	});
 
                 	//하단 네비바 클릭 시 이동
-                	$(document).on("click","a[name='archave_page_move']",function() {
+                	$(document).off("click","a[name='archave_page_move']").on("click","a[name='archave_page_move']",function() {
                 				var id_check = $(this).attr("id"); //해당 seq값을 가져오기위해 새로 추가
                 				var totalPage = $('#archaveTotalPage').val(); //다운로드 목록 전체 페이지 수
                 				var visiblePages = 10;//리스트 보여줄 페이지

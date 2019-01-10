@@ -18,7 +18,7 @@
 					}
 				});	 */
 				
-				$(document).on("click", "#writeFnQSubmit", function(e) {
+				$(document).off("click", "#writeFnQSubmit").on("click", "#writeFnQSubmit", function(e) {
 					e.preventDefault();
 /* 					var str = $('#content').val();
 
