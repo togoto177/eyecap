@@ -28,8 +28,7 @@ public class EyecapSubController {
 	SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd");
 			
 	Calendar time = Calendar.getInstance();
-	String format_time = todayDate.format(time.getTime());
-	
+	String format_time = todayDate.format(time.getTime());			
 	
 	@RequestMapping(value = "/main.do")
 	public String main(Pro_log pro_log, HttpServletRequest request) {
@@ -50,7 +49,6 @@ public class EyecapSubController {
 		if (bs.proHitRead(pro_log) == null) {
 		
 			pro_log.setPro_name(producPageName);
-			pro_log.setPro_date(format_time);
 			bs.proHitInsert(pro_log); //2019-01-09 제품 클릭 시조회수 등록을 위해 추가
 			
 		}else{
@@ -72,7 +70,6 @@ public class EyecapSubController {
 		if (bs.proHitRead(pro_log) == null) { //오늘날짜와 해당 제품으로 조회가 안되면 insert
 		
 			pro_log.setPro_name(producPageName);
-			pro_log.setPro_date(format_time);
 			bs.proHitInsert(pro_log); //2019-01-09 제품 클릭 시조회수 등록을 위해 추가
 			
 		}else{ //오늘 날짜로 이미 카운트가 되어있을경우 카운트 1씩증가
@@ -94,7 +91,6 @@ public class EyecapSubController {
 		if (bs.proHitRead(pro_log) == null) { //오늘날짜와 해당 제품으로 조회가 안되면 insert
 		
 			pro_log.setPro_name(producPageName);
-			pro_log.setPro_date(format_time);
 			bs.proHitInsert(pro_log); //2019-01-09 제품 클릭 시조회수 등록을 위해 추가
 			
 		}else{ //오늘 날짜로 이미 카운트가 되어있을경우 카운트 1씩증가
@@ -116,7 +112,6 @@ public class EyecapSubController {
 		if (bs.proHitRead(pro_log) == null) { //오늘날짜와 해당 제품으로 조회가 안되면 insert
 		
 			pro_log.setPro_name(producPageName);
-			pro_log.setPro_date(format_time);
 			bs.proHitInsert(pro_log); //2019-01-09 제품 클릭 시조회수 등록을 위해 추가
 			
 		}else{ //오늘 날짜로 이미 카운트가 되어있을경우 카운트 1씩증가
@@ -138,7 +133,6 @@ public class EyecapSubController {
 		if (bs.proHitRead(pro_log) == null) { //오늘날짜와 해당 제품으로 조회가 안되면 insert
 		
 			pro_log.setPro_name(producPageName);
-			pro_log.setPro_date(format_time);
 			bs.proHitInsert(pro_log); //2019-01-09 제품 클릭 시조회수 등록을 위해 추가
 			
 		}else{ //오늘 날짜로 이미 카운트가 되어있을경우 카운트 1씩증가
@@ -160,7 +154,6 @@ public class EyecapSubController {
 		if (bs.proHitRead(pro_log) == null) { //오늘날짜와 해당 제품으로 조회가 안되면 insert
 		
 			pro_log.setPro_name(producPageName);
-			pro_log.setPro_date(format_time);
 			bs.proHitInsert(pro_log); //2019-01-09 제품 클릭 시조회수 등록을 위해 추가
 			
 		}else{ //오늘 날짜로 이미 카운트가 되어있을경우 카운트 1씩증가
@@ -182,7 +175,6 @@ public class EyecapSubController {
 		if (bs.proHitRead(pro_log) == null) { //오늘날짜와 해당 제품으로 조회가 안되면 insert
 		
 			pro_log.setPro_name(producPageName);
-			pro_log.setPro_date(format_time);
 			bs.proHitInsert(pro_log); //2019-01-09 제품 클릭 시조회수 등록을 위해 추가
 			
 		}else{ //오늘 날짜로 이미 카운트가 되어있을경우 카운트 1씩증가
@@ -204,7 +196,6 @@ public class EyecapSubController {
 		if (bs.proHitRead(pro_log) == null) { //오늘날짜와 해당 제품으로 조회가 안되면 insert
 		
 			pro_log.setPro_name(producPageName);
-			pro_log.setPro_date(format_time);
 			bs.proHitInsert(pro_log); //2019-01-09 제품 클릭 시조회수 등록을 위해 추가
 			
 		}else{ //오늘 날짜로 이미 카운트가 되어있을경우 카운트 1씩증가
@@ -227,7 +218,6 @@ public class EyecapSubController {
 		if (bs.proHitRead(pro_log) == null) { //오늘날짜와 해당 제품으로 조회가 안되면 insert
 		
 			pro_log.setPro_name(producPageName);
-			pro_log.setPro_date(format_time);
 			bs.proHitInsert(pro_log); //2019-01-09 제품 클릭 시조회수 등록을 위해 추가
 			
 		}else{ //오늘 날짜로 이미 카운트가 되어있을경우 카운트 1씩증가
@@ -249,7 +239,6 @@ public class EyecapSubController {
 		if (bs.proHitRead(pro_log) == null) { //오늘날짜와 해당 제품으로 조회가 안되면 insert
 		
 			pro_log.setPro_name(producPageName);
-			pro_log.setPro_date(format_time);
 			bs.proHitInsert(pro_log); //2019-01-09 제품 클릭 시조회수 등록을 위해 추가
 			
 		}else{ //오늘 날짜로 이미 카운트가 되어있을경우 카운트 1씩증가
@@ -271,7 +260,6 @@ public class EyecapSubController {
 		if (bs.proHitRead(pro_log) == null) { //오늘날짜와 해당 제품으로 조회가 안되면 insert
 		
 			pro_log.setPro_name(producPageName);
-			pro_log.setPro_date(format_time);
 			bs.proHitInsert(pro_log); //2019-01-09 제품 클릭 시조회수 등록을 위해 추가
 			
 		}else{ //오늘 날짜로 이미 카운트가 되어있을경우 카운트 1씩증가
@@ -293,7 +281,6 @@ public class EyecapSubController {
 		if (bs.proHitRead(pro_log) == null) { //오늘날짜와 해당 제품으로 조회가 안되면 insert
 		
 			pro_log.setPro_name(producPageName);
-			pro_log.setPro_date(format_time);
 			bs.proHitInsert(pro_log); //2019-01-09 제품 클릭 시조회수 등록을 위해 추가
 			
 		}else{ //오늘 날짜로 이미 카운트가 되어있을경우 카운트 1씩증가
@@ -315,7 +302,6 @@ public class EyecapSubController {
 		if (bs.proHitRead(pro_log) == null) { //오늘날짜와 해당 제품으로 조회가 안되면 insert
 		
 			pro_log.setPro_name(producPageName);
-			pro_log.setPro_date(format_time);
 			bs.proHitInsert(pro_log); //2019-01-09 제품 클릭 시조회수 등록을 위해 추가
 			
 		}else{ //오늘 날짜로 이미 카운트가 되어있을경우 카운트 1씩증가
