@@ -347,7 +347,7 @@ public class EyecapSubController {
 	@RequestMapping(value = "/B_05.do")
 	public String B_05(Pro_log pro_log, HttpServletRequest request) {
 		
-		SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd hh:mm:ss");
+		SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd");
 		
 		Calendar time = Calendar.getInstance();
 		String format_time = todayDate.format(time.getTime());
