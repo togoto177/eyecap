@@ -25,11 +25,6 @@ public class EyecapSubController {
 	@Autowired
 	BoardFileService bfs;
 	
-	SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd");
-			
-	Calendar time = Calendar.getInstance();
-	String format_time = todayDate.format(time.getTime());			
-	
 	@RequestMapping(value = "/main.do")
 	public String main(Pro_log pro_log, HttpServletRequest request) {
 		
@@ -38,6 +33,11 @@ public class EyecapSubController {
 	
 	@RequestMapping(value = "/A_01.do")
 	public String A_01(Pro_log pro_log, HttpServletRequest request) {
+		
+		SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd");
+		
+		Calendar time = Calendar.getInstance();
+		String format_time = todayDate.format(time.getTime());	
 				
 		String path =  request.getServletPath();
 		String str = path.substring(0,path.lastIndexOf('.'));
@@ -60,6 +60,11 @@ public class EyecapSubController {
 	@RequestMapping(value = "/A_02.do")
 	public String A_02(Pro_log pro_log, HttpServletRequest request) {
 		
+		SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd");
+		
+		Calendar time = Calendar.getInstance();
+		String format_time = todayDate.format(time.getTime());
+		
 		String path =  request.getServletPath();//url 경로 불러옴
 		String str = path.substring(0,path.lastIndexOf('.')); //구분자로 잘름 
 		String producPageName = str.substring(1); //앞에 '/' 제거시킴
@@ -80,6 +85,11 @@ public class EyecapSubController {
 	}
 	@RequestMapping(value = "/A_03.do")
 	public String A_03(Pro_log pro_log, HttpServletRequest request) {
+		
+		SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd");
+		
+		Calendar time = Calendar.getInstance();
+		String format_time = todayDate.format(time.getTime());
 		
 		String path =  request.getServletPath();//url 경로 불러옴
 		String str = path.substring(0,path.lastIndexOf('.')); //구분자로 잘름 
@@ -102,6 +112,11 @@ public class EyecapSubController {
 	@RequestMapping(value = "/A_04.do")
 	public String A_04(Pro_log pro_log, HttpServletRequest request) {
 		
+		SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd");
+		
+		Calendar time = Calendar.getInstance();
+		String format_time = todayDate.format(time.getTime());
+		
 		String path =  request.getServletPath();//url 경로 불러옴
 		String str = path.substring(0,path.lastIndexOf('.')); //구분자로 잘름 
 		String producPageName = str.substring(1); //앞에 '/' 제거시킴
@@ -122,6 +137,11 @@ public class EyecapSubController {
 	}
 	@RequestMapping(value = "/A_05.do")
 	public String A_05(Pro_log pro_log, HttpServletRequest request) {
+		
+		SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd");
+		
+		Calendar time = Calendar.getInstance();
+		String format_time = todayDate.format(time.getTime());
 		
 		String path =  request.getServletPath();//url 경로 불러옴
 		String str = path.substring(0,path.lastIndexOf('.')); //구분자로 잘름 
@@ -144,6 +164,11 @@ public class EyecapSubController {
 	@RequestMapping(value = "/A_06.do")
 	public String A_06(Pro_log pro_log, HttpServletRequest request) {
 		
+		SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd");
+		
+		Calendar time = Calendar.getInstance();
+		String format_time = todayDate.format(time.getTime());
+		
 		String path =  request.getServletPath();//url 경로 불러옴
 		String str = path.substring(0,path.lastIndexOf('.')); //구분자로 잘름 
 		String producPageName = str.substring(1); //앞에 '/' 제거시킴
@@ -165,6 +190,11 @@ public class EyecapSubController {
 	@RequestMapping(value = "/A_07.do")
 	public String A_07(Pro_log pro_log, HttpServletRequest request) {
 		
+		SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd");
+		
+		Calendar time = Calendar.getInstance();
+		String format_time = todayDate.format(time.getTime());
+		
 		String path =  request.getServletPath();//url 경로 불러옴
 		String str = path.substring(0,path.lastIndexOf('.')); //구분자로 잘름 
 		String producPageName = str.substring(1); //앞에 '/' 제거시킴
@@ -185,6 +215,11 @@ public class EyecapSubController {
 	}
 	@RequestMapping(value = "/A_08.do")
 	public String A_08(Pro_log pro_log, HttpServletRequest request) {
+		
+		SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd");
+		
+		Calendar time = Calendar.getInstance();
+		String format_time = todayDate.format(time.getTime());
 		
 		String path =  request.getServletPath();//url 경로 불러옴
 		String str = path.substring(0,path.lastIndexOf('.')); //구분자로 잘름 
@@ -208,6 +243,11 @@ public class EyecapSubController {
 	@RequestMapping(value = "/B_01.do")
 	public String B_01(Pro_log pro_log, HttpServletRequest request) {
 		
+		SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd");
+		
+		Calendar time = Calendar.getInstance();
+		String format_time = todayDate.format(time.getTime());
+		
 		String path =  request.getServletPath();//url 경로 불러옴
 		String str = path.substring(0,path.lastIndexOf('.')); //구분자로 잘름 
 		String producPageName = str.substring(1); //앞에 '/' 제거시킴
@@ -228,6 +268,11 @@ public class EyecapSubController {
 	}
 	@RequestMapping(value = "/B_02.do")
 	public String B_02(Pro_log pro_log, HttpServletRequest request) {
+		
+		SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd");
+		
+		Calendar time = Calendar.getInstance();
+		String format_time = todayDate.format(time.getTime());
 		
 		String path =  request.getServletPath();//url 경로 불러옴
 		String str = path.substring(0,path.lastIndexOf('.')); //구분자로 잘름 
@@ -250,6 +295,11 @@ public class EyecapSubController {
 	@RequestMapping(value = "/B_03.do")
 	public String B_03(Pro_log pro_log, HttpServletRequest request) {
 		
+		SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd");
+		
+		Calendar time = Calendar.getInstance();
+		String format_time = todayDate.format(time.getTime());
+		
 		String path =  request.getServletPath();//url 경로 불러옴
 		String str = path.substring(0,path.lastIndexOf('.')); //구분자로 잘름 
 		String producPageName = str.substring(1); //앞에 '/' 제거시킴
@@ -270,6 +320,11 @@ public class EyecapSubController {
 	}
 	@RequestMapping(value = "/B_04.do")
 	public String B_04(Pro_log pro_log, HttpServletRequest request) {
+		
+		SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd");
+		
+		Calendar time = Calendar.getInstance();
+		String format_time = todayDate.format(time.getTime());
 		
 		String path =  request.getServletPath();//url 경로 불러옴
 		String str = path.substring(0,path.lastIndexOf('.')); //구분자로 잘름 
@@ -292,6 +347,11 @@ public class EyecapSubController {
 	@RequestMapping(value = "/B_05.do")
 	public String B_05(Pro_log pro_log, HttpServletRequest request) {
 		
+		SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd hh:mm:ss");
+		
+		Calendar time = Calendar.getInstance();
+		String format_time = todayDate.format(time.getTime());
+
 		String path =  request.getServletPath();//url 경로 불러옴
 		String str = path.substring(0,path.lastIndexOf('.')); //구분자로 잘름 
 		String producPageName = str.substring(1); //앞에 '/' 제거시킴
