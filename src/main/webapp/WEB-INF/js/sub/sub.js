@@ -1,5 +1,9 @@
 jQuery(document).ready(function($){
 	
+	$('#priceBtn').on('click', function(){
+    	alert("preparing");
+    });
+	
         var sub_tab_Offset = $('.product_des_tab').offset().top;
 
         $(window).scroll(function(){
@@ -38,7 +42,5 @@ jQuery(document).ready(function($){
                 $(".product_des_tab li").removeClass("active");
                 $(".product_des_tab li").eq(2).addClass("active");
             }
-
-
         });
 });

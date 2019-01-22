@@ -55,7 +55,7 @@ public class EyecapSubController {
 			bs.proHitUpdate(pro_log);
 		}
 		
-		return "sub/A_Cable Connectors/01_product responsive to overheat";
+		return "sub/A_Cable Connectors/01_overheat2";
 	}
 	@RequestMapping(value = "/A_02.do")
 	public String A_02(Pro_log pro_log, HttpServletRequest request) {
@@ -81,7 +81,33 @@ public class EyecapSubController {
 			bs.proHitUpdate(pro_log);
 		}
 		
-		return "sub/A_Cable Connectors/02_Insulation cap responsive to overheat";
+		return "sub/A_Cable Connectors/02_overheat2";
+	}
+	@RequestMapping(value = "/pop02.do")
+	public String pop(Pro_log pro_log, HttpServletRequest request) {
+		
+		SimpleDateFormat todayDate = new SimpleDateFormat ( "yyyy-MM-dd");
+		
+		Calendar time = Calendar.getInstance();
+		String format_time = todayDate.format(time.getTime());
+		
+		String path =  request.getServletPath();//url 경로 불러옴
+		String str = path.substring(0,path.lastIndexOf('.')); //구분자로 잘름 
+		String producPageName = str.substring(1); //앞에 '/' 제거시킴
+		
+		pro_log.setPro_date(format_time); //현재 포멧날짜 변수 선언된걸 모델에 담는다
+		pro_log.setPro_name(producPageName); //위에 구분자로 자른 페이지명을 모델에 담는다
+		
+		if (bs.proHitRead(pro_log) == null) { //오늘날짜와 해당 제품으로 조회가 안되면 insert
+		
+			pro_log.setPro_name(producPageName);
+			bs.proHitInsert(pro_log); //2019-01-09 제품 클릭 시조회수 등록을 위해 추가
+			
+		}else{ //오늘 날짜로 이미 카운트가 되어있을경우 카운트 1씩증가
+			bs.proHitUpdate(pro_log);
+		}
+		
+		return "sub/A_Cable Connectors/02_pop";
 	}
 	@RequestMapping(value = "/A_03.do")
 	public String A_03(Pro_log pro_log, HttpServletRequest request) {
