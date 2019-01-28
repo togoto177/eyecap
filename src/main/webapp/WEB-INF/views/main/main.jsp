@@ -124,40 +124,40 @@
                             <p class="icon_title">Tubular Terminal lug responsive to overheat</p>
                           </div>
                           <div class="swiper-slide">
-                            <a href="/A_03.do"><div class="icon_area"></div></a>
+                            <a href="/A_03.do"><div class="icon_area" style="text-align: center;"><img style="position: relative; top: 20%;" alt="" src="../../resources/main/img_03.png"></div></a>
                             <p class="icon_title">Washer responsive to overheat</p>
                           </div>
                           <div class="swiper-slide">
-                            <a href="/A_04.do"><div class="icon_area"></div></a>
+                            <a href="/A_04.do"><div class="icon_area" style="text-align: center;"><img style="position: relative; top: 20%;" alt="" src="../../resources/main/img_04.png"></div></a>
                             <p class="icon_title">Terminal Insulation Cover</p>
                           </div>
                           <div class="swiper-slide">
-                            <a href="/A_05.do"><div class="icon_area"></div></a>
+                            <a href="/A_05.do"><div class="icon_area" style="text-align: center;"><img style="position: relative; top: 20%;" alt="" src="../../resources/main/img_05.png"></div></a>
                             <p class="icon_title">FireZero Conduit</p>
                           </div>
                           <div class="swiper-slide">
-                            <a href="/A_06.do"><div class="icon_area"></div></a>
+                            <a href="/A_06.do"><div class="icon_area" style="text-align: center;"><img style="position: relative; top: 45%;" alt="" src="../../resources/main/img_06.png"></div></a>
                             <p class="icon_title">FireZero Panel Mat</p>
                           </div>
                           <div class="swiper-slide">
-                            <a href="/A_07.do"><div class="icon_area"></div></a>
+                            <a href="/A_07.do"><div class="icon_area" style="text-align: center;"><img style="position: relative; top: 40%;" src="../../resources/main/img_07.png"></div></a>
                             <p class="icon_title">FireZero Trayl Mat</p>
                           </div>
                           <!-- Firestop Products -->
                           <div class="swiper-slide">
-                            <a href="/B_01.do"><div class="icon_area"></div></a>
+                            <a href="/B_01.do"><div class="icon_area" style="text-align: center;"><img style="position: relative; top: 20%;" alt="" src="../../resources/main/img_08.png"></div></a>
                             <p class="icon_title">Vertical penetration - steel pipe</p>
                           </div>
                           <div class="swiper-slide">
-                            <a href="/B_02.do"><div class="icon_area"></div></a>
+                            <a href="/B_02.do"><div class="icon_area" style="text-align: center;"><img style="position: relative; top: 20%;" alt="" src="../../resources/main/img_08.png"></div></a>
                             <p class="icon_title">Vertical penetration - PVC pipe</p>
                           </div>
                           <div class="swiper-slide">
-                            <a href="/B_03.do"><div class="icon_area"></div></a>
+                            <a href="/B_03.do"><div class="icon_area" style="text-align: center;"><img style="position: relative; top: 20%;" alt="" src="../../resources/main/img_08.png"></div></a>
                             <p class="icon_title">Wall penetration - steel pipe</p>
                           </div>
                           <div class="swiper-slide">
-                            <a href="/B_04.do"><div class="icon_area"></div></a>
+                            <a href="/B_04.do"><div class="icon_area" style="text-align: center;"><img style="position: relative; top: 20%;" alt="" src="../../resources/main/img_08.png"></div></a>
                             <p class="icon_title">Wall penetration - PVC Pipe</p>
                           </div>
                           <!-- <div class="swiper-slide">

@@ -1196,6 +1196,9 @@ ol.pop_master_btn02 li a.pop_master_btn_cancle { background:#222222; color:#fff;
     #section-1 p { font-size:0.8em;}
     
     .certificate{width: 50%;}
+    
+    #tableTop {margin-top:3%;}
+    #tableTop2 {margin-top:3%;}
 }
 
 @media screen and (max-width: 779px){
@@ -1222,6 +1225,7 @@ ol.pop_master_btn02 li a.pop_master_btn_cancle { background:#222222; color:#fff;
     /* yj */
     .leftBox_3 { width:90%; margin:0 auto; float:inherit; }
     .one_img {width: 80%;}
+    #tableTop {margin-top:0;}
     
 }
 
@@ -1303,4 +1307,7 @@ ol.pop_master_btn02 li a.pop_master_btn_cancle { background:#222222; color:#fff;
     .footer .footer-inner .copyright { font-size:0.9em;}
     
     .btnDiv{margin-left: 3%;}
+    .product_top_gallery01 li{
+    	width: 90%;
+    }
 }

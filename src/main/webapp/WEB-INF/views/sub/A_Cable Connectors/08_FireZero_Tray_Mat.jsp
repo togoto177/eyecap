@@ -31,8 +31,8 @@ jQuery(document).ready(function($){
                       <div class="location">
                         <a href="/" class="home">Home</a>
                         <a href="">Products</a>
-                        <a href="">Cable Connectors</a>
-                        <a href="" class="current">FireZero Tray Mat</a>
+                        <a href="A_01.do">Cable Connectors</a>
+                        <a href="A_08.do" class="current">FireZero Tray Mat</a>
                       </div>
                   </div>
               </div>

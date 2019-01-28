@@ -31,8 +31,8 @@ jQuery(document).ready(function($){
                       <div class="location">
                         <a href="/" class="home">Home</a>
                         <a href="">Products</a>
-                        <a href="">Cable Connectors</a>
-                        <a href="" class="current">Washer responsive to overheat</a>
+                        <a href="A_01.do">Cable Connectors</a>
+                        <a href="A_04.do" class="current">Washer responsive to overheat</a>
                       </div>
                   </div>
               </div>
@@ -49,10 +49,10 @@ jQuery(document).ready(function($){
                   </h3>
                   <ul class="product_top_gallery">
                     <li>
-                        <img src="resources/sub/A/04/img_01.jpg" alt="insulation cap resposive to overheat img1" />
+                        <img src="resources/sub/A/A_04/img_01.jpg" alt="insulation cap resposive to overheat img1" />
                     </li>
                     <li>
-                        <img src="resources/sub/A/04/img_02.jpg" alt="insulation cap resposive to overheat img2" />
+                        <img src="resources/sub/A/A_04/img_02.jpg" alt="insulation cap resposive to overheat img2" />
                     </li>
                   </ul>
               </div>
@@ -60,69 +60,69 @@ jQuery(document).ready(function($){
             <!-- #section-2 END-->
             <!-- #section-3 START-->
             <section class="section" id="sub-section-3">
-                <div class="sub_wrapper">
-                    <ol class="product_des_tab">
-                        <li class="tab_active">
-                            <a href="#sub_product_des">
-                                Product features
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#sub_product_function">
-                                Washer Specifications
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                --
-                            </a>
-                        </li>
-                    </ol>
-                </div>
+            
+            	<div id="sub_product_function" style="background:#f7f7f7;">
+                      <div class="sub_wrapper">
+                      	<div style="text-align: center; margin-bottom: 55px;">
+                      	<img style="width: 70%;" class="one_img" alt="img" src="resources/sub/A/A_04/img_03.png">
+                      	</div>
+                          <p class="sub_des_des02">
+                              - Color changes at 50℃<br><br>
+                              - Possible for anyone to inspect with naked eye and inspector's fast judgment<br><br>
+                              &emsp;&raquo; Inspection with the naked eye is possible without any other equipment
+                          </p>
+                      </div>
+                  </div>
+                 
                     <div id="sub_product_des">
                         <div class="sub_wrapper">
                             <h4 class="sub_des_tit">
-                                Product features
+                                EYECAP-WT-Washer for Overheat detection
                             </h4>
-                            
-                            <p class="sub_des_des03">
-                            01. Overheatis detected by adding temperature detecting function on the outside of washer<br />
-							02. Overheat of all joints that are connected with a bolt (booth duct, booth bar, distribution panel) can also be detected.<br />
-							03. It resolves desorption caused by poor adhesion of existing temperature tape (Integrated bold and nut) <br />
-							04. It can substituteexisting temperature tapes, which was imported (Technology that used to be owned by Japan is now developed on our own)<br />
-							05. Incidents can be prevented in advance by visual checkup from labor, supervisor, and manager.
-                        </p>
-                        </div>
-                    </div>
-                    
-                    
-                    <div id="sub_product_function">
-                        <div class="sub_wrapper">
-                            <h4 class="sub_des_tit">
-                               Washer Specifications
-                            </h4>
-			                  
-			                  
-                            <ul class="sub_des_box02">
-                            	<li class="widthFull">
-                            		<div style="text-align: right; width: 99.8%;">
-                            			<a style="font-size: 12px;">Unit : (mm)</a>
-                            		</div>
-                            		<table class="table03">
-                                      <tr class="back_gray">
-                                        <td rowspan="7" style="vertical-align: middle; background: none;"><img alt="" src="resources/sub/A/04/img_03.jpg"></td>
-                                          <td>Size(PI)</td><td>D</td>  <td>b</td> <td>t1</td>    <td>t2</td></tr>
-                                      <tr><td>8ø</td>      <td>17</td> <td>8.2</td> <td>3</td> <td>1.5</td></tr>
-                                      <tr><td>10ø</td>     <td>23</td> <td>10.2</td> <td>3</td> <td>1.5</td></tr>
-                                      <tr><td>12ø</td>     <td>26</td> <td>12.2</td> <td>3</td> <td>1.5</td></tr>
-                                      <tr><td>14ø</td>     <td>32</td> <td>14.2</td> <td>3</td> <td>1.5</td></tr>
-                                      <tr><td>16ø</td>     <td>32</td> <td>16.2</td> <td>3</td> <td>1.5</td></tr>
-                                      <tr><td colspan="5">Color : BK(Black), R(Red), B(Blue), Y(Yellow), G(Green)</td></tr>
-                                    </table>
-                            	</li>
+                            <ul class="sub_des_box03">
+	                            <li class="last_merge">
+	                            	<p class="sub_des_tit03">
+		                            	Product Features
+		                        	</p>
+		                            <p class="sub_des_des">
+		                            	<em class="txt_red">01</em> Detect the deterioration of the terminal lug part by processing the temperature
+										sensing function outside the washer<br />
+										<em class="txt_red">02</em> Detect the deterioration of all connecting
+										parts connected with bolts (bus duct, bus
+										bar, switchboard, etc.)
+		                            </p>
+	                            </li>
                             </ul>
+                            <ul class="sub_des_box02">
+		                        <li class="widthFull2">
+		                            <div class="leftBox_3">
+			                            <div style="width: 100%; text-align: center;">
+			                            <img style="width: 30%;" alt="img" src="resources/sub/A/A_04/img_04.png">
+			                            </div>
+			                            
+			                         </div>
+			                         <div class="leftBox_3" id="tableTop2">
+			                         	<table class="table03" style="margin:0;">
+			                               <tr><td style="background:gray;">Size(PI)</td><td>8∅</td><td>10∅</td><td>12∅</td><td>14∅</td><td>16∅</td></tr>
+			                               <tr><td colspan="6">COLOR : BK(Black), R(Red),B(Blue),Y(Yellow)</td></tr>
+			                            </table>
+			                            <p class="sitText" style="margin-top:3%; text-align: left;">
+			                            	※T - Average thickness ±10% All other dimensions are restricted to ±15% tolerance.<br />
+											&emsp;Specification may change without prior notification for better performance.
+			                            </p>
+		                            </div>
+			                    </li>
+		                    </ul>
                         </div>
+                        
+                        <div id="sub_product_function">
+		                   	<div class="btnDiv1">
+		            			<a class="btnCap" id="priceBtn">PriceList Washer</a>
+		            		</div>
+            			</div>
+            		
                     </div>
+                    
                     
             </section>
             <!-- #section-3 END-->

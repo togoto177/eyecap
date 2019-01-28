@@ -258,6 +258,18 @@ ul.sub_des_box03 .width2 {
 	color: white;
 	margin-bottom: 35px;
 }
+.btnDiv2{
+	overflow: hidden;
+	width: 350px;
+	margin: 0 auto;
+	text-align: center;
+}
+.btnDiv1{
+	overflow: hidden;
+	width: 170px;
+	margin: 0 auto;
+	text-align: center;
+}
 .btnCap{
 	display: block;
 	float: left;
@@ -268,4 +280,32 @@ ul.sub_des_box03 .width2 {
 	border-radius: 23px;
 	cursor: pointer;
 	color: white;
+}
+#tableTop{
+	margin-top: 8%;
+}
+#tableTop2{
+	margin-top: 5%;
+}
+.img_text001{
+	text-align: center;
+	font-size: 15px;
+	line-height: 2em;
+}
+.txt_blue{
+	color: #00bcd4;
+}
+.borderLi{
+	border: 1px solid #9e9e9e;
+	padding: 10px;
+}
+.product_top_gallery01{
+	text-align: center;
+}
+.product_top_gallery01 li{
+	width: 450px;
+	margin: 0 auto;
+}
+.product_top_gallery01 img{
+	width: 100%;
 }

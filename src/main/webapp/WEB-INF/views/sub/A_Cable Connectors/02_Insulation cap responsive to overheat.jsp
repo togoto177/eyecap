@@ -11,6 +11,7 @@ jQuery(document).ready(function($){
 		$("#A_li_0"+j).attr("class", "border_bd");
 	}
 	$("#A_li_02").attr("class","active border_bd");
+	
 });
 </script>
 <title>Cable Connectors</title>
@@ -31,8 +32,8 @@ jQuery(document).ready(function($){
                       <div class="location">
                         <a href="/" class="home">Home</a>
                         <a href="">Products</a>
-                        <a href="">Cable Connectors</a>
-                        <a href="" class="current">Insulation cap responsive to overheat</a>
+                        <a href="A_01.do">Cable Connectors</a>
+                        <a href="A_02.do" class="current">Insulation cap responsive to overheat</a>
                       </div>
                   </div>
               </div>
@@ -47,284 +48,216 @@ jQuery(document).ready(function($){
                   <h3 class="sub_content_title">
                     Insulation cap responsive to overheat
                   </h3>
-                  <ul class="product_top_gallery">
-                    <li>
-                        <img src="resources/sub/A/02/product_02_01.jpg" alt="insulation cap resposive to overheat img1" />
-                    </li>
-                    <li>
-                        <img src="resources/sub/A/02/product_02_02.jpg" alt="insulation cap resposive to overheat img2" />
-                    </li>
-                  </ul>
               </div>
             </section>
             <!-- #section-2 END-->
             <!-- #section-3 START-->
             <section class="section" id="sub-section-3">
-                <div class="sub_wrapper5">
-                    <ol class="product_des_tab">
-                        <li class="tab_active">
-                            <a href="#sub_product_des">
-                                Product features
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#sub_product_function">
-                                Material characteristics
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#sub_product_test">
-                                Features of the specifications
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#sub_product_test">
-                                EYECAP-SI
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#sub_product_test">
-                                EYECAP-SIT(동관단자용)
-                            </a>
-                        </li>
-                    </ol>
-                </div>
+            	<div class="btnDiv">
+            		<a class="btnCap" href="/resources/sub/A/A_01/CAPspecification.xlsx" target="_blank">Specification&darr;</a><a class="btnCap" href="pop02.do">CertificateCAP</a><a class="btnCap" id="priceBtn">PriceListCap</a>
+            	</div>
                     <div id="sub_product_des">
                         <div class="sub_wrapper">
-                            <h4 class="sub_des_tit">
-                                Importance of overheat detection
+                            <h4 class="sub_des_tit" style="margin-bottom: 15px;">
+                                Insulation Cap for Overheat detection (EYECAPⓇ-SIT)
                             </h4>
+                            <p class="sub_des_tit03" style="color: orange;">
+                            	Deterioration can be visually confirmed with naked eyes without any equipment!
+                        	</p>
                             <ul class="sub_des_01">
                             	<li><a>&middot;</a> UL 224-The Standard for Extruded Electrical Tubing</li>
                             	<li><a>&middot;</a> RoHS DIRECTIVE 2011/65/EU.</li>
-                            	<li><a>&middot;</a> Regulation(EC)</li>
+                            	<li><a>&middot;</a> REACH Regulation(EC) No. 1907/2006</li>
                             </ul>
                             <ul class="sub_des_02">
-                            	<li>01. It allows labor, supervisor, and manager to perform a visual inspection and helps them to prevent incidents in advance.</li>
-                            	<li>02. Silicon and special dye allow it to cope with overheaton cable connection.</li>
-                            	<li>03. The transparency on the other end allows users to check compression on terminal lug.</li>
-                            	<li>04. It is made of heat-resistant materials that prevent fire incidents including an event of ARC and overheat.</li>
-                            	<li>05. It is capable of triple fire prevention if an insulation cap is applied with a copper terminal lug and a washer responsive to overheat.</li>
-                            </ul>
-                            <ul class="sub_des_box">
-                                <li class="li2">
-                                	<img alt="features1" src="resources/sub/A/02/features_01.jpg">
-                                </li>
-                                <li class="li2">
-                                	<img alt="features2" src="resources/sub/A/02/features_02.jpg">
-                                </li>
-                                <li class="li2">
-                                	<img alt="features3" src="resources/sub/A/02/features_03.jpg">
-                                </li>
+                            	<li>01. Operators, managers and supervisors can visually check with their eyes directly.</li>
+                            	<li>02. Silicon material and special dye precisely respond to overheat.</li>
+                            	<li>03. Part except dye is made of transparent material. Inspection of solderless part and improper construction can be visually performed and confirmed with naked eyes.</li>
+                            	<li>04. Exceptional fire prevention effect even at the time of heat or arc generation as it is produced by its overheat detection.</li>
+                            	<li>05. It is possible to triply prevent fire using insulation cap along with tubular terminal lug and washer for temperature changes.</li>
                             </ul>
                         </div>
                     </div>
                     
-                    
-                    <div id="sub_product_function">
+                   <div class="sub_wrapper">
+                    <h4 class="sub_des_tit">
+                       EYECAPⓇ-SIT(A) - For Solderless Terminal Lug
+                    </h4>
+                    <ul class="sub_des_box02">
+                        <li class="widthFull2">
+                            <div class="leftBox_3">
+	                            <div style="width: 100%; text-align: center;">
+	                            <img style="width: 90%;" alt="img" src="resources/sub/A/A_02/103.jpg">
+	                            </div>
+	                            <p class="sitText">
+	                            	※T - Average thickness ±10%. All other dimensions are restricted to ±15% tolerance. Specification may change without prior notification for better performance.
+	                            </p>
+	                         </div>
+	                         <div class="leftBox_3">
+	                         <a class="mmLeft">(Unit: mm)</a>
+	                         	<table class="table03" style="margin:0;">
+                               <tr class="back_gray"><td colspan="2">Specification</td><td rowspan="2">D</td><td rowspan="2">B</td><td rowspan="2">L</td><td rowspan="2">T</td></tr>
+                               <tr class="back_gray"><td>ICE</td><td>AWG</td></tr>
+                               <tr><td>1.5SQ</td><td>16,18,20</td>    <td>3.16</td> <td>3.00</td> <td>13.70</td><td>0.80</td></tr>
+                               <tr><td>2.5SQ</td><td>14~16</td>       <td>3.83</td> <td>3.70</td> <td>14.40</td><td>0.80</td></tr>
+                               <tr><td>4SQ</td>  <td>12~14</td>       <td>4.53</td> <td>4.40</td> <td>16.00</td><td>0.90</td></tr>
+                               <tr><td>6SQ</td>  <td>10~12</td>       <td>5.00</td> <td>5.19</td> <td>18.00</td><td>1.00</td></tr>
+                               <tr><td>10SQ</td> <td>8</td>           <td>7.10</td> <td>6.50</td> <td>21.00</td><td>1.10</td></tr>
+                               <tr><td>16SQ</td> <td>6</td>           <td>9.00</td> <td>7.70</td> <td>24.00</td><td>1.14</td></tr>
+                               <tr><td>25SQ</td> <td>4</td>           <td>10.25</td><td>10.20</td><td>31.21</td><td>1.25</td></tr>
+                               <tr><td>35SQ</td> <td>2~3</td>         <td>10.71</td><td>10.70</td><td>35.00</td><td>1.30</td></tr>
+                               <tr><td>50SQ</td> <td>1</td>           <td>11.60</td><td>12.80</td><td>37.70</td><td>1.50</td></tr>
+                               <tr><td>70SQ</td> <td>1/0</td>         <td>14.60</td><td>14.00</td><td>39.00</td><td>1.60</td></tr>
+                               <tr><td>95SQ</td> <td>2/0</td>         <td>16.60</td><td>16.10</td><td>43.50</td><td>1.64</td></tr>
+                               <tr><td>120SQ</td><td>3/0</td>         <td>21.60</td><td>19.70</td><td>48.50</td><td>1.75</td></tr>
+                               <tr><td>150SQ</td><td>4/0</td>         <td>23.40</td><td>20.60</td><td>56.65</td><td>1.85</td></tr>
+                               <tr><td>185SQ</td><td>250~300kcmil</td><td>25.93</td><td>24.40</td><td>64.00</td><td>1.90</td></tr>
+                               <tr><td>240SQ</td><td>350~400kcmil</td><td>30.13</td><td>26.80</td><td>70.00</td><td>2.00</td></tr>
+                               <tr><td>300SQ</td><td>450~500kcmil</td><td>35.19</td><td>30.70</td><td>76.00</td><td>2.16</td></tr>
+                            </table>
+                            
+                            <div class="sitLeftBox">
+	                        	<div class="left">
+	                         		<a><strong>Example for Part Number</strong></a>
+	                           		<div class="left_01">
+	                           			<a>EYECAPⓇ-SIT (A) 1.5 BK</a><br />
+	                           			<a class="right">③</a><a class="right">②</a><a class="right">①</a>
+	                           		</div>
+	                           	</div>
+	                           	<div class="left"><br />
+	                           		<a class="red">①</a><a class="size">&nbsp;TYPE :</a>
+	                           		<a class="size1"> (A) (Solderless terminal lugs type)</a><br />
+	                           		<a class="red">②</a><a class="size">&nbsp;SIZE :</a>
+	                           		<a class="size1"> 1.5SQ ~ 300SQ</a><br />
+	                           		<a class="red">③</a><a class="size">&nbsp;COLOR :</a>
+	                           		<a class="size1"> BK(Black), R(Red),B(Blue),Y(Yellow), G(Green)</a>
+	                           	</div>
+                           	</div>
+	                        </div>
+                        </li>
+                      </ul>
+                   </div>
+              	
+                   <div class="sub_wrapper">
+                    <h4 class="sub_des_tit">
+                        EYECAPⓇ-SIT(B) - for Tubular Terminal lug 2-Hole
+                    </h4>
+                    <ul class="sub_des_box02">
+                        <li class="widthFull2">
+                            <div class="leftBox_3">
+	                            <div style="width: 100%; text-align: center;">
+	                            <img style="width: 75%;" alt="img" src="resources/sub/A/A_02/104.jpg">
+	                            </div>
+	                            <p class="sitText">
+	                            	※T - Average thickness ±10%. All other dimensions are restricted to ±15% tolerance. Specification may change without prior notification for better performance.
+	                            </p>
+	                         </div>
+	                         <div class="leftBox_3">
+	                         <a class="mmLeft">(Unit: mm)</a>
+	                         	<table class="table03" style="margin:0;">
+                               <tr class="back_gray"><td colspan="2">Specification</td><td rowspan="2">D</td><td rowspan="2">B</td><td rowspan="2">L</td><td rowspan="2">T</td></tr>
+                               <tr class="back_gray"><td>ICE</td><td>AWG</td></tr>
+                               <tr><td>25SQ</td> <td>6</td>           <td>8.90</td> <td>8.50</td> <td>35.80</td> <td>1.00</td></tr>
+                               <tr><td>35SQ</td> <td>4</td>           <td>10.40</td><td>10.00</td><td>38.90</td> <td>1.10</td></tr>
+                               <tr><td>50SQ</td> <td>2~1</td>         <td>13.20</td><td>12.20</td><td>43.00</td> <td>1.20</td></tr>
+                               <tr><td>70SQ</td> <td>1/0</td>         <td>15.60</td><td>14.60</td><td>49.00</td> <td>1.50</td></tr>
+                               <tr><td>95SQ</td> <td>2/0</td>         <td>17.06</td><td>17.06</td><td>57.94</td> <td>1.60</td></tr>
+                               <tr><td>120SQ</td><td>3/0</td>         <td>19.50</td><td>19.50</td><td>61.94</td> <td>1.60</td></tr>
+                               <tr><td>150SQ</td><td>4/0~250kcmil</td><td>21.80</td><td>21.72</td><td>67.50</td> <td>1.70</td></tr>
+                               <tr><td>185SQ</td><td>300kcmil</td>    <td>24.30</td><td>24.30</td><td>76.20</td> <td>1.70</td></tr>
+                               <tr><td>240SQ</td><td>350~400kcmil</td><td>28.90</td><td>28.90</td><td>85.50</td> <td>1.80</td></tr>
+                               <tr><td>300SQ</td><td>450~500kcmil</td><td>30.82</td><td>30.82</td><td>95.28</td> <td>1.90</td></tr>
+                               <tr><td>400SQ</td><td>550~650kcmil</td><td>35.00</td><td>35.00</td><td>101.00</td><td>2.10</td></tr>
+                               <tr><td>500SQ</td><td>700~800kcmil</td><td>39.50</td><td>38.12</td><td>107.00</td><td>2.40</td></tr>
+                            </table>
+                            
+                            <div class="sitLeftBox">
+	                        	<div class="left">
+	                         		<a><strong>Example for Part Number</strong></a>
+	                           		<div class="left_01">
+	                           			<a>EYECAPⓇ-SIT (B) 25 BK</a><br />
+	                           			<a class="right">&nbsp;③</a><a class="right">&nbsp;②</a><a class="right">&nbsp;①</a>
+	                           		</div>
+	                           	</div>
+	                           	<div class="left"><br />
+	                           		<a class="red">①</a><a class="size">&nbsp;TYPE :</a>
+	                           		<a class="size1"> (B) (Tubular terminal lugs type)</a><br />
+	                           		<a class="red">②</a><a class="size">&nbsp;SIZE :</a>
+	                           		<a class="size1"> 25SQ ~ 500SQ</a><br />
+	                           		<a class="red">③</a><a class="size">&nbsp;COLOR :</a>
+	                           		<a class="size1"> BK(Black), R(Red),B(Blue),Y(Yellow), G(Green)</a>
+	                           	</div>
+                           	</div>
+	                        </div>
+                        </li>
+                      </ul>
+                   </div>
+                   
+                   <div class="sub_wrapper">
+                    <h4 class="sub_des_tit">
+                        EYECAPⓇ-SIT(C) - for Tubular Terminal lug 1-Hole
+                    </h4>
+                    <ul class="sub_des_box02">
+                        <li class="widthFull2">
+                            <div class="leftBox_3">
+	                            <div style="width: 100%; text-align: center;">
+	                            <img style="width: 90%;" alt="img" src="resources/sub/A/A_02/105.jpg">
+	                            </div>
+	                            <p class="sitText">
+	                            	※T - Average thickness ±10%. All other dimensions are restricted to ±15% tolerance. Specification may change without prior notification for better performance.
+	                            </p>
+	                         </div>
+	                         <div class="leftBox_3">
+	                         <a class="mmLeft">(Unit: mm)</a>
+	                         	<table class="table03" style="margin:0;">
+                               <tr class="back_gray"><td colspan="2">Specification</td><td rowspan="2">D</td><td rowspan="2">B</td><td rowspan="2">L</td><td rowspan="2">T</td></tr>
+                               <tr class="back_gray"><td>ICE</td><td>AWG</td></tr>
+                               <tr><td>25SQ</td> <td>6</td>           <td>9.00</td> <td>9.00</td> <td>25.50</td> <td>1.20</td></tr>
+                               <tr><td>35SQ</td> <td>4</td>           <td>10.70</td><td>11.40</td><td>28.00</td> <td>1.20</td></tr>
+                               <tr><td>50SQ</td> <td>2~1</td>         <td>12.10</td><td>12.60</td><td>34.00</td> <td>1.50</td></tr>
+                               <tr><td>70SQ</td> <td>1/0</td>         <td>15.06</td><td>15.36</td><td>39.00</td> <td>1.50</td></tr>
+                               <tr><td>95SQ</td> <td>2/0</td>         <td>17.50</td><td>16.96</td><td>44.27</td> <td>1.60</td></tr>
+                               <tr><td>120SQ</td><td>3/0</td>         <td>20.00</td><td>19.60</td><td>48.50</td> <td>1.60</td></tr>
+                               <tr><td>150SQ</td><td>4/0~250kcmil</td><td>21.90</td><td>21.98</td><td>55.00</td> <td>1.70</td></tr>
+                               <tr><td>185SQ</td><td>300kcmil</td>    <td>24.60</td><td>24.60</td><td>56.90</td> <td>1.70</td></tr>
+                               <tr><td>240SQ</td><td>350~400kcmil</td><td>29.74</td><td>29.20</td><td>64.00</td> <td>1.80</td></tr>
+                               <tr><td>300SQ</td><td>450~500kcmil</td><td>30.82</td><td>30.82</td><td>72.96</td> <td>1.90</td></tr>
+                            </table>
+                            
+                            <div class="sitLeftBox">
+	                        	<div class="left">
+	                         		<a><strong>Example for Part Number</strong></a>
+	                           		<div class="left_01">
+	                           			<a>EYECAPⓇ-SIT (C) 25 BK</a><br />
+	                           			<a class="right">&nbsp;③</a><a class="right">&nbsp;②</a><a class="right">&nbsp;①</a>
+	                           		</div>
+	                           	</div>
+	                           	<div class="left"><br />
+	                           		<a class="red">①</a><a class="size">&nbsp;TYPE :</a>
+	                           		<a class="size1"> (c) (Tubular terminal lugs type)</a><br />
+	                           		<a class="red">②</a><a class="size">&nbsp;SIZE :</a>
+	                           		<a class="size1"> 25SQ ~ 300SQ</a><br />
+	                           		<a class="red">③</a><a class="size">&nbsp;COLOR :</a>
+	                           		<a class="size1"> BK(Black), R(Red),B(Blue),Y(Yellow), G(Green)</a>
+	                           	</div>
+                           	</div>
+	                        </div>
+                        </li>
+                      </ul>
+                   </div>
+                   
+                   <div id="sub_product_function" style="background:#f7f7f7;">
                         <div class="sub_wrapper">
-                            <h4 class="sub_des_tit">
-                               Material characteristics
-                            </h4>
-                            
-                            <ul class="sub_des_box02">
-                            	<li class="widthFull">
-                            		<table class="table03">
-                                      <tr>
-                                        <td class="color">Classification</td>
-                                        <td>TM(Temperature of Meltdown)</td>
-                                        <td>Continuous Heat-resistance temperature</td>
-                                        <td>Internal ARC time</td>
-                                        <td>Dielectric breakdown voltage</td>
-                                      </tr>
-                                      <tr>
-                                        <td class="color">EYE CAP(PVP)</td>
-                                        <td>90~120ºC</td>
-                                        <td>72~105ºC</td>
-                                        <td>14.9S</td>
-                                        <td>max 34.1kv</td>
-                                      </tr>
-                                      <tr>
-                                        <td class="color">EYECAP-SIT(SILCON)</td>
-                                        <td></td>
-                                        <td>-60~315ºC</td>
-                                        <td>191.8S</td>
-                                        <td>max 47.9kv</td>
-                                      </tr>
-                                    </table>
-                            	</li>
-                            	<li class="widthFull">
-	                            	<p class="txt_test_guide">
-		                                Irreversible point applied by EyeCap
-		                            </p>
-		                            <a class="textLeft">
-		                            &nbsp;&nbsp;&nbsp;- Specimen conditioining : (23 ± 2) ℃, (50 ± 5) % R,H, for a minimum of 24 h<br>
-                                    &nbsp;&nbsp;&nbsp;- Test temperature and numidity : 22 ℃, 40 % R.H.<br>
-                                    &nbsp;&nbsp;&nbsp;- Spacing of the electnodes : (6.35 ± 0.1) mm<br>
-                                    &nbsp;&nbsp;&nbsp;- Test boltage : 12.5 kV<br>
-                                    </a>
-                            		<img alt="tableTestImg" src="resources/sub/A/02/irreversible point.jpg">
-                            	</li>
-                            </ul>
-                            
-                            <h4 class="sub_des_tit" style="margin-top: 75px;">
-                               Features of the specifications
-                            </h4>
-                            <ul class="sub_des_box02">
-                            	<li class="widthFull">
-                            		<table class="table03">
-                                      <tr>
-                                        <td class="color">Classification</td>
-                                        <td>Application of ROSH</td>
-                                        <td>Application of REACH</td>
-                                        <td>UL Fireproof Class</td>
-                                        <td>UL Rated Voltage / Usage temperature</td>
-                                      </tr>
-                                      <tr>
-                                        <td class="color">EYE CAP(PVP)</td>
-                                        <td>Applied</td>
-                                        <td>Not applied</td>
-                                        <td>VW-1</td>
-                                        <td>600V/105°C</td>
-                                      </tr>
-                                      <tr>
-                                        <td class="color">EYECAP-SIT(SILICONE )</td>
-                                        <td>Applied</td>
-                                        <td>Applied</td>
-                                        <td>VW-1</td>
-                                        <td>600V/105°C</td>
-                                      </tr>
-                                     </table>
-                                  </li>
-                            </ul>
+                        	<div style="text-align: center; margin-bottom: 55px;">
+                        	<img class="one_img" alt="img" src="resources/sub/A/A_02/106.jpg">
+                        	</div>
+                            <p class="sub_des_des02">
+                                - Color changes at 70℃<br><br>
+                                - Possible for anyone to inspect with naked eye and induce inspector's fast judgment<br><br>
+                                &emsp;&raquo; Inspection with the naked eye is possible without any other equipment
+                            </p>
                         </div>
                     </div>
-                    <div id="sub_product_test">
-	                    <div class="sub_wrapper">
-		                    <h4 class="sub_des_tit">
-		                       EYECAP-SI(압착단자용)
-		                    </h4>
-	                       	<ul class="sub_des_box">
-                                <li class="li3">
-                                	<img alt="features1" src="resources/sub/A/02/sitA_01.jpg">
-                                </li>
-                                <li class="li3">
-                                	<img alt="features2" src="resources/sub/A/02/sitA_02.jpg">
-                                </li>
-                                <li class="li3">
-                                	<img alt="features3" src="resources/sub/A/02/sitA_03.jpg">
-                                </li>
-                            </ul>
-                           	<ul class="sub_des_box02">
-                           		<li class="widthFull2">
-                            		<table class="table03">
-                                      <tr class="back_gray"><td rowspan="2">SIZE(SQ)</td><td rowspan="2">AWG</td><td rowspan="2">B</td><td rowspan="2">b</td><td rowspan="2">D</td><td rowspan="2">A</td><td rowspan="2">L</td><td rowspan="2">T</td><td rowspan="2">E</td><td colspan="7">PART NO.</td></tr>
-                                      <tr class="back_gray"><td>BLACK</td><td>RED</td><td>BLUE</td><td>YELLOW</td><td>GREEN</td><td>P7</td><td>etc</td></tr>
-                                      <tr><td>1.5</td><td>20,18,16</td>    <td>2.8</td> <td>5.9</td> <td>2.8</td> <td>13.1</td><td>7.6</td><td>0.8</td> <td>5.3</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td><td rowspan="16">Gwangyang(POSCO)</td></tr>
-                                      <tr><td>2.5</td><td>16~14</td>       <td>3.4</td> <td>6.9</td> <td>3.5</td> <td>13.8</td><td>8.1</td><td>0.8</td> <td>5.4</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>4</td>  <td>14~12</td>       <td>3.8</td> <td>7.5</td> <td>4.3</td> <td>16.2</td><td>9.6</td><td>0.8</td> <td>7.0</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>6</td>  <td>12~10</td>       <td>4.8</td> <td>8.7</td> <td>5.0</td> <td>17.4</td><td>9.7</td><td>0.8</td> <td>7.7</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>10</td> <td>8</td>           <td>6.2</td> <td>10.1</td><td>6.7</td> <td>20.4</td><td>10.9</td><td>0.8</td><td>8.3</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>16</td> <td>6</td>           <td>7.0</td> <td>12.5</td><td>8.3</td> <td>23.5</td><td>13.0</td><td>0.8</td><td>10.0</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>25</td> <td>4</td>           <td>10.1</td><td>15.5</td><td>10.2</td><td>31.5</td><td>17.1</td><td>0.8</td><td>14.6</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>35</td> <td>2,3</td>         <td>10.6</td><td>16.5</td><td>10.8</td><td>35.1</td><td>19.0</td><td>0.8</td><td>16.8</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>50</td> <td>1</td>           <td>12.4</td><td>18.2</td><td>12.1</td><td>37.7</td><td>19.1</td><td>0.8</td><td>19.1</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>70</td> <td>1/0</td>         <td>14.2</td><td>21.8</td><td>15.2</td><td>38.3</td><td>19.5</td><td>0.8</td><td>20.5</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>95</td> <td>2/0</td>         <td>15.9</td><td>23.5</td><td>16.2</td><td>42.6</td><td>21.6</td><td>0.8</td><td>21.9</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>120</td><td>3/0</td>         <td>18.5</td><td>26.8</td><td>20.9</td><td>47.3</td><td>25.8</td><td>0.8</td><td>22.0</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>150</td><td>4/0,250Kcmil</td><td>19.9</td><td>30.3</td><td>23.7</td><td>55.5</td><td>27.5</td><td>0.8</td><td>30.8</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>185</td><td>300Kcmil</td>    <td>22.9</td><td>33.9</td><td>25.3</td><td>64.0</td><td>33.3</td><td>0.8</td><td>32.9</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>240</td><td>350~400Kcmil</td><td>25.4</td><td>39.7</td><td>30.1</td><td>70.0</td><td>36.6</td><td>0.8</td><td>37.7</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>300</td><td>450~500Kcmil</td><td>27.0</td><td>45.8</td><td>34.9</td><td>74.6</td><td>38.4</td><td>0.8</td><td>45.0</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td colspan="16">
-                                      	<div class="left">
-                                      		<a><strong>Example for Part Number</strong></a>
-                                      		<div class="left_01">
-                                      			<a>EYECAP-SIT (A) 1.5 BK</a><br />
-                                      			<a class="right">③</a><a class="right">②</a><a class="right">①</a>
-                                      		</div>
-                                      	</div>
-                                      	<div class="left" style="margin-left: 10px;">
-                                      		<a class="red">①</a><a class="size">&nbsp;TYPE<br /></a>
-                                      		<a class="size1">
-                                      		&nbsp;&nbsp;&nbsp;(A)(Solderless terminal lugs type)<br />
-                        	                &nbsp;&nbsp;&nbsp;(B)(Tubular terminal lugs type)</a><br />
-                                      		<a class="red">②</a><a class="size">&nbsp;SIZE</a><br />
-                                      		<a class="size1">
-                                      		&nbsp;&nbsp;&nbsp;1.5SQ ~ 300SQ</a><br />
-                                      		<a class="red">③</a><a class="size">&nbsp;COLOR</a><br />
-                                      		<a class="size1">
-                                      		&nbsp;&nbsp;&nbsp;BK(Black), R(RED), B(BLUE), Y(YELLOW), G(GREEN)<br />
-                           	                &nbsp;&nbsp;&nbsp;MOQ(BK, R, B, Y, G 각 칼라별 100EA)<br />
-                	                	    &nbsp;&nbsp;&nbsp;P7(BK, R, B, Y, G, 1set : 각 칼라별 50EA)-광양(포스코)</a>
-                                      	</div>
-                                      </td></tr>
-                                     </table>
-                                  </li>
-                            </ul>
-	                    </div>
-                	</div>
-                	
-                	<div id="sub_product_test">
-	                    <div class="sub_wrapper">
-		                    <h4 class="sub_des_tit">
-		                       EYECAP-SIT(동관단자용)
-		                    </h4>
-	                       	<ul class="sub_des_box">
-                                <li class="li3">
-                                	<img alt="features1" src="resources/sub/A/02/sitB_01.jpg">
-                                </li>
-                                <li class="li3">
-                                	<img alt="features2" src="resources/sub/A/02/sitB_02.jpg">
-                                </li>
-                                <li class="li3">
-                                	<img alt="features3" src="resources/sub/A/02/sitB_03.jpg">
-                                </li>
-                            </ul>
-                           	<ul class="sub_des_box02">
-                           		<li class="widthFull2">
-                            		<table class="table03">
-                                      <tr class="back_gray"><td rowspan="2">SIZE(SQ)</td><td rowspan="2">AWG</td><td rowspan="2">B</td><td rowspan="2">b</td><td rowspan="2">D</td><td rowspan="2">A</td><td rowspan="2">L</td><td rowspan="2">T</td><td rowspan="2">E</td><td colspan="7">PART NO.</td></tr>
-                                      <tr class="back_gray"><td>BLACK</td><td>RED</td><td>BLUE</td><td>YELLOW</td><td>GREEN</td><td>P7</td><td>etc</td></tr>
-                                      <tr><td>25</td>  <td>4</td>             <td>8.6</td>  <td>13.9</td> <td>9.0</td>  <td>10.3</td><td>25.3</td><td>1.2</td><td>14.0</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td><td rowspan="11">Gwangyang(POSCO)</td></tr>
-                                      <tr><td>35</td>  <td>2,3</td>           <td>10.2</td> <td>15.5</td> <td>10.5</td> <td>10.1</td><td>27.5</td><td>1.3</td><td>17.3</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>50</td>  <td>1</td>             <td>11.6</td> <td>17.2</td> <td>11.5</td> <td>12.2</td><td>43.2</td><td>1.5</td><td>34.3</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>70</td>  <td>1/0</td>           <td>13.8</td> <td>20.3</td> <td>13.9</td> <td>12.2</td><td>48.2</td><td>1.8</td><td>36.7</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>95</td>  <td>2/0</td>           <td>16.5</td> <td>22.8</td> <td>16.0</td> <td>12.3</td><td>56.2</td><td>1.9</td><td>36.4</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>120</td> <td>3/0</td>           <td>18.3</td> <td>24.6</td> <td>18.0</td> <td>18.8</td><td>61.6</td><td>1.9</td><td>40.1</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>150</td> <td>4/0, 250Kcmil</td> <td>20.8</td> <td>27.2</td> <td>21.4</td> <td>18.8</td><td>66.7</td><td>2.0</td><td>40.1</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>185</td> <td>300Kcmil</td>      <td>22.1</td> <td>31.0</td> <td>22.7</td> <td>24.0</td><td>74.0</td><td>2.1</td><td>48.6</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>240</td> <td>350~400Kcmil</td>  <td>28.1</td> <td>35.1</td> <td>26.8</td> <td>23.2</td><td>83.0</td><td>2.1</td><td>54.5</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>300</td> <td>450~500Kcmil</td>  <td>29.0</td> <td>37.0</td> <td>28.2</td> <td>25.5</td><td>95.1</td><td>2.3</td><td>66.5</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>
-                                      <tr><td>400</td> <td>550~700Kcmil</td>  <td>32.5</td> <td>40.9</td> <td>32.8</td> <td>25.7</td><td>98.9</td><td>2.5</td><td>72.7</td><td>BK</td><td>R</td><td>B</td><td>Y</td><td>G</td><td>P7</td></tr>                                      
-                                      <tr><td colspan="16">
-                                      	<div class="left">
-                                      		<a><strong>Example for Part Number</strong></a>
-                                      		<div class="left_01">
-                                      			<a>EYECAP-SIT (B) 1.5 BK</a><br />
-                                      			<a class="right">③</a><a class="right">②</a><a class="right">①</a>
-                                      		</div>
-                                      	</div>
-                                      	<div class="left" style="margin-left: 10px;">
-                                      		<a class="red">①</a><a class="size">&nbsp;TYPE<br /></a>
-                                      		<a class="size1">
-                                      		&nbsp;&nbsp;&nbsp;(A)(Solderless terminal lugs type)<br />
-                        	                &nbsp;&nbsp;&nbsp;(B)(Tubular terminal lugs type)</a><br />
-                                      		<a class="red">②</a><a class="size">&nbsp;SIZE</a><br />
-                                      		<a class="size1">
-                                      		&nbsp;&nbsp;&nbsp;25SQ ~ 400SQ</a><br />
-                                      		<a class="red">③</a><a class="size">&nbsp;COLOR</a><br />
-                                      		<a class="size1">
-                                      		&nbsp;&nbsp;&nbsp;BK(Black), R(RED), B(BLUE), Y(YELLOW), G(GREEN)<br />
-                           	                &nbsp;&nbsp;&nbsp;MOQ(BK, R, B, Y, G 각 칼라별 100EA)<br />
-                	                	    &nbsp;&nbsp;&nbsp;P7(BK, R, B, Y, G, 1set : 각 칼라별 50EA)-광양(포스코)</a>
-                                      	</div>
-                                      </td></tr>
-                                     </table>
-                                  </li>
-                            </ul>
-	                    </div>
-                	</div>
                 	
                 	
             </section>
