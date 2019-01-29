@@ -58,18 +58,18 @@ jQuery(document).ready(function($){
             	</div>
                     <div id="sub_product_des">
                         <div class="sub_wrapper">
-                            <h4 class="sub_des_tit" style="margin-bottom: 15px;">
+                            <h4 class="sub_des_tit" style="margin-bottom: 15px;" id="wid90">
                                 Insulation Cap for Overheat detection (EYECAPⓇ-SIT)
                             </h4>
-                            <p class="sub_des_tit03" style="color: orange;">
+                            <p class="sub_des_tit03" style="color: orange;" id="wid90">
                             	Deterioration can be visually confirmed with naked eyes without any equipment!
                         	</p>
-                            <ul class="sub_des_01">
+                            <ul class="sub_des_01" id="wid90">
                             	<li><a>&middot;</a> UL 224-The Standard for Extruded Electrical Tubing</li>
                             	<li><a>&middot;</a> RoHS DIRECTIVE 2011/65/EU.</li>
                             	<li><a>&middot;</a> REACH Regulation(EC) No. 1907/2006</li>
                             </ul>
-                            <ul class="sub_des_02">
+                            <ul class="sub_des_02" id="wid90">
                             	<li>01. Operators, managers and supervisors can visually check with their eyes directly.</li>
                             	<li>02. Silicon material and special dye precisely respond to overheat.</li>
                             	<li>03. Part except dye is made of transparent material. Inspection of solderless part and improper construction can be visually performed and confirmed with naked eyes.</li>

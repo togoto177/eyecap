@@ -16,6 +16,7 @@
 					<input type="hidden" id="archaveVisiblePages" name="visiblePages" value="">
 					<input type="hidden" id="archaveStartPageList" name="startPageList" value="${startPage}">
                     <!-- <table class="reveal reveal-top"> -->
+                    <div class="archiveTable">
                     <table>
                         <tr>
                             <th scope="col" class="th_line">No</th>
@@ -72,6 +73,7 @@
                         </c:otherwise>
                         </c:choose>
                     </table>
+                    </div>
                       
                    <!-- add -->
                     <!-- <div id="btn_master_write" class="reveal action"> -->

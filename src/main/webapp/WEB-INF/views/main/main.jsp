@@ -79,11 +79,12 @@
                   <div class="swiper-slide intro">
                       <img style="height: 100%; width: 100%;" src="resources/main/main_slide_01.jpg" alt="main-slider01" />
                       <h2 class="reveal reveal-top">
-                            <p>
+                            <p class="mainTextP">
                                 Since its establishment, EYECAP have made our position secured<br/>
                                 in the market with quality products and outstanding technologies as the solution provider,<br/>
                                 specializing in cable connectors and firestop products.<br/>
-                                Founded in 2014, EYECAP INTERNATIONAL is representing EYECAP KOREA<br/>
+                                Founded in 2014,<br />
+                                EYECAP INTERNATIONAL is representing EYECAP KOREA<br/>
                                 exclusively for overseas market and now exporting its products to all over the world.
                             </p>
                         </h2>
@@ -95,11 +96,15 @@
                                 Since its establishment, EYECAP have made our position secured<br/>
                                 in the market with quality products and outstanding technologies as the solution provider,<br/>
                                 specializing in cable connectors and firestop products.<br/>
-                                Founded in 2014, EYECAP INTERNATIONAL is representing EYECAP KOREA<br/>
+                                Founded in 2014,<br />
+                                EYECAP INTERNATIONAL is representing EYECAP KOREA<br/>
                                 exclusively for overseas market and now exporting its products to all over the world.
                             </p>
                         </h2>
                   </div>
+                  
+                  
+                  
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>

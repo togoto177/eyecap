@@ -71,11 +71,11 @@ jQuery(document).ready(function($){
                             <h4 class="sub_des_tit">
                                 Features of the product
                             </h4>
-                            <ul class="sub_des_01">
+                            <ul class="sub_des_01" id="wid90">
                             	<li><a>&middot;</a> Tubular Terminal Lug for Temperature Change</li>
                             	<li><a>&middot;</a> UL Tubular Terminal Lug</li>
                             </ul>
-                            <ul class="sub_des_02">
+                            <ul class="sub_des_02" id="wid90">
                             	<li>01. It is possible to visually inspect whether the cable conductor is correctly inserted into the terminal lug during terminal processing </li>
                             	<li>02. Detect terminal deterioration by adding temperature sensing function to terminal check tab</li>
                             	<li>03. Raise the awareness among workers and managers, inducing high-quality construction</li>
@@ -97,12 +97,12 @@ jQuery(document).ready(function($){
 		                    </ul>
 	                    </div>
 	                    <div class="sub_wrapper" style="text-align: center;">
-	                    	<img src="resources/sub/A/A_03/img_09.jpg" alt="insulation cap resposive to overheat img2" />
+	                    	<img class="img033" src="resources/sub/A/A_03/img_09.jpg" alt="insulation cap resposive to overheat img2" />
 	                    </div>
                     </div>
                     <div id="sub_product_des">
                         <div class="sub_wrapper">
-                            <h4 class="sub_des_tit">
+                            <h4 class="sub_des_tit" id="wid90">
                                EYECAP-CP-Tubular Terminal Lug-1 Hole<br />
                                EYECAP-CPT- Tubular Terminal Lug for temperature change-1 Hole
                             </h4>
@@ -144,7 +144,7 @@ jQuery(document).ready(function($){
 		                      </ul>
 		                      
 		                      
-	                        <h4 class="sub_des_tit">
+	                        <h4 class="sub_des_tit" id="wid90">
                                EYECAP-CP-Tubular Terminal Lug-1 Hole<br />
                                EYECAP-CPT- Tubular Terminal Lug for temperature change-1 Hole
                             </h4>
@@ -188,10 +188,10 @@ jQuery(document).ready(function($){
                     
                     <div id="sub_product_des">
                         <div class="sub_wrapper">
-                            <h4 class="sub_des_tit">
+                            <h4 class="sub_des_tit" style="margin-bottom: 7%;" id="wid90">
                                Inspection for completed compression
                             </h4>
-                            <ul class="sub_des_02">
+                            <ul class="sub_des_02" id="wid90">
                             	<li style="color: black; font-size: 15px;">Completed Crimping</li>
                             	<li>You can see whether the crimping work has been completed or not with bare eye</li>
                             </ul>
@@ -208,10 +208,10 @@ jQuery(document).ready(function($){
                          </div>
                          
                          <div class="sub_wrapper">
-                            <h4 class="sub_des_tit" style="margin-top: 7%;">
+                            <h4 class="sub_des_tit" style="margin: 7% 0;" id="wid90">
                                Inspection for completed installation
                             </h4>
-                            <ul class="sub_des_02">
+                            <ul class="sub_des_02" id="wid90">
                             	<li style="color: black; font-size: 15px;">Accurately inserted wire</li>
                             	<li>You can check at a glance whether the cable is inserted accurately or not</li>
                             </ul>
